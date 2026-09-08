@@ -1,0 +1,1403 @@
+/* =========================================================
+   HOW IT WORKS — GONBITE
+   Light editorial food-tech design
+========================================================= */
+
+.how-page {
+  width: 100%;
+  overflow: hidden;
+
+  background: #fffaf6;
+  color: #35261f;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.how-hero {
+  min-height: 88vh;
+
+  display: grid;
+  grid-template-columns: 48% 52%;
+
+  align-items: center;
+
+  padding: 120px 8vw 80px;
+
+  background: #fffaf6;
+
+  gap: 50px;
+}
+
+.how-hero-left {
+  max-width: 620px;
+}
+
+
+/* LABEL */
+
+.how-label {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 30px;
+
+  color: #ef6b35;
+
+  font-size: 10px;
+
+  letter-spacing: 2.5px;
+
+  font-weight: 800;
+}
+
+.how-label span:first-child {
+  width: 38px;
+  height: 1px;
+
+  background: #ef6b35;
+}
+
+
+/* TITLE */
+
+.how-hero h1 {
+  margin: 0;
+
+  color: #35261f;
+
+  font-size: clamp(60px, 7vw, 105px);
+
+  line-height: 0.9;
+
+  letter-spacing: -5px;
+
+  font-weight: 800;
+}
+
+.how-hero h1 i {
+  color: #ef6b35;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-weight: 400;
+}
+
+
+/* DESCRIPTION */
+
+.how-hero p {
+  max-width: 540px;
+
+  margin-top: 35px;
+
+  color: #765f53;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* SCROLL */
+
+.how-scroll {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 42px;
+
+  color: #59443a;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  font-weight: 800;
+}
+
+.how-scroll svg {
+  color: #ef6b35;
+}
+
+
+/* =========================================================
+   HERO ART
+========================================================= */
+
+.how-hero-art {
+  position: relative;
+
+  height: 570px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* Main image
+   Changed from circle to editorial rectangle
+*/
+
+.hero-food-circle {
+  width: min(500px, 90%);
+
+  height: 530px;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  transform: rotate(2deg);
+
+  background: #ead9ce;
+
+  box-shadow:
+    18px 22px 0 #f0ded3,
+    0 25px 55px rgba(100, 65, 45, 0.12);
+}
+
+.hero-food-circle img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.hero-food-circle:hover img {
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   ORDER CARD
+========================================================= */
+
+.hero-order-card {
+  position: absolute;
+
+  left: 2%;
+  bottom: 7%;
+
+  z-index: 5;
+
+  min-width: 205px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #ead9cf;
+
+  border-radius: 6px;
+
+  box-shadow: 0 15px 35px rgba(100, 65, 45, 0.13);
+}
+
+.mini-check {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 7px;
+
+  background: #fff0e7;
+
+  color: #ef6b35;
+}
+
+.hero-order-card strong,
+.hero-order-card small {
+  display: block;
+}
+
+.hero-order-card strong {
+  color: #45332b;
+
+  font-size: 12px;
+}
+
+.hero-order-card small {
+  margin-top: 4px;
+
+  color: #9b867a;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   HERO BADGE
+   Changed from circle to rectangular label
+========================================================= */
+
+.hero-small-circle {
+  position: absolute;
+
+  top: 6%;
+  right: 2%;
+
+  width: auto;
+  height: auto;
+
+  padding: 13px 17px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 4px;
+
+  background: #ef6b35;
+
+  color: #ffffff;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  box-shadow: 0 12px 25px rgba(239, 107, 53, 0.2);
+
+  transform: rotate(-4deg);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.how-intro {
+  padding: 125px 11vw;
+
+  border-top: 1px solid #eaded7;
+
+  background: #ffffff;
+
+  display: grid;
+
+  grid-template-columns: 160px 1fr;
+
+  gap: 70px;
+}
+
+.how-intro-number {
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color: #ef6b35;
+
+  font-weight: 800;
+}
+
+.how-intro h2 {
+  margin: 0;
+
+  max-width: 850px;
+
+  color: #382820;
+
+  font-size: clamp(45px, 5vw, 75px);
+
+  line-height: 0.95;
+
+  letter-spacing: -4px;
+}
+
+.how-intro h2 span {
+  color: #ef6b35;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-weight: 400;
+}
+
+.how-intro p {
+  max-width: 600px;
+
+  margin-top: 30px;
+
+  color: #766158;
+
+  font-size: 15px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   JOURNEY
+========================================================= */
+
+.journey-section {
+  position: relative;
+
+  padding: 100px 9vw 140px;
+
+  background: #fffaf6;
+}
+
+
+/* CENTER LINE */
+
+.journey-line {
+  position: absolute;
+
+  left: 50%;
+
+  top: 0;
+  bottom: 80px;
+
+  width: 1px;
+
+  background: #e6d6cd;
+
+  transform: translateX(-50%);
+}
+
+.journey-line-progress {
+  width: 100%;
+  height: 45%;
+
+  background: #ef6b35;
+}
+
+
+/* =========================================================
+   JOURNEY STEP
+========================================================= */
+
+.journey-step {
+  position: relative;
+
+  min-height: 520px;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 110px minmax(0, 1fr);
+
+  align-items: center;
+
+  margin-bottom: 100px;
+}
+
+.journey-step:last-child {
+  margin-bottom: 0;
+}
+
+
+/*
+IMPORTANT FIX:
+
+The image MUST occupy column 1.
+The content MUST occupy column 3.
+
+Previously the content was falling into the
+110px middle column, causing the broken text.
+*/
+
+.journey-image {
+  grid-column: 1;
+
+  grid-row: 1;
+
+  width: 88%;
+
+  height: 450px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 7px;
+
+  background: #ead9ce;
+}
+
+.journey-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.journey-step:hover .journey-image img {
+  transform: scale(1.05);
+}
+
+
+/* IMAGE TAG */
+
+.journey-tag {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  padding: 9px 13px;
+
+  border-radius: 4px;
+
+  background: #ffffff;
+
+  color: #59453a;
+
+  font-size: 8px;
+
+  letter-spacing: 1.5px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   JOURNEY CONTENT
+========================================================= */
+
+/*
+THIS IS THE MAIN FIX.
+*/
+
+.journey-content {
+  grid-column: 3;
+
+  grid-row: 1;
+
+  width: 100%;
+
+  max-width: 430px;
+
+  padding: 30px 0 30px 35px;
+
+  justify-self: start;
+}
+
+
+/* ICON */
+
+.journey-icon {
+  width: 52px;
+  height: 52px;
+
+  display: grid;
+
+  place-items: center;
+
+  margin-bottom: 24px;
+
+  border-radius: 6px;
+
+  background: #fff0e7;
+
+  color: #ef6b35;
+}
+
+
+/* SMALL LABEL */
+
+.journey-small {
+  color: #a18a7d;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  font-weight: 800;
+}
+
+
+/* TITLE */
+
+.journey-content h3 {
+  margin: 13px 0 15px;
+
+  color: #382820;
+
+  font-size: clamp(34px, 3.5vw, 48px);
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+
+  font-weight: 750;
+}
+
+
+/* DESCRIPTION */
+
+.journey-content p {
+  max-width: 400px;
+
+  margin: 0;
+
+  color: #776157;
+
+  font-size: 14px;
+
+  line-height: 1.85;
+}
+
+
+/* ARROW */
+
+.journey-arrow {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+
+  place-items: center;
+
+  margin-top: 25px;
+
+  border: 1px solid #ddcbc0;
+
+  border-radius: 5px;
+
+  color: #ef6b35;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.journey-step:hover .journey-arrow {
+  background: #ef6b35;
+
+  color: #ffffff;
+
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   JOURNEY NUMBER
+   Changed from circle to small square
+========================================================= */
+
+.journey-number {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 58px;
+  height: 58px;
+
+  display: grid;
+
+  place-items: center;
+
+  z-index: 4;
+
+  background: #fffaf6;
+
+  border: 1px solid #ef6b35;
+
+  border-radius: 5px;
+
+  color: #ef6b35;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   REVERSE JOURNEY
+========================================================= */
+
+.journey-reverse .journey-image {
+  grid-column: 3;
+
+  grid-row: 1;
+
+  margin-left: auto;
+}
+
+.journey-reverse .journey-content {
+  grid-column: 1;
+
+  grid-row: 1;
+
+  margin-left: auto;
+
+  padding-left: 0;
+
+  padding-right: 35px;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+.order-experience {
+  padding: 130px 10vw;
+
+  background: #f7e9df;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 100px;
+}
+
+.experience-copy {
+  max-width: 600px;
+}
+
+.experience-label {
+  color: #ef6b35;
+
+  font-size: 10px;
+
+  letter-spacing: 2.5px;
+
+  font-weight: 800;
+}
+
+.experience-copy h2 {
+  margin: 23px 0;
+
+  color: #382820;
+
+  font-size: clamp(45px, 5vw, 70px);
+
+  line-height: 0.95;
+
+  letter-spacing: -3px;
+}
+
+.experience-copy h2 i {
+  color: #ef6b35;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-weight: 400;
+}
+
+.experience-copy > p {
+  max-width: 520px;
+
+  color: #756056;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* EXPERIENCE POINTS */
+
+.experience-points {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+
+  margin-top: 35px;
+}
+
+.experience-points div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #49372f;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.experience-points svg {
+  color: #ef6b35;
+}
+
+
+/* =========================================================
+   PHONE SHOWCASE
+========================================================= */
+
+.phone-showcase {
+  display: flex;
+
+  justify-content: center;
+}
+
+.phone-frame {
+  width: 310px;
+
+  min-height: 590px;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  color: #3b2b24;
+
+  border: 1px solid #e4d1c5;
+
+  border-radius: 28px;
+
+  box-shadow:
+    15px 20px 0 #efdacf,
+    0 25px 50px rgba(90, 60, 45, 0.12);
+
+  transform: rotate(3deg);
+}
+
+
+/* PHONE TOP */
+
+.phone-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 50px;
+
+  color: #a18b7f;
+
+  font-size: 9px;
+}
+
+
+/* PHONE TITLE */
+
+.phone-title small {
+  display: block;
+
+  color: #a18b7f;
+
+  font-size: 10px;
+}
+
+.phone-title strong {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #382820;
+
+  font-size: 23px;
+}
+
+
+/* PHONE FOOD */
+
+.phone-food {
+  position: relative;
+
+  height: 185px;
+
+  margin-top: 30px;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+}
+
+.phone-food img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.phone-food div {
+  position: absolute;
+
+  left: 14px;
+  bottom: 14px;
+}
+
+.phone-food strong,
+.phone-food span {
+  display: block;
+}
+
+.phone-food strong {
+  color: #ffffff;
+
+  font-size: 13px;
+}
+
+.phone-food span {
+  margin-top: 3px;
+
+  color: #ffffff;
+
+  font-size: 10px;
+}
+
+
+/* PHONE ITEMS */
+
+.phone-items {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.phone-items > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px;
+
+  background: #fff5ef;
+
+  border: 1px solid #f0dfd5;
+
+  border-radius: 7px;
+}
+
+.phone-items > div > span {
+  width: 35px;
+  height: 35px;
+
+  flex-shrink: 0;
+
+  border-radius: 5px;
+
+  background: #f8d6c3;
+}
+
+.phone-items strong,
+.phone-items small {
+  display: block;
+}
+
+.phone-items strong {
+  color: #49362d;
+
+  font-size: 11px;
+}
+
+.phone-items small {
+  margin-top: 3px;
+
+  color: #a28b7e;
+
+  font-size: 8px;
+}
+
+.phone-items b {
+  margin-left: auto;
+
+  color: #49362d;
+
+  font-size: 17px;
+
+  font-weight: 500;
+}
+
+
+/* PHONE BUTTON */
+
+.phone-button {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 20px;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #ef6b35;
+
+  color: #ffffff;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.how-final-cta {
+  position: relative;
+
+  min-height: 570px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 100px 11vw;
+
+  overflow: hidden;
+
+  background: #ef6b35;
+
+  color: #ffffff;
+}
+
+.how-final-content {
+  position: relative;
+
+  z-index: 3;
+}
+
+.how-final-content > span {
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  font-weight: 800;
+}
+
+.how-final-content h2 {
+  max-width: 800px;
+
+  margin: 25px 0 40px;
+
+  font-size: clamp(55px, 7vw, 105px);
+
+  line-height: 0.88;
+
+  letter-spacing: -5px;
+}
+
+.how-final-content h2 i {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-weight: 400;
+}
+
+
+/* CTA BUTTON */
+
+.how-final-content button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 16px 23px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  border-radius: 5px;
+
+  background: #ffffff;
+
+  color: #ef6b35;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.how-final-content button:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 25px rgba(80, 40, 20, 0.15);
+}
+
+
+/* =========================================================
+   DECORATIVE CTA LINES
+   No circles
+========================================================= */
+
+.cta-ring {
+  position: absolute;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 0;
+
+  transform: rotate(25deg);
+}
+
+.ring-one {
+  width: 500px;
+  height: 500px;
+
+  right: -120px;
+  top: 30px;
+}
+
+.ring-two {
+  width: 350px;
+  height: 350px;
+
+  right: 10px;
+  top: 105px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .how-hero {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    gap: 60px;
+
+    padding-top: 100px;
+  }
+
+  .how-hero-left {
+    margin: auto;
+  }
+
+  .how-label,
+  .how-scroll {
+    justify-content: center;
+  }
+
+  .how-hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .how-hero-art {
+    height: 520px;
+  }
+
+
+  .how-intro {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    padding: 100px 8vw;
+  }
+
+
+  .journey-section {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+
+
+  .order-experience {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /* HERO */
+
+  .how-hero {
+    min-height: auto;
+
+    padding: 90px 22px 70px;
+
+    gap: 45px;
+  }
+
+  .how-hero h1 {
+    font-size: 56px;
+
+    letter-spacing: -3px;
+  }
+
+  .how-hero p {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+  .how-hero-art {
+    height: 420px;
+  }
+
+  .hero-food-circle {
+    width: 92%;
+
+    height: 390px;
+
+    transform: rotate(1deg);
+  }
+
+  .hero-order-card {
+    left: 0;
+
+    bottom: 3%;
+  }
+
+  .hero-small-circle {
+    top: 3%;
+
+    right: 0;
+  }
+
+
+  /* INTRO */
+
+  .how-intro {
+    padding: 75px 22px;
+  }
+
+  .how-intro h2 {
+    font-size: 45px;
+
+    letter-spacing: -2px;
+  }
+
+
+  /* JOURNEY */
+
+  .journey-section {
+    padding: 70px 22px 90px;
+  }
+
+  .journey-line {
+    display: none;
+  }
+
+  .journey-step,
+  .journey-reverse {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    min-height: auto;
+
+    margin-bottom: 80px;
+  }
+
+  .journey-number {
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    transform: none;
+
+    width: 48px;
+    height: 48px;
+
+    margin: 0 0 -1px 0;
+
+    align-self: flex-start;
+
+    z-index: 5;
+  }
+
+  .journey-image,
+  .journey-reverse .journey-image {
+    grid-column: auto;
+
+    width: 100%;
+
+    height: 330px;
+
+    margin: 0;
+
+    border-radius: 6px;
+  }
+
+  .journey-content,
+  .journey-reverse .journey-content {
+    grid-column: auto;
+
+    padding: 30px 0 0;
+
+    margin: 0;
+
+    max-width: 100%;
+  }
+
+  .journey-content h3 {
+    font-size: 31px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .journey-content p {
+    max-width: 100%;
+
+    font-size: 14px;
+  }
+
+
+  /* EXPERIENCE */
+
+  .order-experience {
+    padding: 90px 22px;
+
+    gap: 65px;
+  }
+
+  .experience-copy h2 {
+    font-size: 48px;
+
+    letter-spacing: -2px;
+  }
+
+  .phone-frame {
+    width: 285px;
+
+    transform: none;
+  }
+
+
+  /* CTA */
+
+  .how-final-cta {
+    min-height: 520px;
+
+    padding: 80px 22px;
+  }
+
+  .how-final-content h2 {
+    font-size: 58px;
+
+    letter-spacing: -3px;
+  }
+
+  .ring-one {
+    width: 400px;
+    height: 400px;
+
+    right: -250px;
+  }
+
+  .ring-two {
+    width: 280px;
+    height: 280px;
+
+    right: -160px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .how-hero {
+    padding-top: 80px;
+  }
+
+  .how-hero h1 {
+    font-size: 48px;
+  }
+
+  .how-hero-art {
+    height: 370px;
+  }
+
+  .hero-food-circle {
+    height: 340px;
+  }
+
+  .hero-order-card {
+    min-width: 180px;
+
+    padding: 12px 14px;
+  }
+
+  .how-intro h2 {
+    font-size: 40px;
+  }
+
+  .journey-image,
+  .journey-reverse .journey-image {
+    height: 290px;
+  }
+
+  .journey-content h3 {
+    font-size: 29px;
+  }
+
+  .experience-copy h2 {
+    font-size: 42px;
+  }
+
+  .phone-frame {
+    width: 270px;
+  }
+
+  .how-final-content h2 {
+    font-size: 51px;
+  }
+}

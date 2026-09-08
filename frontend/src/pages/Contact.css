@@ -1,0 +1,1111 @@
+/* =========================================================
+   CONTACT PAGE
+   GoNbite - Light / Warm Design
+========================================================= */
+
+.contact-page {
+  --orange: #ff6733;
+  --orange-light: #fff0e7;
+  --cream: #fffaf5;
+  --cream-2: #fff4eb;
+  --brown: #402b24;
+  --text: #594c46;
+  --muted: #8b7e76;
+  --border: #f0ddd1;
+
+  background: var(--cream);
+  color: var(--brown);
+  overflow: hidden;
+  width: 100%;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.contact-hero {
+  position: relative;
+  min-height: 590px;
+  padding: 90px 8vw 80px;
+  background:
+    radial-gradient(
+      circle at 78% 45%,
+      rgba(255, 215, 193, 0.42),
+      transparent 24%
+    ),
+    var(--cream);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 70px;
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.contact-hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 580px;
+}
+
+.contact-label {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 25px;
+
+  color: var(--orange);
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.contact-label div {
+  width: 35px;
+  height: 1px;
+  background: var(--orange);
+}
+
+.contact-hero-text h1 {
+  margin: 0;
+
+  font-size: clamp(60px, 7vw, 100px);
+  line-height: 0.9;
+  letter-spacing: -5px;
+  font-weight: 800;
+
+  color: var(--brown);
+}
+
+.contact-hero-text h1 em {
+  color: var(--orange);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.contact-hero-text > p {
+  max-width: 500px;
+
+  margin: 30px 0 0;
+
+  color: var(--text);
+
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   LOCATION IN HERO
+========================================================= */
+
+.contact-place {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-top: 38px;
+}
+
+.contact-place svg {
+  flex-shrink: 0;
+
+  color: var(--orange);
+}
+
+.contact-place small {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--orange);
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.contact-place strong {
+  display: block;
+
+  color: var(--brown);
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.contact-hero-photo {
+  position: relative;
+
+  min-height: 440px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* decorative peach shapes */
+
+.contact-hero-photo::before {
+  content: "";
+
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  left: 5%;
+  bottom: 3%;
+
+  background: #ffe7d8;
+
+  border-radius: 50%;
+
+  z-index: 0;
+}
+
+.contact-hero-photo::after {
+  content: "";
+
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  right: 5%;
+  bottom: 0;
+
+  background: #ffefe6;
+
+  border-radius: 50%;
+
+  z-index: 0;
+}
+
+
+/* =========================================================
+   CIRCULAR FOOD IMAGE
+========================================================= */
+
+.contact-photo-frame {
+  position: relative;
+
+  width: min(430px, 80vw);
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  border: 8px solid #fff;
+
+  box-shadow:
+    0 25px 60px rgba(126, 78, 54, 0.15);
+
+  transform: rotate(2deg);
+
+  z-index: 2;
+}
+
+.contact-photo-frame::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 103, 51, 0.35);
+
+  pointer-events: none;
+}
+
+.contact-photo-frame img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.7s ease;
+}
+
+.contact-photo-frame:hover img {
+  transform: scale(1.07);
+}
+
+
+/* =========================================================
+   HERO TAG
+========================================================= */
+
+.contact-photo-tag {
+  position: absolute;
+
+  left: 3%;
+  bottom: 12%;
+
+  z-index: 4;
+
+  background: #fff;
+
+  border: 1px solid var(--border);
+
+  border-radius: 16px;
+
+  padding: 17px 22px;
+
+  color: var(--brown);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  box-shadow: 0 15px 35px rgba(126, 78, 54, 0.12);
+}
+
+.contact-photo-tag span {
+  color: var(--orange);
+
+  padding: 0 6px;
+}
+
+
+/* =========================================================
+   CONTACT DETAILS SECTION
+========================================================= */
+
+.contact-list-section {
+  padding: 110px 8vw;
+
+  background: #fff;
+}
+
+.contact-list-container {
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 270px 1fr;
+
+  gap: 70px;
+}
+
+
+/* LEFT TITLE */
+
+.contact-list-title {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-section-number {
+  color: var(--orange);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.contact-list-title small {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: var(--orange);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.contact-list-title h2 {
+  margin: 0;
+
+  font-size: 46px;
+
+  line-height: 0.95;
+
+  letter-spacing: -2px;
+
+  color: var(--brown);
+}
+
+.contact-list-title h2 em {
+  color: var(--orange);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   CONTACT CARDS
+========================================================= */
+
+.contact-list {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 15px;
+}
+
+.contact-list-item {
+  position: relative;
+
+  min-height: 145px;
+
+  padding: 24px;
+
+  display: grid;
+
+  grid-template-columns: 45px 1fr 20px;
+
+  grid-template-rows: auto 1fr;
+
+  column-gap: 15px;
+
+  align-items: center;
+
+  text-decoration: none;
+
+  background: #fffdfa;
+
+  border: 1px solid var(--border);
+
+  border-radius: 15px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.contact-list-item:hover {
+  transform: translateY(-5px);
+
+  border-color: #ffc5a9;
+
+  box-shadow: 0 18px 40px rgba(126, 78, 54, 0.1);
+}
+
+
+/* number */
+
+.contact-item-number {
+  grid-column: 2;
+
+  grid-row: 1;
+
+  color: var(--orange);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+/* icon */
+
+.contact-item-icon {
+  grid-column: 1;
+
+  grid-row: 1 / 3;
+
+  width: 45px;
+  height: 45px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--orange-light);
+
+  color: var(--orange);
+}
+
+
+/* content */
+
+.contact-item-content {
+  grid-column: 2;
+
+  grid-row: 2;
+
+  min-width: 0;
+}
+
+.contact-item-content small {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--muted);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.contact-item-content strong {
+  display: block;
+
+  color: var(--brown);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  word-break: break-word;
+}
+
+
+/* arrow */
+
+.contact-item-arrow {
+  grid-column: 3;
+
+  grid-row: 2;
+
+  color: var(--orange);
+
+  transition: transform 0.3s ease;
+}
+
+.contact-list-item:hover .contact-item-arrow {
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   LOCATION SECTION
+========================================================= */
+
+.contact-location-section {
+  padding: 0 8vw 110px;
+
+  background: #fff;
+}
+
+.location-container {
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  padding: 45px 40px;
+
+  display: grid;
+
+  grid-template-columns: 280px 1fr 300px;
+
+  align-items: center;
+
+  gap: 45px;
+
+  background:
+    linear-gradient(
+      120deg,
+      #fff0e5,
+      #fff8f3
+    );
+
+  border-radius: 18px;
+
+  border: 1px solid #f5ddd0;
+
+  overflow: hidden;
+}
+
+.location-number {
+  align-self: start;
+
+  color: var(--orange);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.location-main {
+  padding-left: 35px;
+
+  border-left: 1px solid #f3cdbb;
+}
+
+.location-main small {
+  color: var(--orange);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.location-main h2 {
+  margin: 13px 0 18px;
+
+  color: var(--brown);
+
+  font-size: clamp(38px, 4vw, 55px);
+
+  line-height: 0.95;
+
+  letter-spacing: -2px;
+}
+
+.location-main h2 em {
+  color: var(--orange);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-weight: 400;
+}
+
+.location-main p {
+  max-width: 510px;
+
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.location-address {
+  margin-top: 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: var(--brown);
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.location-address svg {
+  color: var(--orange);
+}
+
+
+/* =========================================================
+   LOCATION SIDE CARD
+========================================================= */
+
+.location-side {
+  display: flex;
+
+  justify-content: center;
+}
+
+.location-card {
+  width: 100%;
+
+  min-height: 180px;
+
+  padding: 28px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  border: 1px solid #f1d9cc;
+
+  transform: rotate(-2deg);
+
+  box-shadow: 0 18px 35px rgba(126, 78, 54, 0.08);
+}
+
+.location-card > span {
+  color: var(--orange);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.location-card h3 {
+  margin: 18px 0;
+
+  color: var(--brown);
+
+  font-size: 25px;
+
+  line-height: 1.05;
+
+  letter-spacing: -1px;
+}
+
+.location-card-line {
+  width: 100%;
+
+  height: 1px;
+
+  margin-bottom: 13px;
+
+  background: #ead1c3;
+}
+
+.location-card small {
+  color: var(--muted);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   INSTAGRAM SECTION
+========================================================= */
+
+.contact-instagram {
+  padding: 75px 8vw;
+
+  background: #fff5ed;
+
+  border-top: 1px solid #f4dfd2;
+}
+
+.instagram-container {
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 160px 1fr 1fr auto;
+
+  align-items: center;
+
+  gap: 35px;
+}
+
+.instagram-meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: var(--orange);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+.instagram-meta svg {
+  color: var(--orange);
+}
+
+.instagram-container h2 {
+  margin: 0;
+
+  color: var(--brown);
+
+  font-size: clamp(35px, 4vw, 55px);
+
+  line-height: 0.95;
+
+  letter-spacing: -2px;
+}
+
+.instagram-container h2 em {
+  color: var(--orange);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-weight: 400;
+}
+
+.instagram-container p {
+  max-width: 330px;
+
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+.instagram-link {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 20px;
+
+  background: var(--orange);
+
+  color: #fff;
+
+  border-radius: 30px;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.instagram-link:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 25px rgba(255, 103, 51, 0.25);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .contact-hero {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .contact-hero-container {
+    gap: 35px;
+  }
+
+  .contact-list-section,
+  .contact-location-section,
+  .contact-instagram {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .location-container {
+    grid-template-columns: 70px 1fr 250px;
+  }
+
+  .instagram-container {
+    grid-template-columns: 130px 1fr;
+  }
+
+  .instagram-container p {
+    grid-column: 2;
+  }
+
+  .instagram-link {
+    grid-column: 3;
+    grid-row: 1 / 3;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .contact-hero {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .contact-hero-container {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .contact-hero-text {
+    max-width: 650px;
+
+    margin: 0 auto;
+  }
+
+  .contact-label {
+    justify-content: center;
+  }
+
+  .contact-hero-text > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-place {
+    justify-content: center;
+  }
+
+  .contact-hero-photo {
+    min-height: 450px;
+  }
+
+  .contact-photo-tag {
+    left: 12%;
+  }
+
+
+  /* contact */
+
+  .contact-list-container {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .contact-list-title {
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  .contact-section-number {
+    display: none;
+  }
+
+
+  /* location */
+
+  .location-container {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .location-number {
+    display: none;
+  }
+
+  .location-main {
+    padding-left: 0;
+
+    border-left: none;
+  }
+
+  .location-side {
+    max-width: 380px;
+  }
+
+
+  /* instagram */
+
+  .instagram-container {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    gap: 20px;
+  }
+
+  .instagram-meta {
+    justify-content: center;
+  }
+
+  .instagram-container p {
+    grid-column: auto;
+
+    margin: auto;
+  }
+
+  .instagram-link {
+    grid-column: auto;
+    grid-row: auto;
+
+    margin: 5px auto 0;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .contact-hero {
+    min-height: auto;
+
+    padding: 55px 20px 65px;
+  }
+
+  .contact-hero-text h1 {
+    font-size: 58px;
+
+    letter-spacing: -3px;
+  }
+
+  .contact-hero-text > p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .contact-place {
+    justify-content: flex-start;
+
+    text-align: left;
+  }
+
+  .contact-hero-photo {
+    min-height: 350px;
+  }
+
+  .contact-photo-frame {
+    width: min(330px, 78vw);
+
+    border-width: 6px;
+  }
+
+  .contact-photo-tag {
+    left: 2%;
+    bottom: 5%;
+
+    padding: 13px 15px;
+
+    font-size: 9px;
+  }
+
+  .contact-hero-photo::before {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contact-hero-photo::after {
+    width: 100px;
+    height: 100px;
+  }
+
+
+  /* contact list */
+
+  .contact-list-section {
+    padding: 75px 20px;
+  }
+
+  .contact-list-title {
+    justify-content: flex-start;
+
+    text-align: left;
+  }
+
+  .contact-list-title h2 {
+    font-size: 42px;
+  }
+
+  .contact-list {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-list-item {
+    min-height: 125px;
+  }
+
+
+  /* location */
+
+  .contact-location-section {
+    padding: 0 20px 75px;
+  }
+
+  .location-container {
+    padding: 30px 24px;
+
+    border-radius: 15px;
+  }
+
+  .location-main h2 {
+    font-size: 42px;
+  }
+
+  .location-card {
+    min-height: 160px;
+  }
+
+
+  /* instagram */
+
+  .contact-instagram {
+    padding: 65px 20px;
+  }
+
+  .instagram-container h2 {
+    font-size: 43px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .contact-hero-text h1 {
+    font-size: 50px;
+  }
+
+  .contact-photo-frame {
+    width: 285px;
+  }
+
+  .contact-photo-tag {
+    font-size: 8px;
+  }
+
+  .contact-list-title h2,
+  .location-main h2 {
+    font-size: 36px;
+  }
+}

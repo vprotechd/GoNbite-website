@@ -1,0 +1,1144 @@
+/* =========================================================
+   DOWNLOAD PAGE
+========================================================= */
+
+.download-page {
+  background: #fffaf6;
+  color: #30221e;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.download-hero {
+  min-height: calc(100vh - 90px);
+  padding: 70px 7vw 90px;
+  display: flex;
+  align-items: center;
+}
+
+
+.download-hero-container {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 48% 52%;
+  align-items: center;
+
+  gap: 40px;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.download-hero-content {
+  max-width: 650px;
+}
+
+
+.download-label {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 28px;
+
+  color: #ff6335;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+
+.download-label div {
+  width: 35px;
+  height: 1px;
+
+  background: #ff6335;
+}
+
+
+.download-hero-content h1 {
+  margin: 0;
+
+  font-size: clamp(55px, 6vw, 92px);
+  line-height: 0.92;
+
+  letter-spacing: -4px;
+  font-weight: 800;
+
+  color: #30221e;
+}
+
+
+.download-hero-content h1 em {
+  color: #ff6335;
+
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+
+.download-hero-content > p {
+  max-width: 570px;
+
+  margin: 30px 0 35px;
+
+  color: #796b64;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   DOWNLOAD ACTION AREA
+========================================================= */
+
+.download-action-area {
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 30px;
+}
+
+
+/* =========================================================
+   QR
+========================================================= */
+
+.download-qr-box {
+  width: 190px;
+
+  padding: 12px;
+
+  background: #ffffff;
+
+  border: 1px solid #eee0d7;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 45px rgba(80, 45, 30, 0.08);
+}
+
+
+.qr-wrapper {
+  width: 100%;
+
+  padding: 8px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.qr-wrapper svg {
+  width: 145px;
+  height: 145px;
+
+  display: block;
+}
+
+
+.qr-content {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 9px;
+
+  padding: 5px 3px 3px;
+}
+
+
+.qr-icon {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  background: #fff0e9;
+
+  color: #ff6335;
+
+  border-radius: 8px;
+}
+
+
+.qr-content strong,
+.qr-content span {
+  display: block;
+}
+
+
+.qr-content strong {
+  font-size: 10px;
+
+  color: #30221e;
+
+  margin-bottom: 2px;
+}
+
+
+.qr-content span {
+  font-size: 8px;
+
+  color: #9a8c84;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   STORE BUTTONS
+========================================================= */
+
+.download-stores {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+.download-store-button {
+  width: 215px;
+
+  min-height: 62px;
+
+  padding: 12px 14px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  text-decoration: none;
+
+  background: #ffffff;
+
+  border: 1px solid #eee0d7;
+
+  border-radius: 13px;
+
+  color: #30221e;
+
+  box-shadow:
+    0 10px 30px rgba(80, 45, 30, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.download-store-button:hover {
+  transform: translateY(-4px);
+
+  border-color: #ffb49b;
+
+  box-shadow:
+    0 18px 40px rgba(80, 45, 30, 0.11);
+}
+
+
+.store-icon {
+  width: 37px;
+  height: 37px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  background: #fff1e9;
+
+  color: #ff6335;
+
+  border-radius: 9px;
+}
+
+
+.store-text {
+  flex: 1;
+}
+
+
+.store-text small,
+.store-text strong {
+  display: block;
+}
+
+
+.store-text small {
+  color: #9a8c84;
+
+  font-size: 8px;
+
+  letter-spacing: 0.7px;
+}
+
+
+.store-text strong {
+  margin-top: 3px;
+
+  font-size: 14px;
+
+  color: #30221e;
+}
+
+
+.download-store-button > svg {
+  color: #ff6335;
+}
+
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.download-note {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 22px;
+
+  color: #a1948c;
+
+  font-size: 11px;
+}
+
+
+.download-note svg {
+  color: #ff6335;
+}
+
+
+/* =========================================================
+   RIGHT VISUAL
+========================================================= */
+
+.download-visual {
+  position: relative;
+
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* BACKGROUND SHAPE */
+
+.visual-background {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  background: #ffe8dc;
+
+  border-radius: 48% 52% 45% 55%;
+
+  transform: rotate(-9deg);
+}
+
+
+/* =========================================================
+   PHONE
+========================================================= */
+
+.phone-mockup {
+  position: relative;
+
+  z-index: 5;
+
+  width: 300px;
+  height: 590px;
+
+  padding: 11px;
+
+  background: #30221e;
+
+  border-radius: 40px;
+
+  box-shadow:
+    0 35px 80px rgba(55, 35, 25, 0.22);
+
+  transform: rotate(3deg);
+
+  transition: transform 0.5s ease;
+}
+
+
+.phone-mockup:hover {
+  transform: rotate(0deg) translateY(-8px);
+}
+
+
+.phone-speaker {
+  position: absolute;
+
+  width: 72px;
+  height: 5px;
+
+  top: 18px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: #1d1512;
+
+  border-radius: 10px;
+
+  z-index: 10;
+}
+
+
+/* PHONE SCREEN */
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: #fffaf6;
+
+  border-radius: 31px;
+
+  padding: 23px 15px 14px;
+}
+
+
+/* =========================================================
+   APP UI
+========================================================= */
+
+.app-status {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0 7px;
+
+  color: #95877f;
+
+  font-size: 8px;
+}
+
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 27px;
+}
+
+
+.app-header small {
+  display: block;
+
+  color: #95877f;
+
+  font-size: 9px;
+}
+
+
+.app-header h3 {
+  margin: 5px 0 0;
+
+  font-size: 18px;
+
+  line-height: 1.1;
+
+  color: #30221e;
+}
+
+
+.app-avatar {
+  width: 35px;
+  height: 35px;
+
+  display: grid;
+  place-items: center;
+
+  background: #ff6335;
+
+  color: #ffffff;
+
+  border-radius: 10px;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+/* SEARCH */
+
+.app-search {
+  margin-top: 20px;
+
+  padding: 11px 13px;
+
+  display: flex;
+  justify-content: space-between;
+
+  background: #ffffff;
+
+  border: 1px solid #eee2da;
+
+  border-radius: 11px;
+
+  color: #a1938b;
+
+  font-size: 9px;
+}
+
+
+/* FEATURED */
+
+.app-featured {
+  position: relative;
+
+  height: 190px;
+
+  margin-top: 18px;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+}
+
+
+.app-featured img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+.featured-overlay {
+  position: absolute;
+
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+
+  color: #ffffff;
+}
+
+
+.featured-overlay small {
+  display: block;
+
+  font-size: 7px;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 4px;
+}
+
+
+.featured-overlay strong {
+  font-size: 14px;
+}
+
+
+/* SECTION TITLE */
+
+.app-section-title {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 18px;
+
+  font-size: 9px;
+}
+
+
+.app-section-title strong {
+  color: #30221e;
+}
+
+
+.app-section-title span {
+  color: #ff6335;
+}
+
+
+/* MINI ITEMS */
+
+.app-mini-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+
+  margin-top: 10px;
+}
+
+
+.app-mini-item {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 9px;
+
+  background: #ffffff;
+
+  border: 1px solid #eee3dc;
+
+  border-radius: 10px;
+}
+
+
+.mini-food {
+  width: 37px;
+  height: 37px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+}
+
+
+.mini-food img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+.app-mini-item strong,
+.app-mini-item small {
+  display: block;
+}
+
+
+.app-mini-item strong {
+  font-size: 9px;
+
+  color: #30221e;
+}
+
+
+.app-mini-item small {
+  margin-top: 2px;
+
+  font-size: 7px;
+
+  color: #9a8c84;
+}
+
+
+.app-mini-item b {
+  margin-left: auto;
+
+  color: #ff6335;
+
+  font-size: 16px;
+
+  font-weight: 500;
+}
+
+
+/* APP BUTTON */
+
+.app-button {
+  width: 100%;
+
+  margin-top: 13px;
+
+  padding: 11px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #ff6335;
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   FLOATING DOWNLOAD CARD
+========================================================= */
+
+.download-floating-card {
+  position: absolute;
+
+  z-index: 8;
+
+  left: 2%;
+
+  bottom: 14%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 17px;
+
+  background: #ffffff;
+
+  border: 1px solid #eee0d7;
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 18px 45px rgba(60, 35, 25, 0.13);
+}
+
+
+.floating-icon {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  background: #fff0e8;
+
+  color: #ff6335;
+
+  border-radius: 9px;
+}
+
+
+.download-floating-card strong,
+.download-floating-card small {
+  display: block;
+}
+
+
+.download-floating-card strong {
+  font-size: 11px;
+
+  color: #30221e;
+}
+
+
+.download-floating-card small {
+  margin-top: 3px;
+
+  font-size: 8px;
+
+  color: #9a8c84;
+}
+
+
+/* =========================================================
+   FLOATING FOOD CARD
+========================================================= */
+
+.floating-food-card {
+  position: absolute;
+
+  z-index: 7;
+
+  top: 12%;
+
+  right: 5%;
+
+  width: 125px;
+
+  padding: 7px;
+
+  background: #ffffff;
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 18px 45px rgba(60, 35, 25, 0.12);
+
+  transform: rotate(8deg);
+}
+
+
+.floating-food-card img {
+  width: 100%;
+  height: 80px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 9px;
+}
+
+
+.floating-food-card span {
+  display: block;
+
+  padding: 8px 4px 4px;
+
+  color: #ff6335;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .download-hero {
+    padding: 60px 5vw 80px;
+  }
+
+
+  .download-hero-container {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+  }
+
+
+  .download-hero-content h1 {
+    font-size: clamp(50px, 6vw, 75px);
+  }
+
+
+  .download-action-area {
+    align-items: flex-start;
+  }
+
+
+  .download-qr-box {
+    width: 165px;
+  }
+
+
+  .qr-wrapper svg {
+    width: 125px;
+    height: 125px;
+  }
+
+
+  .download-store-button {
+    width: 190px;
+  }
+
+
+  .download-visual {
+    min-height: 600px;
+  }
+
+
+  .phone-mockup {
+    width: 275px;
+    height: 550px;
+  }
+
+
+  .visual-background {
+    width: 430px;
+    height: 430px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .download-hero {
+    min-height: auto;
+
+    padding: 55px 22px 75px;
+  }
+
+
+  .download-hero-container {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    gap: 55px;
+  }
+
+
+  .download-hero-content {
+    max-width: 600px;
+
+    margin: 0 auto;
+  }
+
+
+  .download-label {
+    justify-content: center;
+  }
+
+
+  .download-hero-content h1 {
+    font-size: 55px;
+
+    letter-spacing: -3px;
+  }
+
+
+  .download-hero-content > p {
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 14px;
+  }
+
+
+  .download-action-area {
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+  }
+
+
+  .download-note {
+    justify-content: center;
+  }
+
+
+  .download-visual {
+    min-height: 590px;
+
+    width: 100%;
+  }
+
+
+  .phone-mockup {
+    transform: rotate(0deg);
+
+    width: 275px;
+    height: 540px;
+  }
+
+
+  .phone-mockup:hover {
+    transform: translateY(-5px);
+  }
+
+
+  .visual-background {
+    width: 420px;
+    height: 420px;
+  }
+
+
+  .download-floating-card {
+    left: 4%;
+
+    bottom: 9%;
+  }
+
+
+  .floating-food-card {
+    right: 3%;
+
+    top: 8%;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+  .download-hero {
+    padding: 45px 18px 65px;
+  }
+
+
+  .download-hero-content h1 {
+    font-size: 45px;
+
+    letter-spacing: -2.5px;
+  }
+
+
+  .download-hero-content > p {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+
+  .download-action-area {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+
+  .download-qr-box {
+    width: 190px;
+  }
+
+
+  .qr-wrapper svg {
+    width: 145px;
+    height: 145px;
+  }
+
+
+  .download-stores {
+    width: 100%;
+
+    align-items: center;
+  }
+
+
+  .download-store-button {
+    width: min(100%, 280px);
+  }
+
+
+  .download-visual {
+    min-height: 510px;
+  }
+
+
+  .phone-mockup {
+    width: 245px;
+    height: 485px;
+
+    border-radius: 34px;
+  }
+
+
+  .phone-screen {
+    border-radius: 27px;
+
+    padding: 20px 13px 12px;
+  }
+
+
+  .app-featured {
+    height: 155px;
+  }
+
+
+  .visual-background {
+    width: 330px;
+    height: 330px;
+  }
+
+
+  .download-floating-card {
+    left: 0;
+
+    padding: 10px 12px;
+  }
+
+
+  .floating-food-card {
+    width: 105px;
+
+    right: 0;
+  }
+
+
+  .floating-food-card img {
+    height: 65px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .download-hero-content h1 {
+    font-size: 40px;
+  }
+
+
+  .download-visual {
+    min-height: 470px;
+  }
+
+
+  .phone-mockup {
+    width: 225px;
+    height: 450px;
+  }
+
+
+  .visual-background {
+    width: 300px;
+    height: 300px;
+  }
+
+
+  .download-floating-card {
+    transform: scale(0.85);
+
+    transform-origin: left bottom;
+  }
+
+
+  .floating-food-card {
+    transform: scale(0.8) rotate(8deg);
+
+    transform-origin: right top;
+  }
+
+}

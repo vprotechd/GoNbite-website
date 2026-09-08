@@ -1,0 +1,1676 @@
+/* =========================================================
+   HOME
+========================================================= */
+
+.home {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  color: #3b302a;
+}
+
+.home *,
+.home *::before,
+.home *::after {
+  box-sizing: border-box;
+}
+
+.home a {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 720px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #fff4e9;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -3;
+}
+
+.hero-food-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter:
+    brightness(1.12)
+    saturate(1.12)
+    contrast(1.01);
+}
+
+
+/* Bright warm overlay */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 248, 241, 0.72) 0%,
+      rgba(255, 248, 241, 0.48) 27%,
+      rgba(255, 248, 241, 0.12) 58%,
+      rgba(255, 248, 241, 0.02) 100%
+    );
+}
+
+
+/* Bottom fade */
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      transparent 55%,
+      rgba(255, 245, 236, 0.38) 100%
+    );
+}
+
+
+/* =========================================================
+   HERO SOFT GLOW
+========================================================= */
+
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero-glow-one {
+  width: 330px;
+  height: 330px;
+  top: 10%;
+  right: 7%;
+  background: rgba(255, 142, 72, 0.18);
+}
+
+.hero-glow-two {
+  width: 280px;
+  height: 280px;
+  bottom: 4%;
+  left: 24%;
+  background: rgba(255, 213, 165, 0.22);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  width: min(680px, 90%);
+  margin-left: 7%;
+  padding-top: 29vh;
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 24px;
+  padding: 10px 17px;
+
+  border: 1px solid rgba(255, 107, 53, 0.18);
+  border-radius: 100px;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  color: #b8532d;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+
+  box-shadow:
+    0 8px 25px rgba(160, 95, 50, 0.08);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  background: #ff6b35;
+
+  box-shadow:
+    0 0 12px rgba(255, 107, 53, 0.45);
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.hero h1 {
+  margin: 0;
+
+  color: #3c2c24;
+
+  font-size: clamp(55px, 7vw, 94px);
+  font-weight: 800;
+  line-height: 0.98;
+
+  letter-spacing: -0.055em;
+}
+
+.hero h1 span {
+  color: #ff6b35;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero-description {
+  width: min(580px, 100%);
+
+  margin: 27px 0 31px;
+
+  color: #6f625b;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 54px;
+  padding: 0 23px;
+
+  border-radius: 14px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* Primary */
+
+.primary-btn {
+  color: #ffffff;
+  background: #ff6b35;
+
+  box-shadow:
+    0 12px 28px rgba(255, 107, 53, 0.22);
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+
+  background: #f75e28;
+
+  box-shadow:
+    0 17px 35px rgba(255, 107, 53, 0.28);
+}
+
+
+/* Secondary */
+
+.secondary-btn {
+  border: 1px solid rgba(255, 107, 53, 0.2);
+
+  color: #9a4b2d;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.secondary-btn:hover {
+  transform: translateY(-3px);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 28px rgba(160, 95, 50, 0.1);
+}
+
+.play-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 29px;
+  height: 29px;
+
+  border-radius: 50%;
+
+  background: #fff1e8;
+  color: #ff6b35;
+}
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.hero-location {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  width: fit-content;
+  min-width: 270px;
+
+  margin-top: 42px;
+  padding: 13px 17px;
+
+  border: 1px solid rgba(255, 107, 53, 0.15);
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 12px 30px rgba(140, 91, 54, 0.08);
+}
+
+.location-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background: #fff0e6;
+  color: #ff6b35;
+}
+
+.location-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.hero-location span {
+  color: #9a8b82;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.hero-location strong {
+  color: #4b392f;
+  font-size: 13px;
+}
+
+.location-arrow {
+  margin-left: auto;
+  color: #b59684;
+}
+
+
+/* =========================================================
+   SLIDER INDICATORS
+========================================================= */
+
+.hero-indicators {
+  position: absolute;
+  right: 7%;
+  bottom: 11%;
+
+  z-index: 6;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.indicator {
+  width: 30px;
+  height: 4px;
+
+  padding: 0;
+  border: 0;
+  border-radius: 100px;
+
+  background: rgba(255, 107, 53, 0.25);
+
+  cursor: pointer;
+
+  transition:
+    width 0.3s ease,
+    background 0.3s ease;
+}
+
+.indicator.active {
+  width: 55px;
+  background: #ff6b35;
+}
+
+
+/* =========================================================
+   FOOD NAME
+========================================================= */
+
+.hero-food-name {
+  position: absolute;
+
+  right: 7%;
+  bottom: 16%;
+
+  color: #775b4b;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+.scroll-down {
+  position: absolute;
+
+  left: 7%;
+  bottom: 35px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #987e6d;
+}
+
+.scroll-down span {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  color: #ff6b35;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+}
+
+.section-eyebrow span {
+  width: 30px;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: #ff6b35;
+}
+
+
+/* =========================================================
+   FOOD CATEGORIES
+========================================================= */
+
+.food-categories-section {
+  position: relative;
+
+  padding: 120px 7%;
+
+  background: #fffaf6;
+}
+
+.categories-container {
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.categories-heading {
+  max-width: 760px;
+  margin-bottom: 60px;
+}
+
+.categories-heading h2 {
+  margin: 0;
+
+  color: #3d3029;
+
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 800;
+  line-height: 1.04;
+
+  letter-spacing: -0.045em;
+}
+
+.categories-heading h2 span {
+  color: #ff6b35;
+}
+
+.categories-heading > p {
+  max-width: 620px;
+
+  margin-top: 23px;
+
+  color: #7f7169;
+
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   CATEGORY GRID
+========================================================= */
+
+.food-category-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.food-category-card {
+  overflow: hidden;
+
+  border: 1px solid #f1e6de;
+  border-radius: 25px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 30px rgba(137, 87, 49, 0.06);
+
+  cursor: pointer;
+
+  transition:
+    box-shadow 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.food-category-card:hover {
+  background: #ffffff;
+
+  border-color: #ffd7c2;
+
+  box-shadow:
+    0 22px 48px rgba(137, 87, 49, 0.12);
+}
+
+
+/* =========================================================
+   CATEGORY IMAGE
+========================================================= */
+
+.category-image {
+  position: relative;
+
+  height: 275px;
+
+  overflow: hidden;
+}
+
+.category-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.food-category-card:hover .category-image img {
+  transform: scale(1.08);
+}
+
+.category-image-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 45%,
+      rgba(95, 55, 30, 0.18) 100%
+    );
+}
+
+.category-number {
+  position: absolute;
+
+  top: 19px;
+  left: 20px;
+
+  padding: 6px 9px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  color: #a86242;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+.category-arrow {
+  position: absolute;
+
+  right: 18px;
+  bottom: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #ff6b35;
+
+  box-shadow:
+    0 8px 20px rgba(92, 52, 29, 0.12);
+}
+
+
+/* =========================================================
+   CATEGORY CONTENT
+========================================================= */
+
+.category-content {
+  padding: 22px 23px 25px;
+}
+
+.category-content h3 {
+  margin: 0 0 7px;
+
+  color: #49382f;
+
+  font-size: 22px;
+  font-weight: 750;
+
+  letter-spacing: -0.02em;
+}
+
+.category-content p {
+  margin: 0;
+
+  color: #8b7d74;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   WHY GONBITE
+========================================================= */
+
+.why-section {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 130px 7%;
+
+  background: #ffffff;
+}
+
+.why-container {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: 0.95fr 1.05fr;
+
+  align-items: center;
+
+  gap: 90px;
+
+  max-width: 1380px;
+
+  margin: 0 auto;
+}
+
+
+/* Decorative */
+
+.why-decoration {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.why-decoration-one {
+  width: 400px;
+  height: 400px;
+
+  top: -220px;
+  left: -160px;
+
+  border: 70px solid rgba(255, 107, 53, 0.05);
+}
+
+.why-decoration-two {
+  width: 300px;
+  height: 300px;
+
+  right: -130px;
+  bottom: -160px;
+
+  border: 50px solid rgba(255, 186, 137, 0.12);
+}
+
+
+/* =========================================================
+   WHY IMAGE
+========================================================= */
+
+.why-image-wrapper {
+  position: relative;
+}
+
+.why-image-card {
+  position: relative;
+
+  height: 590px;
+
+  overflow: hidden;
+
+  border-radius: 34px;
+
+  box-shadow:
+    0 25px 60px rgba(137, 87, 49, 0.12);
+}
+
+.why-image-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 55%,
+      rgba(90, 51, 29, 0.15)
+    );
+}
+
+.why-image-card img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 1s ease;
+}
+
+.why-image-wrapper:hover .why-image-card img {
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   FLOATING CARD
+========================================================= */
+
+.why-floating-card {
+  position: absolute;
+
+  right: -35px;
+  bottom: 35px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  min-width: 245px;
+
+  padding: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  box-shadow:
+    0 18px 40px rgba(104, 65, 39, 0.13);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+.floating-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  border-radius: 13px;
+
+  background: #fff0e7;
+
+  color: #ff6b35;
+}
+
+.why-floating-card div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.why-floating-card strong {
+  color: #49372d;
+  font-size: 13px;
+}
+
+.why-floating-card span {
+  color: #918178;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   WHY CONTENT
+========================================================= */
+
+.why-content {
+  max-width: 650px;
+}
+
+.why-content h2 {
+  margin: 0;
+
+  color: #3d3029;
+
+  font-size: clamp(42px, 4.5vw, 64px);
+
+  font-weight: 800;
+  line-height: 1.05;
+
+  letter-spacing: -0.05em;
+}
+
+.why-content h2 span {
+  color: #ff6b35;
+}
+
+.why-description {
+  margin: 25px 0 34px;
+
+  color: #7c6e65;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.feature-card {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 16px;
+
+  padding: 16px;
+
+  border: 1px solid #f0e5dd;
+  border-radius: 17px;
+
+  background: #fffaf7;
+
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: #ffd5bf;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 13px 30px rgba(137, 87, 49, 0.07);
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  border-radius: 13px;
+
+  background: #fff0e7;
+
+  color: #ff6b35;
+}
+
+.feature-card h3 {
+  margin: 2px 0 5px;
+
+  color: #49372d;
+
+  font-size: 15px;
+}
+
+.feature-card p {
+  margin: 0;
+
+  color: #82746b;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   WHY BUTTON
+========================================================= */
+
+.why-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 30px;
+  padding: 15px 21px;
+
+  border-radius: 13px;
+
+  background: #ff6b35;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  box-shadow:
+    0 12px 28px rgba(255, 107, 53, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.why-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 17px 35px rgba(255, 107, 53, 0.25);
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
+
+.how-section {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 125px 7%;
+
+  background: #fff5ed;
+
+  color: #49372d;
+}
+
+.how-container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1380px;
+
+  margin: 0 auto;
+}
+
+.how-heading {
+  max-width: 800px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+.how-heading .section-eyebrow {
+  justify-content: center;
+}
+
+.section-eyebrow-light {
+  color: #ff6b35;
+}
+
+.how-heading h2 {
+  margin: 0;
+
+  color: #3d3029;
+
+  font-size: clamp(40px, 5vw, 68px);
+
+  font-weight: 800;
+  line-height: 1.05;
+
+  letter-spacing: -0.045em;
+}
+
+.how-heading h2 span {
+  color: #ff6b35;
+}
+
+.how-heading p {
+  max-width: 590px;
+
+  margin: 22px auto 0;
+
+  color: #82736a;
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   BACKGROUND CIRCLES
+========================================================= */
+
+.how-bg-circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.how-circle-one {
+  width: 550px;
+  height: 550px;
+
+  top: -330px;
+  right: -120px;
+
+  border: 100px solid rgba(255, 107, 53, 0.06);
+}
+
+.how-circle-two {
+  width: 420px;
+  height: 420px;
+
+  bottom: -300px;
+  left: -170px;
+
+  border: 80px solid rgba(255, 185, 140, 0.12);
+}
+
+
+/* =========================================================
+   STEPS
+========================================================= */
+
+.steps-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.step-card {
+  position: relative;
+
+  min-height: 260px;
+
+  padding: 28px;
+
+  border: 1px solid #f1ddd0;
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  box-shadow:
+    0 12px 30px rgba(137, 87, 49, 0.05);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+  background: #ffffff;
+
+  border-color: #ffcdb4;
+
+  box-shadow:
+    0 20px 40px rgba(137, 87, 49, 0.09);
+}
+
+.step-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.step-top > span {
+  color: #c4a493;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 55px;
+  height: 55px;
+
+  border-radius: 17px;
+
+  background: #fff0e6;
+
+  color: #ff6b35;
+}
+
+.step-card h3 {
+  margin: 35px 0 10px;
+
+  color: #4a382f;
+
+  font-size: 24px;
+}
+
+.step-card p {
+  max-width: 270px;
+
+  margin: 0;
+
+  color: #83746b;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.step-line {
+  position: absolute;
+
+  top: 56px;
+  right: -20px;
+
+  width: 20px;
+  height: 1px;
+
+  background: #f1cdbb;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.how-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 30px;
+  padding: 31px 35px;
+
+  border: 1px solid #f0d6c5;
+  border-radius: 23px;
+
+  background:
+    linear-gradient(
+      100deg,
+      #fff0e5,
+      #ffffff
+    );
+
+  box-shadow:
+    0 15px 35px rgba(137, 87, 49, 0.06);
+}
+
+.how-cta > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.how-cta span {
+  color: #ff6b35;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.how-cta h3 {
+  margin: 0;
+
+  color: #49372d;
+
+  font-size: 22px;
+}
+
+.how-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-width: 145px;
+  min-height: 48px;
+
+  padding: 0 20px;
+
+  border-radius: 12px;
+
+  background: #ff6b35;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  box-shadow:
+    0 10px 25px rgba(255, 107, 53, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.how-cta-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 32px rgba(255, 107, 53, 0.25);
+}
+
+
+/* =========================================================
+   1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .hero-content {
+    margin-left: 6%;
+  }
+
+  .hero h1 {
+    font-size: clamp(52px, 7vw, 78px);
+  }
+
+  .food-categories-section,
+  .why-section,
+  .how-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .why-container {
+    gap: 55px;
+  }
+
+  .why-image-card {
+    height: 530px;
+  }
+}
+
+
+/* =========================================================
+   950px
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .hero {
+    min-height: 700px;
+  }
+
+  .hero-content {
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 27vh;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(255, 248, 241, 0.78) 0%,
+        rgba(255, 248, 241, 0.5) 55%,
+        rgba(255, 248, 241, 0.12) 100%
+      );
+  }
+
+  .food-category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-container {
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+
+  .why-image-wrapper {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .why-content {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+  }
+
+  .step-card {
+    min-height: auto;
+  }
+
+  .step-line {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    height: auto;
+    min-height: 760px;
+  }
+
+  .hero-content {
+    padding-top: 190px;
+    padding-bottom: 140px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 13vw, 68px);
+  }
+
+  .hero-description {
+    max-width: 520px;
+
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .hero-location {
+    margin-top: 30px;
+  }
+
+  .hero-indicators {
+    right: 5%;
+    bottom: 70px;
+  }
+
+  .hero-food-name {
+    right: 5%;
+    bottom: 103px;
+  }
+
+  .scroll-down {
+    left: 5%;
+    bottom: 25px;
+  }
+
+  .food-categories-section,
+  .why-section,
+  .how-section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  .categories-heading {
+    margin-bottom: 40px;
+  }
+
+  .categories-heading h2,
+  .why-content h2,
+  .how-heading h2 {
+    font-size: clamp(38px, 10vw, 54px);
+  }
+
+  .food-category-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .category-image {
+    height: 260px;
+  }
+
+  .why-image-card {
+    height: 480px;
+    border-radius: 26px;
+  }
+
+  .why-floating-card {
+    right: 15px;
+    bottom: 20px;
+  }
+
+  .how-cta {
+    align-items: flex-start;
+    flex-direction: column;
+
+    padding: 26px;
+  }
+
+  .how-cta-button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 720px;
+  }
+
+  .hero-content {
+    width: 90%;
+
+    margin: 0 auto;
+
+    padding-top: 170px;
+  }
+
+  .hero-badge {
+    padding: 8px 13px;
+
+    font-size: 11px;
+  }
+
+  .hero h1 {
+    font-size: clamp(45px, 14vw, 61px);
+
+    letter-spacing: -0.06em;
+  }
+
+  .hero-description {
+    margin-top: 21px;
+
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    width: 100%;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .hero-location {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+  .hero-food-image {
+    object-position: center;
+  }
+
+  .hero-food-name {
+    display: none;
+  }
+
+  .hero-indicators {
+    left: 50%;
+    right: auto;
+
+    bottom: 70px;
+
+    transform: translateX(-50%);
+  }
+
+  .scroll-down {
+    display: none;
+  }
+
+  .food-categories-section,
+  .why-section,
+  .how-section {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  .categories-heading > p {
+    font-size: 14px;
+  }
+
+  .why-image-card {
+    height: 420px;
+  }
+
+  .why-floating-card {
+    min-width: 215px;
+  }
+
+  .feature-card {
+    padding: 14px;
+  }
+
+  .feature-icon {
+    width: 41px;
+    height: 41px;
+  }
+
+  .feature-card p {
+    font-size: 11px;
+  }
+
+  .step-card {
+    padding: 23px;
+  }
+
+  .step-card h3 {
+    margin-top: 28px;
+  }
+}
+
+
+/* =========================================================
+   380px
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .hero {
+    min-height: 690px;
+  }
+
+  .hero-content {
+    padding-top: 155px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .hero-location {
+    padding: 11px;
+  }
+
+  .location-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .why-image-card {
+    height: 360px;
+  }
+
+  .why-floating-card {
+    min-width: 195px;
+    padding: 12px;
+  }
+
+  .floating-check {
+    width: 37px;
+    height: 37px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .home *,
+  .home *::before,
+  .home *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+
+    scroll-behavior: auto !important;
+
+    transition-duration: 0.01ms !important;
+  }
+}
