@@ -632,28 +632,6 @@
   letter-spacing: 0.08em;
 }
 
-.category-arrow {
-  position: absolute;
-
-  right: 18px;
-  bottom: 18px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 44px;
-  height: 44px;
-
-  border-radius: 50%;
-
-  background: #ffffff;
-  color: #ff6b35;
-
-  box-shadow:
-    0 8px 20px rgba(92, 52, 29, 0.12);
-}
-
 
 /* =========================================================
    CATEGORY CONTENT

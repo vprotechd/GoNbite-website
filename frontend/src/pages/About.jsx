@@ -675,13 +675,7 @@ function About() {
             <em>Good moments.</em>
           </h2>
 
-          <Link
-            to="/how-it-works"
-            className="final-link"
-          >
-            Explore GoNbite
-            <ArrowUpRight size={18} />
-          </Link>
+       
 
         </motion.div>
 
