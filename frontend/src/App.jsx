@@ -4,7 +4,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import WhyChooseUs from "./pages/WhyChooseUs";
@@ -15,7 +15,7 @@ import Download from "./pages/Download";
 const App = () => {
   return (
     <BrowserRouter>
-
+   <ScrollToTop />
       <Routes>
 
         <Route
