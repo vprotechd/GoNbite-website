@@ -46,9 +46,7 @@ const Download = () => {
             >
 
               <div className="download-label">
-                <span>GONBITE</span>
-                <div></div>
-                <span>APP</span>
+                
               </div>
 
               <h1>
