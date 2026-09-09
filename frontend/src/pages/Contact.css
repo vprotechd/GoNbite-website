@@ -28,6 +28,7 @@
   position: relative;
   min-height: 590px;
   padding: 90px 8vw 80px;
+
   background:
     radial-gradient(
       circle at 78% 45%,
@@ -123,7 +124,6 @@
 
 .contact-place svg {
   flex-shrink: 0;
-
   color: var(--orange);
 }
 
@@ -288,7 +288,6 @@
 
 .contact-photo-tag span {
   color: var(--orange);
-
   padding: 0 6px;
 }
 
@@ -299,7 +298,6 @@
 
 .contact-list-section {
   padding: 110px 8vw;
-
   background: #fff;
 }
 
@@ -386,7 +384,7 @@
 
   display: grid;
 
-  grid-template-columns: 45px 1fr 20px;
+  grid-template-columns: 45px minmax(0, 1fr) 20px;
 
   grid-template-rows: auto 1fr;
 
@@ -489,6 +487,8 @@
   font-weight: 700;
 
   word-break: break-word;
+
+  overflow-wrap: anywhere;
 }
 
 
@@ -564,6 +564,8 @@
   padding-left: 35px;
 
   border-left: 1px solid #f3cdbb;
+
+  min-width: 0;
 }
 
 .location-main small {
@@ -626,6 +628,8 @@
 
 .location-address svg {
   color: var(--orange);
+
+  flex-shrink: 0;
 }
 
 
@@ -637,6 +641,8 @@
   display: flex;
 
   justify-content: center;
+
+  min-width: 0;
 }
 
 .location-card {
@@ -781,6 +787,8 @@
 
   align-items: center;
 
+  justify-content: center;
+
   gap: 12px;
 
   padding: 14px 20px;
@@ -812,7 +820,7 @@
 
 
 /* =========================================================
-   RESPONSIVE
+   LARGE TABLET / SMALL DESKTOP
 ========================================================= */
 
 @media (max-width: 1100px) {
@@ -834,11 +842,13 @@
   }
 
   .location-container {
-    grid-template-columns: 70px 1fr 250px;
+    grid-template-columns: 70px minmax(0, 1fr) 250px;
+
+    gap: 30px;
   }
 
   .instagram-container {
-    grid-template-columns: 130px 1fr;
+    grid-template-columns: 130px minmax(0, 1fr);
   }
 
   .instagram-container p {
@@ -859,12 +869,16 @@
 @media (max-width: 850px) {
 
   .contact-hero {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    min-height: auto;
+
+    padding-top: 75px;
+    padding-bottom: 75px;
   }
 
   .contact-hero-container {
     grid-template-columns: 1fr;
+
+    gap: 45px;
 
     text-align: center;
   }
@@ -889,15 +903,25 @@
   }
 
   .contact-hero-photo {
-    min-height: 450px;
+    min-height: 430px;
+  }
+
+  .contact-photo-frame {
+    width: min(400px, 65vw);
   }
 
   .contact-photo-tag {
-    left: 12%;
+    left: 10%;
+    bottom: 8%;
   }
 
 
   /* contact */
+
+  .contact-list-section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
 
   .contact-list-container {
     grid-template-columns: 1fr;
@@ -915,13 +939,23 @@
     display: none;
   }
 
+  .contact-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
 
   /* location */
+
+  .contact-location-section {
+    padding-bottom: 90px;
+  }
 
   .location-container {
     grid-template-columns: 1fr;
 
     gap: 30px;
+
+    padding: 40px 35px;
   }
 
   .location-number {
@@ -936,10 +970,19 @@
 
   .location-side {
     max-width: 380px;
+
+    margin: 0 auto;
+
+    width: 100%;
   }
 
 
   /* instagram */
+
+  .contact-instagram {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 
   .instagram-container {
     grid-template-columns: 1fr;
@@ -953,8 +996,16 @@
     justify-content: center;
   }
 
+  .instagram-container h2 {
+    max-width: 600px;
+
+    margin: 0 auto;
+  }
+
   .instagram-container p {
     grid-column: auto;
+
+    max-width: 450px;
 
     margin: auto;
   }
@@ -977,16 +1028,38 @@
   .contact-hero {
     min-height: auto;
 
-    padding: 55px 20px 65px;
+    padding: 70px 20px 60px;
+  }
+
+  .contact-hero-container {
+    gap: 35px;
+  }
+
+  .contact-label {
+    gap: 9px;
+
+    margin-bottom: 20px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+  }
+
+  .contact-label div {
+    width: 25px;
   }
 
   .contact-hero-text h1 {
-    font-size: 58px;
+    font-size: clamp(50px, 15vw, 62px);
 
     letter-spacing: -3px;
+
+    line-height: 0.92;
   }
 
   .contact-hero-text > p {
+    margin-top: 24px;
+
     font-size: 14px;
 
     line-height: 1.7;
@@ -996,10 +1069,29 @@
     justify-content: flex-start;
 
     text-align: left;
+
+    gap: 11px;
+
+    margin-top: 28px;
   }
+
+  .contact-place small {
+    font-size: 8px;
+  }
+
+  .contact-place strong {
+    font-size: 13px;
+
+    line-height: 1.4;
+  }
+
+
+  /* hero image */
 
   .contact-hero-photo {
     min-height: 350px;
+
+    margin-top: 5px;
   }
 
   .contact-photo-frame {
@@ -1009,22 +1101,34 @@
   }
 
   .contact-photo-tag {
-    left: 2%;
-    bottom: 5%;
+    left: 1%;
+    bottom: 4%;
 
-    padding: 13px 15px;
+    padding: 12px 14px;
 
-    font-size: 9px;
+    border-radius: 12px;
+
+    font-size: 8px;
+  }
+
+  .contact-photo-tag span {
+    padding: 0 4px;
   }
 
   .contact-hero-photo::before {
     width: 120px;
     height: 120px;
+
+    left: 1%;
+    bottom: 2%;
   }
 
   .contact-hero-photo::after {
     width: 100px;
     height: 100px;
+
+    right: 1%;
+    bottom: 0;
   }
 
 
@@ -1034,22 +1138,61 @@
     padding: 75px 20px;
   }
 
+  .contact-list-container {
+    gap: 35px;
+  }
+
   .contact-list-title {
     justify-content: flex-start;
 
     text-align: left;
   }
 
+  .contact-list-title small {
+    margin-bottom: 13px;
+
+    font-size: 9px;
+  }
+
   .contact-list-title h2 {
-    font-size: 42px;
+    font-size: clamp(38px, 11vw, 46px);
+
+    letter-spacing: -1.5px;
   }
 
   .contact-list {
     grid-template-columns: 1fr;
+
+    gap: 12px;
   }
 
   .contact-list-item {
     min-height: 125px;
+
+    padding: 20px;
+
+    grid-template-columns: 42px minmax(0, 1fr) 16px;
+
+    column-gap: 13px;
+  }
+
+  .contact-item-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .contact-item-number {
+    font-size: 10px;
+  }
+
+  .contact-item-content small {
+    font-size: 8px;
+  }
+
+  .contact-item-content strong {
+    font-size: 12px;
+
+    line-height: 1.45;
   }
 
 
@@ -1063,14 +1206,42 @@
     padding: 30px 24px;
 
     border-radius: 15px;
+
+    gap: 25px;
   }
 
   .location-main h2 {
-    font-size: 42px;
+    margin-top: 12px;
+
+    font-size: clamp(38px, 11vw, 45px);
+
+    letter-spacing: -1.5px;
+  }
+
+  .location-main p {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .location-address {
+    align-items: flex-start;
+
+    font-size: 12px;
+
+    line-height: 1.5;
   }
 
   .location-card {
     min-height: 160px;
+
+    padding: 23px;
+  }
+
+  .location-card h3 {
+    margin: 15px 0;
+
+    font-size: 22px;
   }
 
 
@@ -1080,8 +1251,32 @@
     padding: 65px 20px;
   }
 
+  .instagram-container {
+    gap: 18px;
+  }
+
+  .instagram-meta {
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+  }
+
   .instagram-container h2 {
-    font-size: 43px;
+    font-size: clamp(38px, 11vw, 45px);
+
+    letter-spacing: -1.5px;
+  }
+
+  .instagram-container p {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .instagram-link {
+    padding: 13px 18px;
+
+    font-size: 11px;
   }
 }
 
@@ -1090,10 +1285,30 @@
    SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 380px) {
+@media (max-width: 420px) {
+
+  .contact-hero {
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 65px;
+  }
 
   .contact-hero-text h1 {
     font-size: 50px;
+
+    letter-spacing: -2.5px;
+  }
+
+  .contact-hero-text > p {
+    font-size: 13px;
+  }
+
+  .contact-place strong {
+    font-size: 12px;
+  }
+
+  .contact-hero-photo {
+    min-height: 315px;
   }
 
   .contact-photo-frame {
@@ -1101,11 +1316,187 @@
   }
 
   .contact-photo-tag {
+    left: 0;
+
+    padding: 11px 12px;
+
+    font-size: 7.5px;
+  }
+
+  .contact-hero-photo::before {
+    width: 95px;
+    height: 95px;
+  }
+
+  .contact-hero-photo::after {
+    width: 80px;
+    height: 80px;
+  }
+
+
+  .contact-list-section {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .contact-list-title h2 {
+    font-size: 37px;
+  }
+
+  .contact-list-item {
+    padding: 18px;
+
+    grid-template-columns: 38px minmax(0, 1fr) 14px;
+
+    column-gap: 11px;
+  }
+
+  .contact-item-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .contact-item-content strong {
+    font-size: 11px;
+  }
+
+  .contact-location-section {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .location-container {
+    padding: 27px 20px;
+  }
+
+  .location-main h2 {
+    font-size: 37px;
+  }
+
+  .location-main p {
+    font-size: 12px;
+  }
+
+  .location-card {
+    padding: 20px;
+
+    min-height: 145px;
+  }
+
+  .location-card h3 {
+    font-size: 20px;
+  }
+
+  .contact-instagram {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .instagram-container h2 {
+    font-size: 38px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .contact-hero {
+    padding-top: 60px;
+    padding-bottom: 55px;
+  }
+
+  .contact-hero-text h1 {
+    font-size: 46px;
+
+    letter-spacing: -2px;
+  }
+
+  .contact-label {
     font-size: 8px;
+  }
+
+  .contact-hero-photo {
+    min-height: 290px;
+  }
+
+  .contact-photo-frame {
+    width: 260px;
+  }
+
+  .contact-photo-tag {
+    font-size: 7px;
+
+    padding: 9px 10px;
   }
 
   .contact-list-title h2,
   .location-main h2 {
-    font-size: 36px;
+    font-size: 34px;
+  }
+
+  .contact-list-item {
+    min-height: 115px;
+
+    padding: 16px;
+  }
+
+  .contact-item-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .contact-item-content small {
+    font-size: 7px;
+  }
+
+  .contact-item-content strong {
+    font-size: 10px;
+  }
+
+  .location-container {
+    padding: 24px 17px;
+  }
+
+  .location-card {
+    padding: 18px;
+  }
+
+  .instagram-container h2 {
+    font-size: 35px;
+  }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+   Remove hover movement on touch screens
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+  .contact-list-item:hover {
+    transform: none;
+
+    box-shadow: none;
+
+    border-color: var(--border);
+  }
+
+  .contact-list-item:hover .contact-item-arrow {
+    transform: none;
+  }
+
+  .contact-photo-frame:hover img {
+    transform: none;
+  }
+
+  .instagram-link:hover {
+    transform: none;
+
+    box-shadow: none;
   }
 }

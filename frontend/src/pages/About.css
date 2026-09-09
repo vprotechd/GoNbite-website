@@ -10,7 +10,6 @@
   color: #302821;
 }
 
-
 /* =========================================================
    HERO
 ========================================================= */
@@ -24,14 +23,11 @@
   max-width: 1320px;
   min-height: 620px;
   margin: auto;
-
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-
   gap: 90px;
   align-items: center;
 }
-
 
 /* LEFT */
 
@@ -43,14 +39,10 @@
   display: flex;
   align-items: center;
   gap: 13px;
-
   color: #ef6c32;
-
   font-size: 10px;
   font-weight: 800;
-
   letter-spacing: 0.18em;
-
   margin-bottom: 28px;
 }
 
@@ -61,115 +53,80 @@
 .about-kicker div {
   width: 38px;
   height: 1px;
-
   background: #ef6c32;
 }
 
 .about-hero-left h1 {
   margin: 0;
-
   font-size: clamp(65px, 7vw, 105px);
-
   line-height: 0.88;
-
   letter-spacing: -0.065em;
-
   font-weight: 800;
 }
 
 .about-hero-left h1 span {
   color: #ef6c32;
-
   font-family: Georgia, serif;
-
   font-weight: 400;
 }
 
 .about-hero-left p {
   max-width: 470px;
-
   margin: 35px 0 30px;
-
   color: #7d736b;
-
   font-size: 16px;
-
   line-height: 1.8;
 }
 
 .about-hero-link {
   display: inline-flex;
-
   align-items: center;
-
   gap: 10px;
-
   color: #302821;
-
   text-decoration: none;
-
   border-bottom: 1px solid #302821;
-
   padding-bottom: 7px;
-
   font-size: 13px;
-
   font-weight: 700;
-
   transition: all 0.3s ease;
 }
 
 .about-hero-link:hover {
   color: #ef6c32;
-
   border-color: #ef6c32;
-
   gap: 15px;
 }
-
 
 /* RIGHT IMAGE */
 
 .about-hero-right {
   position: relative;
-
   padding: 35px 35px 80px 0;
 }
 
 .hero-image-frame {
   height: 560px;
-
   overflow: hidden;
-
   position: relative;
-
   z-index: 2;
 }
 
 .hero-image-frame::before {
   content: "";
-
   position: absolute;
-
   left: 0;
   top: 0;
-
   width: 5px;
   height: 100%;
-
   background: #ef6c32;
-
   z-index: 3;
 }
 
 .hero-image-frame img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   display: block;
-
   transition: transform 0.8s ease;
 }
 
@@ -179,95 +136,62 @@
 
 .about-hero-right::after {
   content: "";
-
   position: absolute;
-
   right: 0;
   top: 0;
-
   width: 75%;
   height: 88%;
-
   border: 1px solid #ead9cc;
-
   z-index: 1;
 }
 
 .hero-image-caption {
   position: absolute;
-
   z-index: 4;
-
   bottom: 20px;
-
   left: 35px;
-
   width: 270px;
-
   padding: 18px 20px;
-
   background: #ffffff;
-
   border-left: 3px solid #ef6c32;
 }
 
 .hero-image-caption span {
   display: block;
-
   color: #ef6c32;
-
   font-size: 9px;
-
   font-weight: 800;
-
   letter-spacing: 0.16em;
-
   margin-bottom: 8px;
 }
 
 .hero-image-caption p {
   margin: 0;
-
   color: #645a52;
-
   font-size: 12px;
-
   line-height: 1.6;
 }
-
 
 /* HERO BOTTOM */
 
 .hero-bottom-line {
   max-width: 1320px;
-
   height: 80px;
-
   margin: auto;
-
   border-top: 1px solid #e8ddd5;
-
   display: flex;
-
   align-items: center;
-
   gap: 35px;
-
   color: #a0948c;
-
   font-size: 9px;
-
   font-weight: 800;
-
   letter-spacing: 0.17em;
 }
 
 .hero-scroll-text {
   margin-left: auto;
-
   color: #b1a59d;
 }
-
 
 /* =========================================================
    INTRODUCTION
@@ -275,57 +199,39 @@
 
 .about-introduction {
   max-width: 1250px;
-
   margin: auto;
-
   padding: 150px 0;
-
   display: grid;
-
   grid-template-columns: 70px 1fr 0.65fr;
-
   gap: 55px;
-
   align-items: start;
 }
 
 .intro-number {
   color: #ef6c32;
-
   font-size: 12px;
-
   font-weight: 800;
-
   padding-top: 12px;
 }
 
 .editorial-label {
   display: inline-block;
-
   color: #ef6c32;
-
   font-size: 10px;
-
   font-weight: 800;
-
   letter-spacing: 0.18em;
 }
 
 .intro-main h2 {
   margin: 22px 0 0;
-
   font-size: clamp(50px, 5.4vw, 78px);
-
   line-height: 0.94;
-
   letter-spacing: -0.055em;
 }
 
 .intro-main h2 em {
   color: #ef6c32;
-
   font-family: Georgia, serif;
-
   font-weight: 400;
 }
 
@@ -335,14 +241,10 @@
 
 .intro-copy p {
   margin: 0 0 22px;
-
   color: #756b63;
-
   font-size: 15px;
-
   line-height: 1.8;
 }
-
 
 /* =========================================================
    STORY
@@ -350,99 +252,69 @@
 
 .about-story {
   padding: 130px 7%;
-
   background: #fff3ea;
 }
 
 .story-header {
   max-width: 1250px;
-
   margin: auto;
-
   display: grid;
-
   grid-template-columns: 70px 1fr;
-
   gap: 55px;
-
   margin-bottom: 75px;
 }
 
 .story-header-number {
   color: #ef6c32;
-
   font-size: 12px;
-
   font-weight: 800;
-
   padding-top: 12px;
 }
 
 .story-header h2 {
   margin: 20px 0 0;
-
   font-size: clamp(52px, 5.8vw, 82px);
-
   line-height: 0.92;
-
   letter-spacing: -0.055em;
 }
 
 .story-header h2 em {
   color: #ef6c32;
-
   font-family: Georgia, serif;
-
   font-weight: 400;
 }
 
 .story-content {
   max-width: 1250px;
-
   margin: auto;
-
   display: grid;
-
   grid-template-columns: 1.2fr 0.8fr;
-
   gap: 100px;
-
   align-items: center;
 }
 
 .story-image {
   position: relative;
-
   height: 580px;
-
   overflow: hidden;
 }
 
 .story-image img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   display: block;
 }
 
 .story-image > span {
   position: absolute;
-
   left: 0;
   bottom: 0;
-
   padding: 12px 18px;
-
   background: #302821;
-
   color: white;
-
   font-size: 9px;
-
   font-weight: 800;
-
   letter-spacing: 0.16em;
 }
 
@@ -453,69 +325,47 @@
 .story-line {
   width: 55px;
   height: 3px;
-
   background: #ef6c32;
-
   margin-bottom: 25px;
 }
 
 .story-text h3 {
   margin: 0 0 28px;
-
   font-size: 45px;
-
   line-height: 1;
-
   letter-spacing: -0.04em;
 }
 
 .story-text p {
   margin: 0 0 20px;
-
   color: #776d65;
-
   font-size: 15px;
-
   line-height: 1.8;
 }
 
 .story-signature {
   display: flex;
-
   align-items: center;
-
   gap: 10px;
-
   margin-top: 35px;
-
   color: #ef6c32;
-
   font-size: 12px;
-
   font-weight: 700;
 }
 
 .story-statements {
   max-width: 1250px;
-
   margin: 75px auto 0;
-
   border-top: 1px solid #e8d5c8;
-
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
 }
 
 .story-statements div {
   padding: 25px 25px 0;
-
   border-right: 1px solid #e8d5c8;
-
   display: flex;
-
   flex-direction: column;
-
   gap: 10px;
 }
 
@@ -525,18 +375,14 @@
 
 .story-statements strong {
   color: #ef6c32;
-
   font-size: 11px;
 }
 
 .story-statements span {
   color: #645a52;
-
   font-size: 13px;
-
   line-height: 1.5;
 }
-
 
 /* =========================================================
    VALUES
@@ -544,117 +390,84 @@
 
 .about-values {
   padding: 150px 7%;
-
   background: #ffffff;
 }
 
 .values-title-block {
   max-width: 1250px;
-
   margin: auto;
-
   display: grid;
-
   grid-template-columns: 70px 1fr;
-
   gap: 55px;
-
   margin-bottom: 70px;
 }
 
 .values-number {
   color: #ef6c32;
-
   font-size: 12px;
-
   font-weight: 800;
-
   padding-top: 12px;
 }
 
 .values-title-block h2 {
   margin: 20px 0 0;
-
   font-size: clamp(52px, 5.7vw, 80px);
-
   line-height: 0.92;
-
   letter-spacing: -0.055em;
 }
 
 .values-title-block h2 em {
   color: #ef6c32;
-
   font-family: Georgia, serif;
-
   font-weight: 400;
 }
 
 .values-list {
   max-width: 1250px;
-
   margin: auto;
-
   border-top: 1px solid #e7ddd6;
 }
 
 .value-item {
   min-height: 125px;
-
   display: grid;
-
   grid-template-columns: 80px 55px 1fr 40px;
-
   align-items: center;
-
   gap: 25px;
-
   border-bottom: 1px solid #e7ddd6;
-
   transition: padding 0.3s ease, background 0.3s ease;
 }
 
 .value-item:hover {
   padding-left: 15px;
-
   background: #fffaf6;
 }
 
 .value-number {
   color: #a89d95;
-
   font-size: 11px;
-
   font-weight: 800;
 }
 
 .value-icon {
   width: 42px;
   height: 42px;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   color: #ef6c32;
-
   background: #fff0e6;
 }
 
 .value-info h3 {
   margin: 0 0 5px;
-
   font-size: 22px;
 }
 
 .value-info p {
   margin: 0;
-
   color: #81776f;
-
   font-size: 13px;
-
   line-height: 1.6;
 }
 
@@ -662,91 +475,66 @@
   color: #ef6c32;
 }
 
-
 /* =========================================================
    FOOD SECTION
 ========================================================= */
 
 .about-food-section {
   padding: 140px 7% 150px;
-
   background: #fffaf6;
 }
 
 .food-section-heading {
   max-width: 1250px;
-
   margin: 0 auto 60px;
 }
 
 .food-section-heading span {
   color: #ef6c32;
-
   font-size: 10px;
-
   font-weight: 800;
-
   letter-spacing: 0.18em;
 }
 
 .food-section-heading h2 {
   margin: 20px 0 0;
-
   font-size: clamp(50px, 5.8vw, 80px);
-
   line-height: 0.93;
-
   letter-spacing: -0.055em;
 }
 
 .food-section-heading h2 em {
   color: #ef6c32;
-
   font-family: Georgia, serif;
-
   font-weight: 400;
 }
 
 .food-editorial-image {
   position: relative;
-
   max-width: 1250px;
-
   height: 570px;
-
   margin: auto;
-
   overflow: hidden;
 }
 
 .food-editorial-image img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   display: block;
 }
 
 .food-image-word {
   position: absolute;
-
   right: 30px;
   bottom: 20px;
-
   color: white;
-
   font-size: clamp(50px, 8vw, 120px);
-
   line-height: 1;
-
   font-weight: 900;
-
   letter-spacing: -0.06em;
-
   opacity: 0.9;
 }
-
 
 /* =========================================================
    PARTNER
@@ -754,89 +542,62 @@
 
 .about-partner {
   padding: 150px 7%;
-
   background: #ffffff;
 }
 
 .partner-heading {
   max-width: 1250px;
-
   margin: auto;
-
   margin-bottom: 70px;
 }
 
 .partner-heading h2 {
   margin: 20px 0 0;
-
   font-size: clamp(52px, 5.8vw, 82px);
-
   line-height: 0.92;
-
   letter-spacing: -0.055em;
 }
 
 .partner-heading h2 em {
   color: #ef6c32;
-
   font-family: Georgia, serif;
-
   font-weight: 400;
 }
 
 .partner-grid {
   max-width: 1250px;
-
   margin: auto;
-
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 100px;
-
   align-items: center;
 }
 
 .partner-image {
   position: relative;
-
   height: 510px;
-
   overflow: hidden;
 }
 
 .partner-image img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   display: block;
 }
 
 .partner-image-label {
   position: absolute;
-
   left: 0;
   bottom: 0;
-
   display: flex;
-
   align-items: center;
-
   gap: 10px;
-
   padding: 14px 20px;
-
   background: #ef6c32;
-
   color: white;
-
   font-size: 9px;
-
   font-weight: 800;
-
   letter-spacing: 0.12em;
 }
 
@@ -846,142 +607,99 @@
 
 .partner-small-label {
   display: flex;
-
   align-items: center;
-
   gap: 8px;
-
   color: #ef6c32;
-
   font-size: 10px;
-
   font-weight: 800;
-
   letter-spacing: 0.17em;
 }
 
 .partner-information h3 {
   margin: 22px 0;
-
   font-size: clamp(48px, 5vw, 70px);
-
   line-height: 0.95;
-
   letter-spacing: -0.05em;
 }
 
 .partner-information h3 span {
   color: #ef6c32;
-
   font-family: Georgia, serif;
-
   font-weight: 400;
 }
 
 .partner-information > p {
   margin: 0 0 28px;
-
   color: #776d65;
-
   font-size: 15px;
-
   line-height: 1.8;
 }
 
 .partner-checks {
   display: flex;
-
   flex-direction: column;
-
   gap: 13px;
-
   margin-bottom: 30px;
 }
 
 .partner-checks div {
   display: flex;
-
   align-items: center;
-
   gap: 10px;
-
   color: #625950;
-
   font-size: 13px;
-
   font-weight: 600;
 }
 
 .partner-checks svg {
   color: #ef6c32;
+  flex-shrink: 0;
 }
 
 .partner-location {
   display: flex;
-
   align-items: center;
-
   gap: 12px;
-
   border-top: 1px solid #e7ddd6;
-
   border-bottom: 1px solid #e7ddd6;
-
   padding: 17px 0;
-
   margin-bottom: 28px;
-
   color: #ef6c32;
 }
 
 .partner-location div {
   display: flex;
-
   flex-direction: column;
-
   gap: 3px;
 }
 
 .partner-location span {
   color: #a09790;
-
   font-size: 10px;
 }
 
 .partner-location strong {
   color: #40372f;
-
   font-size: 13px;
 }
 
 .partner-link {
   display: inline-flex;
-
   align-items: center;
-
   gap: 10px;
-
   padding: 14px 20px;
-
   background: #302821;
-
   color: white;
-
   text-decoration: none;
-
   font-size: 12px;
-
   font-weight: 700;
-
   transition: all 0.3s ease;
 }
 
 .partner-link:hover {
   background: #ef6c32;
-
   transform: translateY(-2px);
 }
-
 
 /* =========================================================
    FINAL
@@ -989,17 +707,11 @@
 
 .about-final {
   min-height: 520px;
-
   padding: 120px 7%;
-
   background: #fff3ea;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   text-align: center;
 }
 
@@ -1009,79 +721,62 @@
 
 .about-final span {
   color: #ef6c32;
-
   font-size: 10px;
-
   font-weight: 800;
-
   letter-spacing: 0.2em;
 }
 
 .about-final h2 {
   margin: 20px 0 30px;
-
   font-size: clamp(55px, 7vw, 100px);
-
   line-height: 0.9;
-
   letter-spacing: -0.06em;
 }
 
 .about-final h2 em {
   color: #ef6c32;
-
   font-family: Georgia, serif;
-
   font-weight: 400;
 }
 
 .final-link {
   display: inline-flex;
-
   align-items: center;
-
   gap: 10px;
-
   color: #302821;
-
   text-decoration: none;
-
   font-size: 13px;
-
   font-weight: 800;
-
   border-bottom: 1px solid #302821;
-
   padding-bottom: 7px;
 }
 
 .final-link:hover {
   color: #ef6c32;
-
   border-color: #ef6c32;
 }
-
 
 /* =========================================================
    TABLET
 ========================================================= */
 
 @media (max-width: 1000px) {
+  .about-hero {
+    padding: 70px 6% 0;
+  }
 
   .about-hero-grid {
     grid-template-columns: 1fr;
-
-    gap: 40px;
+    gap: 45px;
+    min-height: auto;
   }
 
   .about-hero-left {
     text-align: center;
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
+    padding-bottom: 0;
   }
 
   .about-hero-left p {
@@ -1096,9 +791,13 @@
     height: 500px;
   }
 
-  .about-introduction {
-    grid-template-columns: 50px 1fr;
+  .hero-image-caption {
+    left: 20px;
+  }
 
+  .about-introduction {
+    padding: 110px 7%;
+    grid-template-columns: 50px 1fr;
     gap: 40px;
   }
 
@@ -1107,259 +806,577 @@
     padding-top: 0;
   }
 
+  .about-story {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
   .story-content {
     gap: 50px;
+  }
+
+  .story-image {
+    height: 500px;
+  }
+
+  .about-values {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .about-food-section {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .food-editorial-image {
+    height: 500px;
+  }
+
+  .about-partner {
+    padding-left: 6%;
+    padding-right: 6%;
   }
 
   .partner-grid {
     gap: 50px;
   }
 
-}
+  .partner-image {
+    height: 470px;
+  }
 
+  .about-final {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
 
 /* =========================================================
    MOBILE
 ========================================================= */
 
 @media (max-width: 700px) {
+  .about-page {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* HERO */
 
   .about-hero {
-    padding: 55px 20px 0;
+    padding: 75px 20px 0;
   }
 
   .about-hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
     min-height: auto;
   }
 
+  .about-hero-left {
+    width: 100%;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .about-kicker {
+    gap: 9px;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    margin-bottom: 20px;
+  }
+
+  .about-kicker span {
+    font-size: 10px;
+  }
+
+  .about-kicker div {
+    width: 28px;
+  }
+
   .about-hero-left h1 {
-    font-size: 52px;
+    width: 100%;
+    font-size: clamp(45px, 13vw, 57px);
+    line-height: 0.91;
+    letter-spacing: -0.055em;
   }
 
   .about-hero-left p {
+    max-width: 100%;
+    margin: 25px 0 25px;
     font-size: 14px;
+    line-height: 1.7;
   }
 
+  .about-hero-link {
+    font-size: 12px;
+    padding-bottom: 6px;
+  }
+
+  /* HERO IMAGE */
+
   .about-hero-right {
-    padding: 15px 0 70px;
+    width: 100%;
+    padding: 10px 0 65px;
   }
 
   .hero-image-frame {
+    width: 100%;
     height: 430px;
+  }
+
+  .hero-image-frame::before {
+    width: 4px;
   }
 
   .about-hero-right::after {
     width: 70%;
     height: 88%;
+    right: 0;
   }
 
   .hero-image-caption {
     left: 10px;
-    bottom: 10px;
-
-    width: 230px;
-
-    padding: 14px;
+    bottom: 8px;
+    width: min(230px, 70%);
+    padding: 13px 14px;
   }
 
-  .hero-bottom-line {
-    gap: 15px;
-
-    justify-content: center;
-
+  .hero-image-caption span {
     font-size: 8px;
+    margin-bottom: 6px;
+  }
+
+  .hero-image-caption p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  /* HERO BOTTOM */
+
+  .hero-bottom-line {
+    width: 100%;
+    height: 65px;
+    gap: 12px;
+    justify-content: center;
+    text-align: center;
+    font-size: 7px;
+    letter-spacing: 0.12em;
   }
 
   .hero-scroll-text {
     display: none;
   }
 
-
   /* INTRO */
 
   .about-introduction {
-    padding: 90px 20px;
-
+    width: 100%;
+    padding: 85px 20px;
     display: block;
   }
 
   .intro-number {
-    margin-bottom: 30px;
+    padding: 0;
+    margin-bottom: 28px;
+    font-size: 11px;
+  }
+
+  .editorial-label {
+    font-size: 9px;
+    letter-spacing: 0.15em;
   }
 
   .intro-main h2 {
-    font-size: 47px;
+    margin-top: 17px;
+    font-size: clamp(40px, 11.5vw, 52px);
+    line-height: 0.96;
+    letter-spacing: -0.05em;
   }
 
   .intro-copy {
-    margin-top: 35px;
+    margin-top: 32px;
+    padding: 0;
   }
 
+  .intro-copy p {
+    font-size: 14px;
+    line-height: 1.75;
+    margin-bottom: 18px;
+  }
 
   /* STORY */
 
   .about-story {
-    padding: 90px 20px;
+    padding: 85px 20px;
   }
 
   .story-header {
     display: block;
-
-    margin-bottom: 50px;
+    width: 100%;
+    margin-bottom: 48px;
   }
 
   .story-header-number {
-    margin-bottom: 30px;
+    padding: 0;
+    margin-bottom: 27px;
+    font-size: 11px;
   }
 
   .story-header h2 {
-    font-size: 49px;
+    margin-top: 0;
+    font-size: clamp(42px, 12vw, 55px);
+    line-height: 0.94;
+    letter-spacing: -0.05em;
   }
 
   .story-content {
-    grid-template-columns: 1fr;
-
-    gap: 45px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 
   .story-image {
-    height: 400px;
+    width: 100%;
+    height: 390px;
+  }
+
+  .story-image > span {
+    padding: 10px 14px;
+    font-size: 8px;
   }
 
   .story-text {
+    width: 100%;
     padding-right: 0;
   }
 
+  .story-line {
+    width: 45px;
+    height: 3px;
+    margin-bottom: 20px;
+  }
+
   .story-text h3 {
-    font-size: 38px;
+    margin-bottom: 20px;
+    font-size: clamp(32px, 9vw, 42px);
+    line-height: 1;
+  }
+
+  .story-text p {
+    font-size: 14px;
+    line-height: 1.75;
+    margin-bottom: 17px;
+  }
+
+  .story-signature {
+    margin-top: 27px;
+    font-size: 11px;
   }
 
   .story-statements {
+    width: 100%;
     grid-template-columns: 1fr;
-
-    margin-top: 55px;
+    margin-top: 50px;
   }
 
   .story-statements div {
+    padding: 19px 0;
     border-right: none;
-
     border-bottom: 1px solid #e8d5c8;
-
-    padding: 20px 0;
+    gap: 7px;
   }
 
   .story-statements div:last-child {
     border-bottom: none;
   }
 
+  .story-statements strong {
+    font-size: 10px;
+  }
+
+  .story-statements span {
+    font-size: 12px;
+    line-height: 1.55;
+  }
 
   /* VALUES */
 
   .about-values {
-    padding: 90px 20px;
+    padding: 85px 20px;
   }
 
   .values-title-block {
     display: block;
-
-    margin-bottom: 50px;
+    width: 100%;
+    margin-bottom: 48px;
   }
 
   .values-number {
-    margin-bottom: 30px;
+    padding: 0;
+    margin-bottom: 27px;
+    font-size: 11px;
   }
 
   .values-title-block h2 {
-    font-size: 49px;
+    margin-top: 0;
+    font-size: clamp(42px, 12vw, 55px);
+    line-height: 0.94;
+    letter-spacing: -0.05em;
+  }
+
+  .values-list {
+    width: 100%;
   }
 
   .value-item {
-    min-height: 110px;
-
-    grid-template-columns: 35px 42px 1fr 20px;
-
+    min-height: auto;
+    grid-template-columns: 30px 42px minmax(0, 1fr) 18px;
     gap: 10px;
+    padding: 20px 0;
+  }
+
+  .value-item:hover {
+    padding-left: 0;
+    background: transparent;
+  }
+
+  .value-number {
+    font-size: 10px;
+  }
+
+  .value-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .value-info {
+    min-width: 0;
   }
 
   .value-info h3 {
-    font-size: 17px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 1.25;
   }
 
   .value-info p {
     font-size: 11px;
+    line-height: 1.55;
   }
 
+  .value-arrow {
+    font-size: 14px;
+  }
 
   /* FOOD */
 
   .about-food-section {
-    padding: 90px 20px;
+    padding: 85px 20px;
+  }
+
+  .food-section-heading {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .food-section-heading span {
+    font-size: 9px;
+    letter-spacing: 0.15em;
   }
 
   .food-section-heading h2 {
-    font-size: 49px;
+    margin-top: 17px;
+    font-size: clamp(42px, 12vw, 55px);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
   }
 
   .food-editorial-image {
-    height: 400px;
+    width: 100%;
+    height: 380px;
   }
 
   .food-image-word {
-    font-size: 55px;
-
-    right: 15px;
-    bottom: 15px;
+    right: 14px;
+    bottom: 13px;
+    font-size: clamp(42px, 14vw, 65px);
+    letter-spacing: -0.06em;
   }
-
 
   /* PARTNER */
 
   .about-partner {
-    padding: 90px 20px;
+    padding: 85px 20px;
+  }
+
+  .partner-heading {
+    width: 100%;
+    margin-bottom: 45px;
   }
 
   .partner-heading h2 {
-    font-size: 49px;
+    margin-top: 17px;
+    font-size: clamp(42px, 12vw, 55px);
+    line-height: 0.94;
+    letter-spacing: -0.05em;
   }
 
   .partner-grid {
-    grid-template-columns: 1fr;
-
-    gap: 45px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
   }
 
   .partner-image {
-    height: 400px;
+    width: 100%;
+    height: 390px;
+  }
+
+  .partner-image-label {
+    padding: 11px 14px;
+    gap: 7px;
+    font-size: 8px;
+  }
+
+  .partner-information {
+    width: 100%;
+    max-width: none;
+  }
+
+  .partner-small-label {
+    font-size: 9px;
+    letter-spacing: 0.14em;
   }
 
   .partner-information h3 {
-    font-size: 47px;
+    margin: 18px 0;
+    font-size: clamp(40px, 11vw, 52px);
+    line-height: 0.96;
   }
 
+  .partner-information > p {
+    font-size: 14px;
+    line-height: 1.75;
+    margin-bottom: 24px;
+  }
+
+  .partner-checks {
+    gap: 11px;
+    margin-bottom: 25px;
+  }
+
+  .partner-checks div {
+    align-items: flex-start;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .partner-checks svg {
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .partner-location {
+    gap: 10px;
+    padding: 15px 0;
+    margin-bottom: 24px;
+  }
+
+  .partner-location span {
+    font-size: 9px;
+  }
+
+  .partner-location strong {
+    font-size: 12px;
+  }
+
+  .partner-link {
+    padding: 13px 18px;
+    font-size: 11px;
+  }
 
   /* FINAL */
 
   .about-final {
-    min-height: 430px;
-
+    min-height: 420px;
     padding: 80px 20px;
   }
 
-  .about-final h2 {
-    font-size: 52px;
+  .about-final-content {
+    width: 100%;
   }
 
+  .about-final span {
+    font-size: 9px;
+    letter-spacing: 0.16em;
+  }
+
+  .about-final h2 {
+    margin: 18px 0 25px;
+    font-size: clamp(44px, 13vw, 60px);
+    line-height: 0.92;
+    letter-spacing: -0.055em;
+  }
+
+  .final-link {
+    font-size: 12px;
+    padding-bottom: 6px;
+  }
 }
 
+/* =========================================================
+   SMALL PHONES
+========================================================= */
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
+  .about-hero {
+    padding: 70px 17px 0;
+  }
 
   .about-hero-left h1 {
     font-size: 45px;
   }
 
+  .about-hero-left p {
+    font-size: 13px;
+  }
+
+  .about-hero-right {
+    padding-bottom: 60px;
+  }
+
   .hero-image-frame {
     height: 360px;
+  }
+
+  .hero-image-caption {
+    width: 205px;
+    left: 8px;
+    bottom: 7px;
+    padding: 11px 12px;
+  }
+
+  .hero-image-caption p {
+    font-size: 10px;
+  }
+
+  .hero-bottom-line {
+    height: 58px;
+    font-size: 6.5px;
+  }
+
+  .about-introduction,
+  .about-story,
+  .about-values,
+  .about-food-section,
+  .about-partner {
+    padding-left: 17px;
+    padding-right: 17px;
   }
 
   .intro-main h2,
@@ -1370,8 +1387,127 @@
     font-size: 43px;
   }
 
-  .about-final h2 {
-    font-size: 45px;
+  .story-image {
+    height: 350px;
   }
 
+  .value-item {
+    grid-template-columns: 27px 38px minmax(0, 1fr) 15px;
+    gap: 8px;
+  }
+
+  .value-icon {
+    width: 37px;
+    height: 37px;
+  }
+
+  .value-info h3 {
+    font-size: 15px;
+  }
+
+  .value-info p {
+    font-size: 10.5px;
+  }
+
+  .food-editorial-image {
+    height: 340px;
+  }
+
+  .food-image-word {
+    font-size: 48px;
+  }
+
+  .partner-image {
+    height: 350px;
+  }
+
+  .partner-information h3 {
+    font-size: 43px;
+  }
+
+  .about-final {
+    min-height: 390px;
+    padding: 70px 17px;
+  }
+
+  .about-final h2 {
+    font-size: 46px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+  .about-hero-left h1 {
+    font-size: 40px;
+  }
+
+  .hero-image-frame {
+    height: 330px;
+  }
+
+  .hero-image-caption {
+    width: 185px;
+    padding: 9px 10px;
+  }
+
+  .hero-image-caption span {
+    font-size: 7px;
+  }
+
+  .hero-image-caption p {
+    font-size: 9px;
+  }
+
+  .intro-main h2,
+  .story-header h2,
+  .values-title-block h2,
+  .food-section-heading h2,
+  .partner-heading h2 {
+    font-size: 40px;
+  }
+
+  .story-image {
+    height: 320px;
+  }
+
+  .value-item {
+    grid-template-columns: 24px 35px minmax(0, 1fr) 12px;
+    gap: 7px;
+  }
+
+  .value-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .value-info h3 {
+    font-size: 14px;
+  }
+
+  .value-info p {
+    font-size: 10px;
+  }
+
+  .food-editorial-image {
+    height: 310px;
+  }
+
+  .food-image-word {
+    font-size: 43px;
+  }
+
+  .partner-image {
+    height: 320px;
+  }
+
+  .partner-information h3 {
+    font-size: 40px;
+  }
+
+  .about-final h2 {
+    font-size: 42px;
+  }
 }
