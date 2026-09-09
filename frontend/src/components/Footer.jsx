@@ -249,8 +249,8 @@ const Footer = () => {
                   Email
                 </span>
 
-                <a href="mailto:info.gonbite@gmail.com">
-                  info.gonbite@gmail.com
+                <a href="mailto:support@gonbite.com">
+                  support@gonbite.com
                 </a>
 
               </div>
@@ -319,7 +319,7 @@ const Footer = () => {
                 </span>
 
                 <p>
-                  Mohali, Punjab, India
+                 SCF-116 A, Second Floor, Phase 5, Industrial Area, Sector 58, Sahibzada Ajit Singh Nagar, Punjab 160055
                 </p>
 
               </div>

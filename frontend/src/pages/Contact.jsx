@@ -21,8 +21,8 @@ const Contact = () => {
       number: "01",
       icon: Mail,
       label: "EMAIL",
-      value: "info.gonbite@gmail.com",
-      href: "mailto:info.gonbite@gmail.com",
+      value: "support@gonbite.com",
+      href: "mailto:support@gonbite.com",
     },
     {
       number: "02",
@@ -38,14 +38,14 @@ const Contact = () => {
       value: "+91 8146759497",
       href: "tel:+918146759497",
     },
-    {
-      number: "04",
-      icon: Globe,
-      label: "INSTAGRAM",
-      value: "@gonbite",
-      href: "https://www.instagram.com/gonbite/",
-      external: true,
-    },
+   {
+  number: "04",
+  icon: Globe,
+  label: "Address",
+  value: "SCF-116 A, Second Floor, Phase 5, Industrial Area, Sector 58, Sahibzada Ajit Singh Nagar, Punjab 160055",
+  href: "https://www.google.com/maps/search/?api=1&query=VProTech+Digital+Mohali+Punjab+India",
+  external: true,
+},
   ];
 
   return (
