@@ -477,9 +477,7 @@ function Home() {
     }}
   >
 
-    <span>
-      SCROLL TO DISCOVER
-    </span>
+  
 
     <ChevronDown size={18} />
 
