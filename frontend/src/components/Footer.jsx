@@ -331,6 +331,9 @@ const Footer = () => {
         </div>
 
 
+
+
+
         {/* ===================================================
             APP PROMO
         =================================================== */}
@@ -348,7 +351,7 @@ const Footer = () => {
             <div>
 
               <span className="footer-app-small">
-                COMING SOON
+                Available on
               </span>
 
               <h3>
@@ -400,7 +403,7 @@ const Footer = () => {
               <div>
 
                 <small>
-                  Coming soon on
+                  Available on
                 </small>
 
                 <strong>

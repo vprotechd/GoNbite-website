@@ -298,8 +298,7 @@ function Home() {
         },
       }}
     >
-      Discover delicious food from your favorite restaurants
-      and get it delivered straight to your doorstep.
+      
     </motion.p>
 
 

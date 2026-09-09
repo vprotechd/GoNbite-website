@@ -238,7 +238,7 @@
     0.8fr
     1fr;
 
-  gap: 60px;
+  gap: 50px;
 }
 
 
@@ -415,6 +415,7 @@
 
 .footer-contact-column {
   min-width: 0;
+  margin-left: 0px;
 }
 
 .footer-contact-item {

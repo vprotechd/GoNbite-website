@@ -287,46 +287,7 @@ const Contact = () => {
         </section>
 
 
-        {/* =====================================================
-            INSTAGRAM
-        ===================================================== */}
-
-        <section className="contact-instagram">
-
-          <div className="instagram-container">
-
-            <div className="instagram-meta">
-
-              <span>03 — SOCIAL</span>
-
-              <Globe size={20} />
-
-            </div>
-
-            <h2>
-              Follow the
-              <br />
-              <em>bite.</em>
-            </h2>
-
-            <p>
-              Stay connected with GoNbite for food,
-              updates, launches and more.
-            </p>
-
-            <a
-              href="https://www.instagram.com/gonbite/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="instagram-link"
-            >
-              <span>@gonbite</span>
-              <ArrowUpRight size={19} />
-            </a>
-
-          </div>
-
-        </section>
+      
 
       </main>
 
