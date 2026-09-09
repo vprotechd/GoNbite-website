@@ -462,26 +462,7 @@ function Home() {
   </div>
 
 
-  {/* Scroll */}
-  <motion.div
-    className="scroll-down"
-
-    animate={{
-      y: [0, 7, 0],
-    }}
-
-    transition={{
-      duration: 1.8,
-      repeat: Infinity,
-      ease: "easeInOut",
-    }}
-  >
-
-  
-
-    <ChevronDown size={18} />
-
-  </motion.div>
+ 
 
 </section>
 
