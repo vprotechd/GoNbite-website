@@ -8,10 +8,9 @@ import {
   Mail,
   Phone,
   MapPin,
-    Youtube,
-  ArrowUpRight,
   Heart,
   ArrowRight,
+  Play,
 } from "lucide-react";
 
 import logo from "../assets/images/gonbite-logo.jpeg";
@@ -110,10 +109,13 @@ const Footer = () => {
             </p>
 
 
-            {/* Social icons */}
+            {/* =================================================
+                SOCIAL LINKS
+            ================================================= */}
 
             <div className="footer-socials">
 
+              {/* Instagram */}
               <a
                 href="https://www.instagram.com/gonbite/"
                 target="_blank"
@@ -123,6 +125,8 @@ const Footer = () => {
                 <Globe size={17} />
               </a>
 
+
+              {/* Facebook */}
               <a
                 href="https://www.facebook.com/profile.php?id=61594057297851"
                 target="_blank"
@@ -132,6 +136,8 @@ const Footer = () => {
                 <Users size={17} />
               </a>
 
+
+              {/* X / Twitter */}
               <a
                 href="https://x.com/OfficialGoNbite"
                 target="_blank"
@@ -141,6 +147,8 @@ const Footer = () => {
                 <MessageCircle size={17} />
               </a>
 
+
+              {/* LinkedIn */}
               <a
                 href="https://www.linkedin.com/in/gonbite-627b13434/"
                 target="_blank"
@@ -151,16 +159,18 @@ const Footer = () => {
               </a>
 
 
-
-  {/* YouTube */}
-  <a
-    href="https://www.youtube.com/@Go_N_bite"
-    target="_blank"
-    rel="noreferrer"
-    aria-label="YouTube"
-  >
-    <Youtube size={17} />
-  </a>
+              {/* YouTube */}
+              <a
+                href="https://www.youtube.com/@Go_N_bite"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="YouTube"
+              >
+                <Play
+                  size={17}
+                  fill="currentColor"
+                />
+              </a>
 
             </div>
 
@@ -214,9 +224,6 @@ const Footer = () => {
           </div>
 
 
-        
-
-
           {/* =================================================
               CONTACT
           ================================================= */}
@@ -228,13 +235,16 @@ const Footer = () => {
             </h3>
 
 
+            {/* Email */}
+
             <div className="footer-contact-item">
 
               <div className="footer-contact-icon">
                 <Mail size={16} />
               </div>
 
-              <div>
+              <div className="footer-contact-info">
+
                 <span>
                   Email
                 </span>
@@ -242,42 +252,59 @@ const Footer = () => {
                 <a href="mailto:info.gonbite@gmail.com">
                   info.gonbite@gmail.com
                 </a>
+
               </div>
 
             </div>
 
 
- {/* Phone 1 */}
-<div className="footer-contact-item">
-  <div className="footer-contact-icon">
-    <Phone size={16} />
-  </div>
+            {/* Phone 1 */}
 
-  <div className="footer-contact-info">
-    <span>Phone</span>
+            <div className="footer-contact-item">
 
-    <a href="tel:+916283409048">
-      +91 6283409048
-    </a>
-  </div>
-</div>
+              <div className="footer-contact-icon">
+                <Phone size={16} />
+              </div>
+
+              <div className="footer-contact-info">
+
+                <span>
+                  Phone
+                </span>
+
+                <a href="tel:+916283409048">
+                  +91 6283409048
+                </a>
+
+              </div>
+
+            </div>
 
 
-{/* Phone 2 */}
-<div className="footer-contact-item">
-  <div className="footer-contact-icon">
-    <Phone size={16} />
-  </div>
+            {/* Phone 2 */}
 
-  <div className="footer-contact-info">
-    <span>Phone</span>
+            <div className="footer-contact-item">
 
-    <a href="tel:+918146759497">
-      +91 8146759497
-    </a>
-  </div>
-</div>
+              <div className="footer-contact-icon">
+                <Phone size={16} />
+              </div>
 
+              <div className="footer-contact-info">
+
+                <span>
+                  Phone
+                </span>
+
+                <a href="tel:+918146759497">
+                  +91 8146759497
+                </a>
+
+              </div>
+
+            </div>
+
+
+            {/* Location */}
 
             <div className="footer-contact-item">
 
@@ -285,7 +312,8 @@ const Footer = () => {
                 <MapPin size={16} />
               </div>
 
-              <div>
+              <div className="footer-contact-info">
+
                 <span>
                   Location
                 </span>
@@ -293,6 +321,7 @@ const Footer = () => {
                 <p>
                   Mohali, Punjab, India
                 </p>
+
               </div>
 
             </div>
@@ -311,7 +340,9 @@ const Footer = () => {
           <div className="footer-app-content">
 
             <div className="footer-app-icon">
-              <span>G</span>
+              <span>
+                G
+              </span>
             </div>
 
             <div>
@@ -335,6 +366,8 @@ const Footer = () => {
 
           <div className="footer-app-buttons">
 
+            {/* App Store */}
+
             <div className="footer-store-button">
 
               <div className="store-symbol">
@@ -342,6 +375,7 @@ const Footer = () => {
               </div>
 
               <div>
+
                 <small>
                   Coming soon on
                 </small>
@@ -349,10 +383,13 @@ const Footer = () => {
                 <strong>
                   App Store
                 </strong>
+
               </div>
 
             </div>
 
+
+            {/* Google Play */}
 
             <div className="footer-store-button">
 
@@ -361,6 +398,7 @@ const Footer = () => {
               </div>
 
               <div>
+
                 <small>
                   Coming soon on
                 </small>
@@ -368,6 +406,7 @@ const Footer = () => {
                 <strong>
                   Google Play
                 </strong>
+
               </div>
 
             </div>
@@ -383,6 +422,9 @@ const Footer = () => {
 
         <div className="footer-bottom">
 
+
+          {/* Copyright */}
+
           <div className="footer-copyright">
 
             © {currentYear} GoNbite.
@@ -390,6 +432,8 @@ const Footer = () => {
 
           </div>
 
+
+          {/* Powered By */}
 
           <div className="footer-powered">
 
@@ -416,6 +460,8 @@ const Footer = () => {
 
           </div>
 
+
+          {/* Legal */}
 
           <div className="footer-legal">
 
