@@ -8,6 +8,7 @@ import {
   Mail,
   Phone,
   MapPin,
+    Youtube,
   ArrowUpRight,
   Heart,
   ArrowRight,
@@ -114,7 +115,7 @@ const Footer = () => {
             <div className="footer-socials">
 
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/gonbite/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
@@ -123,7 +124,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/profile.php?id=61594057297851"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Facebook"
@@ -132,7 +133,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://twitter.com/"
+                href="https://x.com/OfficialGoNbite"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Twitter"
@@ -141,13 +142,25 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/gonbite-627b13434/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
               >
                 <BriefcaseBusiness size={17} />
               </a>
+
+
+
+  {/* YouTube */}
+  <a
+    href="https://www.youtube.com/@Go_N_bite"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="YouTube"
+  >
+    <Youtube size={17} />
+  </a>
 
             </div>
 
@@ -201,51 +214,7 @@ const Footer = () => {
           </div>
 
 
-          {/* =================================================
-              EXPLORE
-          ================================================= */}
-
-          <div className="footer-column">
-
-            <h3>
-              Explore
-            </h3>
-
-            <ul>
-
-              <li>
-                <Link to="/how-it-works">
-                  Discover Food
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/about">
-                  Our Story
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/why-choose-us">
-                  Our Values
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/contact">
-                  Partner With Us
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/contact">
-                  Support
-                </Link>
-              </li>
-
-            </ul>
-
-          </div>
+        
 
 
           {/* =================================================
@@ -270,31 +239,44 @@ const Footer = () => {
                   Email
                 </span>
 
-                <a href="mailto:hello@gonbite.com">
-                  hello@gonbite.com
+                <a href="mailto:info.gonbite@gmail.com">
+                  info.gonbite@gmail.com
                 </a>
               </div>
 
             </div>
 
 
-            <div className="footer-contact-item">
+ {/* Phone 1 */}
+<div className="footer-contact-item">
+  <div className="footer-contact-icon">
+    <Phone size={16} />
+  </div>
 
-              <div className="footer-contact-icon">
-                <Phone size={16} />
-              </div>
+  <div className="footer-contact-info">
+    <span>Phone</span>
 
-              <div>
-                <span>
-                  Phone
-                </span>
+    <a href="tel:+916283409048">
+      +91 6283409048
+    </a>
+  </div>
+</div>
 
-                <a href="tel:+919999999999">
-                  +91 99999 99999
-                </a>
-              </div>
 
-            </div>
+{/* Phone 2 */}
+<div className="footer-contact-item">
+  <div className="footer-contact-icon">
+    <Phone size={16} />
+  </div>
+
+  <div className="footer-contact-info">
+    <span>Phone</span>
+
+    <a href="tel:+918146759497">
+      +91 8146759497
+    </a>
+  </div>
+</div>
 
 
             <div className="footer-contact-item">
