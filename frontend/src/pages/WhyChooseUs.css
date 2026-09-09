@@ -2,6 +2,7 @@
   background: #fffdf9;
   color: #081a3a;
   overflow: hidden;
+  width: 100%;
 }
 
 /* =========================
@@ -64,7 +65,9 @@
   padding-bottom: 7px;
 }
 
-/* HERO VISUAL */
+/* =========================
+   HERO VISUAL
+========================= */
 
 .why-hero-visual {
   position: relative;
@@ -105,6 +108,7 @@
 .floating-icon {
   width: 40px;
   height: 40px;
+  flex-shrink: 0;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -144,7 +148,6 @@
   letter-spacing: 1.5px;
   font-weight: 700;
 }
-
 
 /* =========================
    INTRO
@@ -196,7 +199,6 @@
   font-size: 17px;
   margin-top: 30px;
 }
-
 
 /* =========================
    BENEFITS
@@ -271,7 +273,6 @@
 .benefit-arrow {
   color: #f36b21;
 }
-
 
 /* =========================
    VALUES
@@ -383,7 +384,6 @@
   margin: 0;
 }
 
-
 /* =========================
    NUMBERS
 ========================= */
@@ -431,7 +431,6 @@
   font-size: 13px;
 }
 
-
 /* =========================
    CTA
 ========================= */
@@ -450,6 +449,7 @@
 .why-cta-content {
   position: relative;
   z-index: 3;
+  max-width: 700px;
 }
 
 .why-cta-content > span {
@@ -517,20 +517,22 @@
   top: -50px;
 }
 
-
 /* =========================
-   RESPONSIVE
+   TABLET
 ========================= */
 
 @media (max-width: 1000px) {
   .why-hero {
     grid-template-columns: 1fr;
-    padding-top: 70px;
+    padding: 80px 6vw 60px;
+    min-height: auto;
+    gap: 50px;
   }
 
   .why-hero-copy {
     text-align: center;
     margin: auto;
+    padding-bottom: 0;
   }
 
   .why-hero-copy > p {
@@ -542,13 +544,33 @@
     min-height: 570px;
   }
 
+  .hero-floating-card {
+    left: 8%;
+  }
+
+  .hero-circle-text {
+    right: 8%;
+  }
+
   .why-intro {
     grid-template-columns: 1fr;
     gap: 35px;
+    padding: 100px 7vw;
+  }
+
+  .values-section {
+    padding: 110px 7vw;
   }
 
   .values-top {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .benefits-section,
+  .numbers-section {
+    padding-left: 7vw;
+    padding-right: 7vw;
   }
 
   .cta-food {
@@ -557,111 +579,501 @@
   }
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 700px) {
+  .why-page {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+
   .why-hero {
-    padding: 60px 22px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+    padding: 75px 20px 55px;
+    gap: 40px;
+  }
+
+  .why-hero-copy {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    padding: 0;
+  }
+
+  .why-eyebrow {
+    font-size: 10px;
+    letter-spacing: 2.3px;
+    margin-bottom: 18px;
   }
 
   .why-hero h1 {
-    font-size: 52px;
+    font-size: clamp(43px, 13vw, 58px);
+    line-height: 0.95;
     letter-spacing: -2.5px;
   }
 
+  .why-hero-copy > p {
+    max-width: 100%;
+    margin-top: 24px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .why-hero-link {
+    margin-top: 25px;
+    font-size: 13px;
+    padding-bottom: 6px;
+  }
+
+  /* HERO IMAGE */
+
   .why-hero-visual {
-    min-height: 480px;
+    width: 100%;
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
   }
 
   .hero-photo-main {
-    width: 80%;
-    height: 440px;
+    width: min(330px, 78vw);
+    height: 420px;
+    border-radius: 165px 165px 20px 20px;
+    transform: rotate(1.5deg);
   }
 
   .hero-floating-card {
     left: 0;
-    bottom: 7%;
+    bottom: 3%;
+    padding: 12px 14px;
+    gap: 9px;
+    border-radius: 13px;
+    max-width: 180px;
+  }
+
+  .floating-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .hero-floating-card strong {
+    font-size: 11px;
+  }
+
+  .hero-floating-card small {
+    font-size: 9px;
   }
 
   .hero-circle-text {
     right: 0;
-    top: 5%;
+    top: 2%;
+    width: 82px;
+    height: 82px;
+    font-size: 6.5px;
+    letter-spacing: 1px;
   }
 
-  .why-intro,
-  .benefits-section,
-  .values-section,
-  .numbers-section {
-    padding: 80px 22px;
+  /* INTRO */
+
+  .why-intro {
+    display: block;
+    padding: 75px 20px;
   }
 
-  .why-intro-content h2,
-  .benefits-heading h2,
-  .values-top h2 {
+  .why-intro-label {
+    margin-bottom: 30px;
+    font-size: 10px;
+  }
+
+  .why-intro-label span:first-child {
+    font-size: 13px;
+  }
+
+  .why-intro-content {
+    width: 100%;
+  }
+
+  .why-intro-content h2 {
+    font-size: clamp(38px, 11vw, 52px);
+    line-height: 1;
     letter-spacing: -2px;
   }
 
+  .why-intro-content p {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.75;
+    margin-top: 24px;
+  }
+
+  /* BENEFITS */
+
+  .benefits-section {
+    padding: 75px 20px;
+  }
+
+  .benefits-heading > span {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
   .benefits-heading h2 {
-    margin-bottom: 50px;
+    font-size: clamp(38px, 11vw, 52px);
+    line-height: 0.98;
+    letter-spacing: -2px;
+    margin: 18px 0 45px;
   }
 
   .benefit-row {
-    grid-template-columns: 40px 50px 1fr;
-    gap: 15px;
-    padding: 25px 0;
+    min-height: auto;
+    grid-template-columns: 32px 44px minmax(0, 1fr);
+    gap: 12px;
+    padding: 22px 0;
+    align-items: start;
+  }
+
+  .benefit-row:hover {
+    padding-left: 0;
+  }
+
+  .benefit-number {
+    font-size: 11px;
+    padding-top: 8px;
+  }
+
+  .benefit-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .benefit-content {
+    min-width: 0;
+  }
+
+  .benefit-content h3 {
+    font-size: 17px;
+    line-height: 1.25;
+    margin-bottom: 7px;
+  }
+
+  .benefit-content p {
+    font-size: 12.5px;
+    line-height: 1.6;
   }
 
   .benefit-arrow {
     display: none;
   }
 
-  .benefit-content h3 {
-    font-size: 18px;
+  /* VALUES */
+
+  .values-section {
+    padding: 80px 20px;
   }
 
-  .benefit-content p {
-    font-size: 13px;
+  .values-top {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  .values-top span {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .values-top h2 {
+    font-size: clamp(40px, 11vw, 54px);
+    line-height: 0.98;
+    letter-spacing: -2.5px;
+    margin: 18px 0 25px;
+  }
+
+  .values-top > p {
+    font-size: 14px;
+    line-height: 1.7;
   }
 
   .values-grid {
-    grid-template-columns: 1fr;
-    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
   }
 
   .value-card-3 {
-    grid-column: auto;
+    width: 100%;
     max-width: none;
+    margin: 0;
   }
 
   .value-image,
   .value-card-2 .value-image,
   .value-card-3 .value-image {
-    height: 350px;
+    width: 100%;
+    height: 330px;
+    border-radius: 15px;
+  }
+
+  .value-index {
+    top: 13px;
+    left: 13px;
+    width: 38px;
+    height: 38px;
+    font-size: 10px;
+  }
+
+  .value-text {
+    padding-top: 18px;
+  }
+
+  .value-text h3 {
+    font-size: 21px;
+    margin-bottom: 8px;
+  }
+
+  .value-text p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  /* NUMBERS */
+
+  .numbers-section {
+    padding: 75px 20px;
+  }
+
+  .numbers-intro {
+    gap: 9px;
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    margin-bottom: 45px;
   }
 
   .numbers-grid {
+    display: grid;
     grid-template-columns: 1fr;
   }
 
   .numbers-grid > div {
-    min-height: 150px;
+    min-height: 135px;
+    padding: 24px 0;
     border-left: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-    padding: 25px 0;
   }
 
+  .numbers-grid > div:last-child {
+    border-bottom: none;
+  }
+
+  .numbers-grid strong {
+    font-size: clamp(55px, 16vw, 78px);
+    letter-spacing: -4px;
+  }
+
+  .numbers-grid span {
+    font-size: 12px;
+  }
+
+  /* CTA */
+
   .why-cta {
-    min-height: 650px;
-    padding: 80px 22px;
+    min-height: 620px;
+    padding: 75px 20px;
+    align-items: flex-start;
+  }
+
+  .why-cta-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .why-cta-content > span {
+    font-size: 10px;
+    letter-spacing: 2.2px;
   }
 
   .why-cta h2 {
+    font-size: clamp(48px, 14vw, 68px);
+    line-height: 0.9;
     letter-spacing: -3px;
+    margin: 20px 0 35px;
+    max-width: 100%;
+  }
+
+  .why-cta button {
+    padding: 14px 20px;
+    font-size: 13px;
+    gap: 9px;
+    position: relative;
+    z-index: 5;
   }
 
   .cta-food {
-    width: 330px;
-    height: 330px;
-    right: -100px;
-    bottom: 30px;
+    width: 285px;
+    height: 285px;
+    right: -105px;
+    bottom: 25px;
     top: auto;
+    opacity: 0.9;
+    border-width: 9px;
+  }
+
+  .why-cta-shape {
+    width: 440px;
+    height: 440px;
+    right: -170px;
+    top: 110px;
+  }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 420px) {
+  .why-hero {
+    padding: 70px 17px 50px;
+    gap: 35px;
+  }
+
+  .why-hero h1 {
+    font-size: 44px;
+    letter-spacing: -2px;
+  }
+
+  .why-hero-copy > p {
+    font-size: 14px;
+  }
+
+  .why-hero-visual {
+    min-height: 410px;
+  }
+
+  .hero-photo-main {
+    width: 74vw;
+    height: 380px;
+    border-radius: 150px 150px 18px 18px;
+  }
+
+  .hero-floating-card {
+    max-width: 165px;
+    padding: 10px 11px;
+  }
+
+  .hero-circle-text {
+    width: 72px;
+    height: 72px;
+    font-size: 5.5px;
+  }
+
+  .why-intro,
+  .benefits-section,
+  .values-section,
+  .numbers-section {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .why-intro-content h2,
+  .benefits-heading h2,
+  .values-top h2 {
+    font-size: 40px;
+  }
+
+  .benefit-row {
+    grid-template-columns: 27px 40px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .benefit-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .benefit-content h3 {
+    font-size: 16px;
+  }
+
+  .benefit-content p {
+    font-size: 12px;
+  }
+
+  .value-image,
+  .value-card-2 .value-image,
+  .value-card-3 .value-image {
+    height: 290px;
+  }
+
+  .why-cta {
+    min-height: 590px;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .why-cta h2 {
+    font-size: 48px;
+  }
+
+  .cta-food {
+    width: 245px;
+    height: 245px;
+    right: -95px;
+    bottom: 20px;
+  }
+}
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 360px) {
+  .why-hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-photo-main {
+    width: 72vw;
+    height: 350px;
+  }
+
+  .hero-floating-card {
+    max-width: 150px;
+  }
+
+  .hero-floating-card strong {
+    font-size: 10px;
+  }
+
+  .hero-floating-card small {
+    font-size: 8px;
+  }
+
+  .benefit-row {
+    grid-template-columns: 25px 36px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .benefit-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .benefit-content h3 {
+    font-size: 15px;
+  }
+
+  .why-cta h2 {
+    font-size: 43px;
+  }
+
+  .cta-food {
+    width: 220px;
+    height: 220px;
+    right: -90px;
   }
 }
