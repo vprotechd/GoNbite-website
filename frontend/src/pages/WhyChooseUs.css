@@ -1,13 +1,18 @@
+/* =========================================================
+   WHY CHOOSE US PAGE
+========================================================= */
+
 .why-page {
-  background: #fffdf9;
+   background: #f3ddcd;
   color: #081a3a;
   overflow: hidden;
   width: 100%;
 }
 
-/* =========================
+
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 .why-hero {
   min-height: 88vh;
@@ -54,20 +59,10 @@
   line-height: 1.8;
 }
 
-.why-hero-link {
-  margin-top: 35px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: #081a3a;
-  font-weight: 700;
-  border-bottom: 1px solid #081a3a;
-  padding-bottom: 7px;
-}
 
-/* =========================
+/* =========================================================
    HERO VISUAL
-========================= */
+========================================================= */
 
 .why-hero-visual {
   position: relative;
@@ -149,9 +144,10 @@
   font-weight: 700;
 }
 
-/* =========================
+
+/* =========================================================
    INTRO
-========================= */
+========================================================= */
 
 .why-intro {
   display: grid;
@@ -200,9 +196,10 @@
   margin-top: 30px;
 }
 
-/* =========================
+
+/* =========================================================
    BENEFITS
-========================= */
+========================================================= */
 
 .benefits-section {
   padding: 110px 10vw;
@@ -223,6 +220,12 @@
   margin: 20px 0 80px;
 }
 
+.benefits-heading h2 em {
+  color: #f36b21;
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
 .benefits-list {
   border-top: 1px solid #d8d4ca;
 }
@@ -230,15 +233,55 @@
 .benefit-row {
   min-height: 150px;
   display: grid;
-  grid-template-columns: 80px 70px 1fr 50px;
+  grid-template-columns: 80px 70px 1fr;
   align-items: center;
   gap: 30px;
   border-bottom: 1px solid #d8d4ca;
-  transition: padding 0.35s ease;
+  transition:
+    padding 0.35s ease,
+    background 0.35s ease;
 }
 
 .benefit-row:hover {
   padding-left: 15px;
+}
+
+
+/* =========================================================
+   FEATURED / UNIQUE FEATURES
+========================================================= */
+
+.benefit-row-featured {
+  background: rgba(255, 107, 53, 0.055);
+}
+
+.benefit-row-featured:hover {
+  background: rgba(255, 107, 53, 0.09);
+}
+
+.benefit-row-featured .benefit-icon {
+  background: #ffffff;
+  color: #f36b21;
+  box-shadow: 0 8px 25px rgba(243, 107, 33, 0.14);
+}
+
+.benefit-row-featured .benefit-content h3 {
+  font-size: 24px;
+}
+
+.benefit-row-featured .benefit-content h3::after {
+  content: "UNIQUE";
+  display: inline-block;
+  margin-left: 10px;
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: #f36b21;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  vertical-align: middle;
 }
 
 .benefit-number {
@@ -270,13 +313,10 @@
   font-size: 14px;
 }
 
-.benefit-arrow {
-  color: #f36b21;
-}
 
-/* =========================
+/* =========================================================
    VALUES
-========================= */
+========================================================= */
 
 .values-section {
   padding: 140px 8vw;
@@ -384,9 +424,10 @@
   margin: 0;
 }
 
-/* =========================
+
+/* =========================================================
    NUMBERS
-========================= */
+========================================================= */
 
 .numbers-section {
   padding: 100px 10vw;
@@ -431,9 +472,10 @@
   font-size: 13px;
 }
 
-/* =========================
+
+/* =========================================================
    CTA
-========================= */
+========================================================= */
 
 .why-cta {
   position: relative;
@@ -517,9 +559,10 @@
   top: -50px;
 }
 
-/* =========================
+
+/* =========================================================
    TABLET
-========================= */
+========================================================= */
 
 @media (max-width: 1000px) {
   .why-hero {
@@ -579,9 +622,10 @@
   }
 }
 
-/* =========================
+
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
 @media (max-width: 700px) {
   .why-page {
@@ -624,12 +668,6 @@
     margin-top: 24px;
     font-size: 15px;
     line-height: 1.7;
-  }
-
-  .why-hero-link {
-    margin-top: 25px;
-    font-size: 13px;
-    padding-bottom: 6px;
   }
 
   /* HERO IMAGE */
@@ -679,6 +717,7 @@
     letter-spacing: 1px;
   }
 
+
   /* INTRO */
 
   .why-intro {
@@ -711,6 +750,7 @@
     line-height: 1.75;
     margin-top: 24px;
   }
+
 
   /* BENEFITS */
 
@@ -767,9 +807,16 @@
     line-height: 1.6;
   }
 
-  .benefit-arrow {
-    display: none;
+  .benefit-row-featured .benefit-content h3 {
+    font-size: 17px;
   }
+
+  .benefit-row-featured .benefit-content h3::after {
+    font-size: 6px;
+    padding: 3px 5px;
+    margin-left: 5px;
+  }
+
 
   /* VALUES */
 
@@ -841,6 +888,7 @@
     line-height: 1.65;
   }
 
+
   /* NUMBERS */
 
   .numbers-section {
@@ -878,6 +926,7 @@
   .numbers-grid span {
     font-size: 12px;
   }
+
 
   /* CTA */
 
@@ -931,9 +980,10 @@
   }
 }
 
-/* =========================
+
+/* =========================================================
    SMALL PHONES
-========================= */
+========================================================= */
 
 @media (max-width: 420px) {
   .why-hero {
@@ -1027,9 +1077,10 @@
   }
 }
 
-/* =========================
+
+/* =========================================================
    VERY SMALL PHONES
-========================= */
+========================================================= */
 
 @media (max-width: 360px) {
   .why-hero h1 {

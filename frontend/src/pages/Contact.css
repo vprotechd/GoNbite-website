@@ -6,7 +6,7 @@
 .contact-page {
   --orange: #ff6733;
   --orange-light: #fff0e7;
-  --cream: #fffaf5;
+  --cream: #f3ddcd;
   --cream-2: #fff4eb;
   --brown: #402b24;
   --text: #594c46;
@@ -31,7 +31,8 @@
 
   background:
     radial-gradient(
-      circle at 78% 45%,
+      
+      circle at 88% 45%,
       rgba(255, 215, 193, 0.42),
       transparent 24%
     ),

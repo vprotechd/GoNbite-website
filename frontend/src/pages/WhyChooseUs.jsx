@@ -1,14 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  ArrowUpRight,
   Clock3,
   ShieldCheck,
-  MapPin,
   Heart,
   Sparkles,
   Utensils,
   Smartphone,
+  Mic,
+  ScanLine,
 } from "lucide-react";
 
 import Navbar from "../components/Navbar";
@@ -25,18 +25,32 @@ import "./WhyChooseUs.css";
 const benefits = [
   {
     number: "01",
+    title: "Voice your order",
+    text: "Tell GoNbite what you are craving. Voice ordering makes discovering and ordering food easier when typing feels like too much.",
+    icon: Mic,
+    featured: true,
+  },
+  {
+    number: "02",
+    title: "Scan food. Find it. Order it.",
+    text: "See something delicious? Scan it with GoNbite and turn that food moment into an order with a simple, smarter experience.",
+    icon: ScanLine,
+    featured: true,
+  },
+  {
+    number: "03",
     title: "Food that feels worth ordering",
     text: "We focus on making the everyday food-ordering experience simpler, quicker and more enjoyable.",
     icon: Utensils,
   },
   {
-    number: "02",
+    number: "04",
     title: "Less waiting. More eating.",
     text: "Smart ordering and delivery flow helps take the unnecessary waiting out of your meal.",
     icon: Clock3,
   },
   {
-    number: "03",
+    number: "05",
     title: "A place you can trust",
     text: "From discovering a restaurant to receiving your meal, every step is designed around a dependable experience.",
     icon: ShieldCheck,
@@ -68,7 +82,9 @@ const WhyChooseUs = () => {
 
       <main className="why-page">
 
-        {/* HERO */}
+        {/* =========================
+            HERO
+        ========================= */}
         <section className="why-hero">
           <div className="why-hero-copy">
             <motion.span
@@ -99,8 +115,6 @@ const WhyChooseUs = () => {
               easy ordering and getting their cravings exactly when
               they want them.
             </motion.p>
-
-           
           </div>
 
           <motion.div
@@ -110,7 +124,10 @@ const WhyChooseUs = () => {
             transition={{ duration: 1 }}
           >
             <div className="hero-photo-main">
-              <img src={food4} alt="Delicious food from GoNbite" />
+              <img
+                src={food4}
+                alt="Delicious food from GoNbite"
+              />
             </div>
 
             <div className="hero-floating-card">
@@ -132,8 +149,9 @@ const WhyChooseUs = () => {
           </motion.div>
         </section>
 
-
-        {/* INTRO */}
+        {/* =========================
+            INTRO
+        ========================= */}
         <section className="why-intro">
           <div className="why-intro-label">
             <span>01</span>
@@ -155,12 +173,20 @@ const WhyChooseUs = () => {
           </div>
         </section>
 
-
-        {/* BENEFITS */}
+        {/* =========================
+            BENEFITS / UNIQUE FEATURES
+        ========================= */}
         <section className="benefits-section">
           <div className="benefits-heading">
             <span>WHAT MAKES US DIFFERENT</span>
-            <h2>The little things<br />make the difference.</h2>
+
+            <h2>
+              We don't just
+              <br />
+              deliver food.
+              <br />
+              <em>We rethink it.</em>
+            </h2>
           </div>
 
           <div className="benefits-list">
@@ -169,11 +195,16 @@ const WhyChooseUs = () => {
 
               return (
                 <motion.div
-                  className="benefit-row"
+                  className={`benefit-row ${
+                    item.featured ? "benefit-row-featured" : ""
+                  }`}
                   key={item.number}
                   initial={{ opacity: 0, y: 35 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
+                  viewport={{
+                    once: true,
+                    amount: 0.2,
+                  }}
                   transition={{
                     duration: 0.65,
                     delay: index * 0.12,
@@ -184,27 +215,31 @@ const WhyChooseUs = () => {
                   </div>
 
                   <div className="benefit-icon">
-                    <Icon size={25} strokeWidth={1.7} />
+                    <Icon
+                      size={25}
+                      strokeWidth={1.7}
+                    />
                   </div>
 
                   <div className="benefit-content">
                     <h3>{item.title}</h3>
+
                     <p>{item.text}</p>
                   </div>
-
-                  
                 </motion.div>
               );
             })}
           </div>
         </section>
 
-
-        {/* IMAGE STORY */}
+        {/* =========================
+            IMAGE STORY
+        ========================= */}
         <section className="values-section">
           <div className="values-top">
             <div>
               <span>02 — THE EXPERIENCE</span>
+
               <h2>
                 More than
                 <br />
@@ -223,16 +258,27 @@ const WhyChooseUs = () => {
               <motion.article
                 className={`value-card value-card-${index + 1}`}
                 key={item.title}
-                initial={{ opacity: 0, y: 45 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                initial={{
+                  opacity: 0,
+                  y: 45,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                }}
                 transition={{
                   duration: 0.7,
                   delay: index * 0.12,
                 }}
               >
                 <div className="value-image">
-                  <img src={item.image} alt={item.title} />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                  />
 
                   <div className="value-index">
                     0{index + 1}
@@ -241,6 +287,7 @@ const WhyChooseUs = () => {
 
                 <div className="value-text">
                   <h3>{item.title}</h3>
+
                   <p>{item.text}</p>
                 </div>
               </motion.article>
@@ -248,8 +295,9 @@ const WhyChooseUs = () => {
           </div>
         </section>
 
-
-        {/* NUMBERS */}
+        {/* =========================
+            NUMBERS
+        ========================= */}
         <section className="numbers-section">
           <div className="numbers-intro">
             <Sparkles size={23} />
@@ -274,8 +322,9 @@ const WhyChooseUs = () => {
           </div>
         </section>
 
-
-        {/* CTA */}
+        {/* =========================
+            CTA
+        ========================= */}
         <section className="why-cta">
           <div className="why-cta-shape"></div>
 
@@ -289,11 +338,13 @@ const WhyChooseUs = () => {
               <br />
               is waiting.
             </h2>
-
           </div>
 
           <div className="cta-food">
-            <img src={food5} alt="GoNbite meal" />
+            <img
+              src={food5}
+              alt="GoNbite meal"
+            />
           </div>
         </section>
 
