@@ -13,7 +13,7 @@ import {
   Play,
 } from "lucide-react";
 
-import logo from "../assets/images/gonbite-logo.jpeg";
+import logo from "../assets/images/food logo2-Photoroom.png";
 
 import "./Footer.css";
 
@@ -342,11 +342,11 @@ const Footer = () => {
 
           <div className="footer-app-content">
 
-            <div className="footer-app-icon">
+            {/* <div className="footer-app-icon">
               <span>
                 G
               </span>
-            </div>
+            </div> */}
 
             <div>
 

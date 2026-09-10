@@ -100,15 +100,7 @@ const WhyChooseUs = () => {
               they want them.
             </motion.p>
 
-            <motion.div
-              className="why-hero-link"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
-            >
-              <span>Discover the difference</span>
-              <ArrowUpRight size={19} />
-            </motion.div>
+           
           </div>
 
           <motion.div
@@ -200,10 +192,7 @@ const WhyChooseUs = () => {
                     <p>{item.text}</p>
                   </div>
 
-                  <ArrowUpRight
-                    className="benefit-arrow"
-                    size={23}
-                  />
+                  
                 </motion.div>
               );
             })}
@@ -301,10 +290,6 @@ const WhyChooseUs = () => {
               is waiting.
             </h2>
 
-            <button>
-              <span>Explore GoNbite</span>
-              <ArrowUpRight size={20} />
-            </button>
           </div>
 
           <div className="cta-food">

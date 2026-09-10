@@ -434,7 +434,7 @@ function About() {
                   <p>{value.text}</p>
                 </div>
 
-                <ArrowUpRight className="value-arrow" size={20} />
+              
 
               </motion.div>
             );

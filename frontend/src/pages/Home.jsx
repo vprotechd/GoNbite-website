@@ -227,30 +227,7 @@ function Home() {
     }}
   >
 
-    {/* Badge */}
-    <motion.div
-      className="hero-badge"
-
-      variants={{
-        hidden: {
-          opacity: 0,
-          y: 15,
-        },
-
-        visible: {
-          opacity: 1,
-          y: 0,
-
-          transition: {
-            duration: 0.6,
-          },
-        },
-      }}
-    >
-      <span className="badge-dot"></span>
-
-      Your cravings, delivered
-    </motion.div>
+   
 
 
     {/* Heading */}
@@ -387,10 +364,7 @@ function Home() {
 
       </div>
 
-      <ChevronDown
-        size={18}
-        className="location-arrow"
-      />
+     
 
     </motion.div>
 

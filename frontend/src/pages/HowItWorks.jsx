@@ -97,15 +97,7 @@ const HowItWorks = () => {
               choosing your meal to taking the first bite.
             </motion.p>
 
-            <motion.div
-              className="how-scroll"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-            >
-              <span>SCROLL TO EXPLORE</span>
-              <ArrowRight size={17} />
-            </motion.div>
+          
 
           </div>
 
@@ -208,10 +200,7 @@ const HowItWorks = () => {
 
                   <p>{step.text}</p>
 
-                  <div className="journey-arrow">
-                    <ArrowRight size={18} />
-                  </div>
-
+                  
                 </div>
 
               </motion.article>
@@ -332,10 +321,7 @@ const HowItWorks = () => {
               <i> first bite.</i>
             </h2>
 
-            <button>
-              Start exploring GoNbite
-              <ArrowRight size={19} />
-            </button>
+           
 
           </div>
 

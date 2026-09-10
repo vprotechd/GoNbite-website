@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ArrowRight } from "lucide-react";
 
-import logo from "../assets/images/gonbite-logo.jpeg";
+import logo from "../assets/images/food logo2-Photoroom.png";
 
 import "./Navbar.css";
 

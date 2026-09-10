@@ -153,7 +153,7 @@ const Download = () => {
                     </span>
 
                     <span className="store-text">
-                      <small>DOWNLOAD ON THE</small>
+                      <small>Available soon</small>
                       <strong>App Store</strong>
                     </span>
 

@@ -47,7 +47,8 @@
 }
 
 .about-kicker span {
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 900;
 }
 
 .about-kicker div {
@@ -73,8 +74,8 @@
 .about-hero-left p {
   max-width: 470px;
   margin: 35px 0 30px;
-  color: #7d736b;
-  font-size: 16px;
+  color: #625950;
+  font-size: 17px;
   line-height: 1.8;
 }
 
@@ -97,7 +98,9 @@
   gap: 15px;
 }
 
-/* RIGHT IMAGE */
+/* =========================================================
+   RIGHT IMAGE
+========================================================= */
 
 .about-hero-right {
   position: relative;
@@ -167,12 +170,14 @@
 
 .hero-image-caption p {
   margin: 0;
-  color: #645a52;
-  font-size: 12px;
+  color: #554c45;
+  font-size: 13px;
   line-height: 1.6;
 }
 
-/* HERO BOTTOM */
+/* =========================================================
+   HERO BOTTOM
+========================================================= */
 
 .hero-bottom-line {
   max-width: 1320px;
@@ -182,15 +187,15 @@
   display: flex;
   align-items: center;
   gap: 35px;
-  color: #a0948c;
-  font-size: 9px;
+  color: #8d8178;
+  font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.17em;
 }
 
 .hero-scroll-text {
   margin-left: auto;
-  color: #b1a59d;
+  color: #a0968f;
 }
 
 /* =========================================================
@@ -209,8 +214,8 @@
 
 .intro-number {
   color: #ef6c32;
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 900;
   padding-top: 12px;
 }
 
@@ -241,8 +246,8 @@
 
 .intro-copy p {
   margin: 0 0 22px;
-  color: #756b63;
-  font-size: 15px;
+  color: #5f564f;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -266,8 +271,8 @@
 
 .story-header-number {
   color: #ef6c32;
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 900;
   padding-top: 12px;
 }
 
@@ -338,8 +343,8 @@
 
 .story-text p {
   margin: 0 0 20px;
-  color: #776d65;
-  font-size: 15px;
+  color: #5f564f;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -375,12 +380,13 @@
 
 .story-statements strong {
   color: #ef6c32;
-  font-size: 11px;
+  font-size: 14px;
+  font-weight: 900;
 }
 
 .story-statements span {
-  color: #645a52;
-  font-size: 13px;
+  color: #5c534c;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -404,8 +410,8 @@
 
 .values-number {
   color: #ef6c32;
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 900;
   padding-top: 12px;
 }
 
@@ -444,9 +450,9 @@
 }
 
 .value-number {
-  color: #a89d95;
-  font-size: 11px;
-  font-weight: 800;
+  color: #8f837b;
+  font-size: 15px;
+  font-weight: 900;
 }
 
 .value-icon {
@@ -460,15 +466,15 @@
 }
 
 .value-info h3 {
-  margin: 0 0 5px;
+  margin: 0 0 6px;
   font-size: 22px;
 }
 
 .value-info p {
   margin: 0;
-  color: #81776f;
-  font-size: 13px;
-  line-height: 1.6;
+  color: #5f564f;
+  font-size: 15px;
+  line-height: 1.65;
 }
 
 .value-arrow {
@@ -630,8 +636,8 @@
 
 .partner-information > p {
   margin: 0 0 28px;
-  color: #776d65;
-  font-size: 15px;
+  color: #5f564f;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -674,7 +680,7 @@
 }
 
 .partner-location span {
-  color: #a09790;
+  color: #8e847d;
   font-size: 10px;
 }
 
@@ -889,7 +895,7 @@
   }
 
   .about-kicker span {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .about-kicker div {
@@ -906,8 +912,9 @@
   .about-hero-left p {
     max-width: 100%;
     margin: 25px 0 25px;
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #625950;
   }
 
   .about-hero-link {
@@ -950,7 +957,7 @@
   }
 
   .hero-image-caption p {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.5;
   }
 
@@ -981,7 +988,8 @@
   .intro-number {
     padding: 0;
     margin-bottom: 28px;
-    font-size: 11px;
+    font-size: 14px;
+    font-weight: 900;
   }
 
   .editorial-label {
@@ -1002,9 +1010,10 @@
   }
 
   .intro-copy p {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.75;
     margin-bottom: 18px;
+    color: #5f564f;
   }
 
   /* STORY */
@@ -1022,7 +1031,8 @@
   .story-header-number {
     padding: 0;
     margin-bottom: 27px;
-    font-size: 11px;
+    font-size: 14px;
+    font-weight: 900;
   }
 
   .story-header h2 {
@@ -1067,9 +1077,10 @@
   }
 
   .story-text p {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.75;
     margin-bottom: 17px;
+    color: #5f564f;
   }
 
   .story-signature {
@@ -1095,12 +1106,14 @@
   }
 
   .story-statements strong {
-    font-size: 10px;
+    font-size: 13px;
+    font-weight: 900;
   }
 
   .story-statements span {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.55;
+    color: #5c534c;
   }
 
   /* VALUES */
@@ -1118,7 +1131,8 @@
   .values-number {
     padding: 0;
     margin-bottom: 27px;
-    font-size: 11px;
+    font-size: 14px;
+    font-weight: 900;
   }
 
   .values-title-block h2 {
@@ -1134,7 +1148,7 @@
 
   .value-item {
     min-height: auto;
-    grid-template-columns: 30px 42px minmax(0, 1fr) 18px;
+    grid-template-columns: 34px 42px minmax(0, 1fr) 18px;
     gap: 10px;
     padding: 20px 0;
   }
@@ -1145,7 +1159,9 @@
   }
 
   .value-number {
-    font-size: 10px;
+    font-size: 13px;
+    font-weight: 900;
+    color: #8f837b;
   }
 
   .value-icon {
@@ -1164,8 +1180,9 @@
   }
 
   .value-info p {
-    font-size: 11px;
-    line-height: 1.55;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #5f564f;
   }
 
   .value-arrow {
@@ -1260,9 +1277,10 @@
   }
 
   .partner-information > p {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.75;
     margin-bottom: 24px;
+    color: #5f564f;
   }
 
   .partner-checks {
@@ -1343,7 +1361,7 @@
   }
 
   .about-hero-left p {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .about-hero-right {
@@ -1362,7 +1380,7 @@
   }
 
   .hero-image-caption p {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .hero-bottom-line {
@@ -1392,8 +1410,12 @@
   }
 
   .value-item {
-    grid-template-columns: 27px 38px minmax(0, 1fr) 15px;
+    grid-template-columns: 30px 38px minmax(0, 1fr) 15px;
     gap: 8px;
+  }
+
+  .value-number {
+    font-size: 12px;
   }
 
   .value-icon {
@@ -1406,7 +1428,8 @@
   }
 
   .value-info p {
-    font-size: 10.5px;
+    font-size: 12px;
+    line-height: 1.6;
   }
 
   .food-editorial-image {
@@ -1458,7 +1481,7 @@
   }
 
   .hero-image-caption p {
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .intro-main h2,
@@ -1474,8 +1497,12 @@
   }
 
   .value-item {
-    grid-template-columns: 24px 35px minmax(0, 1fr) 12px;
+    grid-template-columns: 27px 35px minmax(0, 1fr) 12px;
     gap: 7px;
+  }
+
+  .value-number {
+    font-size: 11px;
   }
 
   .value-icon {
@@ -1488,7 +1515,8 @@
   }
 
   .value-info p {
-    font-size: 10px;
+    font-size: 11px;
+    line-height: 1.55;
   }
 
   .food-editorial-image {
