@@ -203,6 +203,7 @@
 ========================================================= */
 
 .about-introduction {
+  width: calc(100% - 80px);
   max-width: 1250px;
   margin: auto;
   padding: 150px 0;
