@@ -311,6 +311,16 @@ function Home() {
 
 
       <Link
+        to="/download"
+        className="primary-btn"
+      >
+        Download Now
+
+        <ArrowRight size={19} />
+      </Link>
+
+
+      <Link
         to="/how-it-works"
         className="secondary-btn"
       >
