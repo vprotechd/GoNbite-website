@@ -55,7 +55,7 @@ const Footer = () => {
             </div>
 
             <Link
-              to="/contact"
+              to="/download"
               className="footer-cta-button"
             >
               Get Started
@@ -403,7 +403,7 @@ const Footer = () => {
               <div>
 
                 <small>
-                  Available on
+                  Coming soon on
                 </small>
 
                 <strong>
@@ -468,11 +468,11 @@ const Footer = () => {
 
           <div className="footer-legal">
 
-            <Link to="/privacy">
+            <Link to="/privacy-policy">
               Privacy
             </Link>
 
-            <Link to="/terms">
+            <Link to="/terms-and-conditions">
               Terms
             </Link>
 

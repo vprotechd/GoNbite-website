@@ -1,0 +1,767 @@
+/* =========================================================
+   GONBITE LEGAL PAGES
+   Privacy Policy + Terms & Conditions
+========================================================= */
+
+.legal-page {
+  min-height: 100vh;
+  background: #fffaf3;
+  color: #17304d;
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.legal-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.legal-hero {
+  position: relative;
+  overflow: hidden;
+
+  padding: 95px 20px 55px;
+
+  background:
+    radial-gradient(
+      circle at 88% 15%,
+      rgba(244, 142, 22, 0.13),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 8% 85%,
+      rgba(50, 160, 85, 0.10),
+      transparent 25%
+    ),
+    #fffaf3;
+
+  border-bottom: 1px solid rgba(10, 22, 40, 0.06);
+}
+
+
+/* HERO CONTENT */
+
+.legal-hero-inner {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+
+  align-items: center;
+
+  gap: 60px;
+}
+
+
+/* =========================================================
+   HERO LEFT
+========================================================= */
+
+.legal-hero-content {
+  max-width: 650px;
+}
+
+
+.legal-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 8px 17px;
+
+  margin-bottom: 16px;
+
+  border-radius: 999px;
+
+  background: #ffe5c6;
+
+  color: #ed7100;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  letter-spacing: 0.2px;
+}
+
+
+.legal-hero-content h1 {
+  margin: 0 0 17px;
+
+  color: #123253;
+
+  font-size: clamp(42px, 5.5vw, 67px);
+
+  line-height: 1.04;
+
+  font-weight: 850;
+
+  letter-spacing: -2px;
+}
+
+
+.legal-hero-content p {
+  max-width: 650px;
+
+  margin: 0 0 20px;
+
+  color: #58708a;
+
+  font-size: 17px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.legal-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 23px;
+
+  color: #263d55;
+
+  font-size: 14px;
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   BACK HOME BUTTON
+========================================================= */
+
+.back-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 18px;
+
+  border: 1.5px solid #f47d14;
+
+  border-radius: 999px;
+
+  background: #ffffff;
+
+  color: #ef7100;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 750;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.back-home-btn:hover {
+  background: #f47d14;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 22px rgba(244, 125, 20, 0.20);
+}
+
+
+.back-home-btn svg {
+  transition: transform 0.25s ease;
+}
+
+
+.back-home-btn:hover svg {
+  transform: translateX(-3px);
+}
+
+
+/* =========================================================
+   FOOD IMAGE AREA
+========================================================= */
+
+.legal-hero-image {
+  position: relative;
+
+  min-height: 350px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.food-image-wrapper {
+  position: relative;
+
+  z-index: 4;
+
+  width: min(390px, 100%);
+
+  aspect-ratio: 1 / 1;
+
+  padding: 13px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 25px 55px rgba(17, 35, 55, 0.14);
+
+  transform: rotate(2deg);
+}
+
+
+.legal-food-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   DECORATIVE SHAPES
+========================================================= */
+
+.food-decoration {
+  position: absolute;
+
+  border-radius: 45% 55% 60% 40%;
+
+  z-index: 1;
+}
+
+
+.food-decoration-one {
+  width: 145px;
+  height: 145px;
+
+  top: 15px;
+  right: 5px;
+
+  background: #f58a1f;
+
+  transform: rotate(25deg);
+}
+
+
+.food-decoration-two {
+  width: 175px;
+  height: 150px;
+
+  bottom: 8px;
+  left: 0;
+
+  background: #48a95f;
+
+  transform: rotate(-25deg);
+}
+
+
+/* =========================================================
+   LEAF
+========================================================= */
+
+.leaf-decoration {
+  position: absolute;
+
+  right: 5px;
+  bottom: 15px;
+
+  z-index: 5;
+
+  color: #3b9a58;
+
+  transform: rotate(-18deg);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.legal-content {
+  padding: 55px 20px 90px;
+}
+
+
+.legal-layout {
+  display: grid;
+
+  grid-template-columns: 245px minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 35px;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.legal-sidebar {
+  position: sticky;
+
+  top: 95px;
+
+  padding: 23px 21px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(20, 48, 77, 0.08);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 35px rgba(15, 38, 60, 0.055);
+}
+
+
+.legal-sidebar h3 {
+  margin: 0 0 13px;
+
+  color: #123253;
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+
+.legal-sidebar a {
+  position: relative;
+
+  display: block;
+
+  padding: 8px 0 8px 14px;
+
+  color: #61778d;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.legal-sidebar a::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 50%;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #f47d14;
+
+  transform: translateY(-50%);
+}
+
+
+.legal-sidebar a:hover {
+  color: #ed7200;
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   LEGAL CARD
+========================================================= */
+
+.legal-card {
+  padding: 43px 48px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(20, 48, 77, 0.07);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 14px 45px rgba(15, 38, 60, 0.055);
+}
+
+
+.legal-card section {
+  scroll-margin-top: 100px;
+
+  padding-bottom: 32px;
+
+  margin-bottom: 32px;
+
+  border-bottom: 1px solid #edf0f2;
+}
+
+
+.legal-card section:last-of-type {
+  border-bottom: none;
+
+  margin-bottom: 0;
+
+  padding-bottom: 20px;
+}
+
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+.legal-card h2 {
+  position: relative;
+
+  margin: 0 0 15px;
+
+  padding-left: 14px;
+
+  color: #123253;
+
+  font-size: 22px;
+
+  line-height: 1.35;
+
+  font-weight: 800;
+}
+
+
+.legal-card h2::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 3px;
+
+  width: 4px;
+
+  height: calc(100% - 6px);
+
+  border-radius: 10px;
+
+  background: #f47d14;
+}
+
+
+.legal-card h3 {
+  margin: 23px 0 9px;
+
+  color: #173b5d;
+
+  font-size: 16px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.legal-card p {
+  margin: 0 0 14px;
+
+  color: #62778c;
+
+  font-size: 15px;
+
+  line-height: 1.82;
+}
+
+
+.legal-card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.legal-card ul {
+  margin: 9px 0 15px;
+
+  padding-left: 21px;
+}
+
+
+.legal-card li {
+  position: relative;
+
+  margin-bottom: 8px;
+
+  color: #62778c;
+
+  font-size: 15px;
+
+  line-height: 1.65;
+}
+
+
+.legal-card li::marker {
+  color: #f47d14;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.legal-contact {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+  max-width: 510px;
+
+  padding: 20px 22px;
+
+  margin-top: 18px;
+
+  background: #fff8ef;
+
+  border: 1px solid rgba(244, 125, 20, 0.14);
+
+  border-radius: 15px;
+}
+
+
+.legal-contact div {
+  display: grid;
+
+  grid-template-columns: 85px 1fr;
+
+  gap: 15px;
+
+  align-items: center;
+}
+
+
+.legal-contact strong {
+  color: #173653;
+
+  font-size: 14px;
+}
+
+
+.legal-contact a {
+  color: #ec7200;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+.legal-contact a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   TRUST BOX
+========================================================= */
+
+.legal-trust-box {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 16px 19px;
+
+  margin-top: 10px;
+
+  background: #eaf8ec;
+
+  border-radius: 12px;
+
+  color: #2e7843;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  line-height: 1.5;
+}
+
+
+.legal-trust-box svg {
+  flex-shrink: 0;
+
+  color: #36934f;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .legal-hero-inner {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+
+  .legal-hero-content {
+    max-width: 750px;
+  }
+
+
+  .legal-hero-image {
+    min-height: 300px;
+  }
+
+
+  .legal-layout {
+    grid-template-columns: 1fr;
+  }
+
+
+  .legal-sidebar {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .legal-container {
+    width: min(100% - 28px, 1180px);
+  }
+
+
+  .legal-hero {
+    padding: 75px 14px 35px;
+  }
+
+
+  .legal-hero-content h1 {
+    font-size: 40px;
+
+    letter-spacing: -1.3px;
+  }
+
+
+  .legal-hero-content p {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+
+  .legal-hero-image {
+    min-height: 270px;
+  }
+
+
+  .food-image-wrapper {
+    width: 275px;
+  }
+
+
+  .food-decoration-one {
+    width: 105px;
+    height: 105px;
+
+    right: 15px;
+  }
+
+
+  .food-decoration-two {
+    width: 120px;
+    height: 110px;
+
+    left: 15px;
+  }
+
+
+  .leaf-decoration {
+    right: 20px;
+  }
+
+
+  .legal-content {
+    padding: 35px 14px 60px;
+  }
+
+
+  .legal-card {
+    padding: 28px 20px;
+
+    border-radius: 18px;
+  }
+
+
+  .legal-card h2 {
+    font-size: 20px;
+  }
+
+
+  .legal-card p,
+  .legal-card li {
+    font-size: 14px;
+  }
+
+
+  .legal-contact div {
+    grid-template-columns: 1fr;
+
+    gap: 4px;
+  }
+
+
+  .legal-trust-box {
+    align-items: flex-start;
+
+    font-size: 12px;
+  }
+
+}

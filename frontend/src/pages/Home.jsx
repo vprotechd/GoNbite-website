@@ -850,7 +850,7 @@ function Home() {
             </div>
 
             <Link
-              to="/contact"
+              to="/download"
               className="how-cta-button"
             >
               Get Started

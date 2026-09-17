@@ -13,6 +13,8 @@ import WhyChooseUs from "./pages/WhyChooseUs";
 import HowItWorks from "./pages/HowItWorks";
 import Contact from "./pages/Contact";
 import Download from "./pages/Download";
+import PrivacyPolicy from "./pages/Privacy";
+import TermsAndConditions from "./pages/Terms";
 
 const seoByPath = {
   "/": {
@@ -98,6 +100,9 @@ const App = () => {
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/download" element={<Download />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        
       </Routes>
     </BrowserRouter>
   );
