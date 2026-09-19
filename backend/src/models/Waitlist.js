@@ -21,7 +21,7 @@ const waitlistSchema = new mongoose.Schema(
       required: true,
       lowercase: true,
       trim: true,
-      index: true,
+      // index: true  ← removed
     },
   },
   {
