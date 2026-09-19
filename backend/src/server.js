@@ -197,7 +197,7 @@ mongoose
   .then(() => {
     console.log("MongoDB connected successfully");
 
-    app.listen(config.port, () => {
+    app.listen(config.port, "0.0.0.0", () => {
       console.log(
         `GoNbite API running on http://localhost:${config.port}`
       );

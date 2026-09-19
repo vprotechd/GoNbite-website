@@ -35,6 +35,15 @@ export const config = {
 
   adminKey: process.env.ADMIN_REGISTRATION_KEY || "",
 
+  emailFrom:
+    process.env.EMAIL_FROM ||
+    process.env.RESEND_FROM ||
+    process.env.SMTP_USER,
+
+  resend: {
+    apiKey: process.env.RESEND_API_KEY || "",
+  },
+
   smtp: {
     host: process.env.SMTP_HOST,
     port: Number(process.env.SMTP_PORT || 587),
@@ -44,9 +53,5 @@ export const config = {
 
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS,
-
-    from:
-      process.env.EMAIL_FROM ||
-      process.env.SMTP_USER,
   },
 };

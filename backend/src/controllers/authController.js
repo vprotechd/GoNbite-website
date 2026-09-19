@@ -44,9 +44,7 @@ const createUser = async ({
   }
 
   if (!password || password.length < 8) {
-    throw new Error(
-      "Password must be at least 8 characters."
-    );
+    throw new Error("Password must be at least 8 characters.");
   }
 
   const normalizedEmail = email.toLowerCase().trim();
@@ -56,38 +54,65 @@ const createUser = async ({
   });
 
   if (exists) {
-    throw new Error(
+    const error = new Error(
       "An account with this email already exists."
     );
+    error.statusCode = 409;
+    throw error;
   }
 
   const passwordHash = await bcrypt.hash(password, 12);
+  const isAdmin = role === "admin";
+  const verificationToken = isAdmin ? null : createVerificationToken();
 
-  const verificationToken = createVerificationToken();
+  let user;
 
-  const user = await User.create({
-    name: name.trim(),
-    email: normalizedEmail,
-    passwordHash,
-    role,
+  try {
+    user = await User.create({
+      name: name.trim(),
+      email: normalizedEmail,
+      passwordHash,
+      role,
+      isEmailVerified: isAdmin,
+      emailVerificationTokenHash: verificationToken
+        ? hashToken(verificationToken)
+        : null,
+      emailVerificationExpires: verificationToken
+        ? new Date(Date.now() + 24 * 60 * 60 * 1000)
+        : null,
+    });
 
-    isEmailVerified: false,
+    // Administrators are verified immediately and do not depend on SMTP.
+    if (!isAdmin) {
+      try {
+        await sendVerificationEmail({
+          to: user.email,
+          name: user.name,
+          token: verificationToken,
+        });
+      } catch (emailError) {
+        // Never leave a half-created account when the verification email
+        // could not be sent. The user can safely register again later.
+        await User.deleteOne({ _id: user._id });
+        emailError.statusCode = 503;
+        emailError.publicMessage =
+          "Your account could not be created because the verification email service is temporarily unavailable. Please try again later.";
+        throw emailError;
+      }
+    }
 
-    emailVerificationTokenHash:
-      hashToken(verificationToken),
+    return user;
+  } catch (error) {
+    if (error?.code === 11000) {
+      const duplicateError = new Error(
+        "An account with this email already exists."
+      );
+      duplicateError.statusCode = 409;
+      throw duplicateError;
+    }
 
-    emailVerificationExpires: new Date(
-      Date.now() + 24 * 60 * 60 * 1000
-    ),
-  });
-
-  await sendVerificationEmail({
-    to: user.email,
-    name: user.name,
-    token: verificationToken,
-  });
-
-  return user;
+    throw error;
+  }
 };
 
 /* --------------------------------
@@ -104,8 +129,8 @@ export const register = async (req, res) => {
       user,
     });
   } catch (error) {
-    res.status(400).json({
-      message: error.message,
+    res.status(error.statusCode || 400).json({
+      message: error.publicMessage || error.message,
     });
   }
 };
@@ -145,8 +170,8 @@ export const adminRegister = async (req, res) => {
       user,
     });
   } catch (error) {
-    res.status(400).json({
-      message: error.message,
+    res.status(error.statusCode || 400).json({
+      message: error.publicMessage || error.message,
     });
   }
 };
@@ -217,11 +242,9 @@ export const resendVerification = async (req, res) => {
       });
     }
 
-    const user = await User.findOne({
-      email,
-    });
+    const user = await User.findOne({ email });
 
-    // Don't reveal whether an account exists
+    // Do not reveal whether an account exists.
     if (!user || user.isEmailVerified) {
       return res.json({
         message:
@@ -229,36 +252,49 @@ export const resendVerification = async (req, res) => {
       });
     }
 
+    const previousHash = user.emailVerificationTokenHash;
+    const previousExpiry = user.emailVerificationExpires;
     const token = createVerificationToken();
 
-    user.emailVerificationTokenHash =
-      hashToken(token);
-
+    user.emailVerificationTokenHash = hashToken(token);
     user.emailVerificationExpires = new Date(
       Date.now() + 24 * 60 * 60 * 1000
     );
 
     await user.save();
 
-    await sendVerificationEmail({
-      to: user.email,
-      name: user.name,
-      token,
-    });
+    try {
+      await sendVerificationEmail({
+        to: user.email,
+        name: user.name,
+        token,
+      });
+    } catch (emailError) {
+      // Keep the previously valid token if delivery failed.
+      user.emailVerificationTokenHash = previousHash;
+      user.emailVerificationExpires = previousExpiry;
+      await user.save();
+
+      console.error(
+        "Resend verification email error:",
+        emailError?.code || emailError?.message || emailError
+      );
+
+      return res.status(503).json({
+        message:
+          "The verification email service is temporarily unavailable. Please try again later.",
+      });
+    }
 
     return res.json({
       message:
         "If the account exists and needs verification, a new email has been sent.",
     });
   } catch (error) {
-    console.error(
-      "Resend verification error:",
-      error
-    );
+    console.error("Resend verification error:", error);
 
     return res.status(500).json({
-      message:
-        "Unable to resend verification email.",
+      message: "Unable to resend verification email.",
     });
   }
 };
@@ -279,9 +315,13 @@ const loginUser = async (
 
     const password = req.body.password || "";
 
-    const user = await User.findOne({
-      email,
-    });
+    if (!email || !emailOk(email) || !password) {
+      return res.status(400).json({
+        message: "Email address and password are required.",
+      });
+    }
+
+    const user = await User.findOne({ email });
 
     if (
       !user ||
