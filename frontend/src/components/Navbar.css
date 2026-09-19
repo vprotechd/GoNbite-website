@@ -403,3 +403,16 @@
     right: 3%;
   }
 }
+
+/* Account actions added without changing the existing navigation styling. */
+.navbar-actions { display:flex; align-items:center; gap:8px; }
+.navbar-auth-btn {
+  display:inline-flex; align-items:center; gap:7px; min-height:42px; padding:0 13px;
+  border:1px solid rgba(255,107,53,.18); border-radius:12px; background:rgba(255,255,255,.7);
+  color:#5b463b; font-size:12px; font-weight:700; cursor:pointer; text-decoration:none;
+  transition:transform .25s ease, background .25s ease, box-shadow .25s ease;
+}
+.navbar-auth-btn:hover { transform:translateY(-2px); background:#fff; box-shadow:0 8px 22px rgba(100,70,45,.08); }
+.navbar-auth-btn.register { background:#ff6b35; color:#fff; border-color:#ff6b35; }
+.navbar-auth-btn.logout { font-family:inherit; }
+@media (max-width: 1100px) { .navbar-actions .navbar-auth-btn { display:none; } }

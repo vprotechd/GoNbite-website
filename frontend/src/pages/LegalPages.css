@@ -765,3 +765,36 @@
   }
 
 }
+
+.form-success {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #eaf8ef;
+  color: #18733b;
+  border: 1px solid #bfe6cb;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.resend-verification-btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  color: #ff8500;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.resend-verification-btn:hover {
+  text-decoration: underline;
+}
+
+.resend-verification-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

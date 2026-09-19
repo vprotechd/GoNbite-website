@@ -1,0 +1,26 @@
+ 
+.account-page{min-height:100vh;background:linear-gradient(135deg,#fffaf6,#f7efe8);color:#34271f;padding:110px 20px 70px}
+.account-wrap{width:min(1040px,100%);margin:auto;display:grid;grid-template-columns:1.05fr .95fr;background:#fff;border:1px solid #f0e2d8;border-radius:28px;overflow:hidden;box-shadow:0 25px 80px rgba(89,58,35,.10)}
+.account-brand{padding:58px;background:linear-gradient(145deg,#fff4ea,#fffaf7);display:flex;flex-direction:column;justify-content:center}
+.account-brand img{width:115px;height:auto;object-fit:contain;margin-bottom:25px}
+.account-brand h1{font-size:clamp(38px,5vw,62px);line-height:1;letter-spacing:-.05em;margin:0 0 18px;color:#3b2b23}
+.account-brand h1 span{color:#ff6b35}
+.account-brand p{color:#76685f;line-height:1.75;max-width:470px}
+.account-points{display:grid;gap:12px;margin-top:25px}
+.account-point{display:flex;gap:10px;align-items:center;color:#604e43;font-size:14px;font-weight:600}
+.account-point i{width:9px;height:9px;border-radius:50%;background:#ff6b35}
+.account-form{padding:52px}
+.account-kicker{font-size:11px;letter-spacing:.16em;font-weight:800;color:#ff6b35;text-transform:uppercase}
+.account-form h2{font-size:34px;letter-spacing:-.03em;margin:8px 0 8px;color:#352820}
+.account-form>p{color:#83746a;font-size:14px;line-height:1.6;margin-bottom:26px}
+.form-grid{display:grid;gap:16px}
+.form-field label{display:block;font-size:12px;font-weight:800;color:#5e4d43;margin-bottom:7px}
+.form-field input,.form-field textarea,.form-field select{width:100%;border:1px solid #eadbd0;background:#fffaf7;border-radius:12px;padding:13px 14px;font:inherit;color:#34271f;outline:none;transition:border .2s,box-shadow .2s}
+.form-field input:focus,.form-field textarea:focus,.form-field select:focus{border-color:#ff9a72;box-shadow:0 0 0 4px rgba(255,107,53,.09)}
+.form-field textarea{min-height:170px;resize:vertical}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-submit{border:0;border-radius:13px;background:#ff6b35;color:#fff;padding:14px 18px;font:inherit;font-weight:800;cursor:pointer;box-shadow:0 12px 25px rgba(255,107,53,.18);transition:transform .2s}
+.form-submit:hover{transform:translateY(-2px)} .form-submit:disabled{opacity:.6;cursor:not-allowed;transform:none}
+.form-note{font-size:12px;color:#897a71;text-align:center;line-height:1.6}.form-link{text-align:center;font-size:13px;color:#76685f}.form-link a{color:#d95525;font-weight:800;text-decoration:none}
+.form-error{padding:11px 13px;border-radius:10px;background:#fff0ed;color:#a23a23;font-size:13px}.form-success{padding:11px 13px;border-radius:10px;background:#eefaf1;color:#23753a;font-size:13px}
+@media(max-width:800px){.account-wrap{grid-template-columns:1fr}.account-brand{padding:38px}.account-form{padding:36px 25px}.form-row{grid-template-columns:1fr}}
