@@ -18,6 +18,8 @@ import TermsAndConditions from "./pages/Terms";
 import Blogs from "./pages/Blogs";
 import BlogDetails from "./pages/BlogDetails";
 import Login from "./pages/Login";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
 import Register from "./pages/Register";
 import VerifyEmail from "./pages/VerifyEmail";
 import AdminLogin from "./pages/AdminLogin";
@@ -55,6 +57,8 @@ const seoByPath = {
     description: "Read GoNbite articles about food, restaurants, local dining, ordering tips, offers and the food scene in Mohali.",
   },
   "/login": { title: "Login | GoNbite", description: "Log in to your GoNbite account." },
+  "/forgot-password": { title: "Forgot Password | GoNbite", description: "Recover your GoNbite account securely." },
+  "/reset-password": { title: "Reset Password | GoNbite", description: "Create a new GoNbite account password." },
   "/register": { title: "Create Your GoNbite Account", description: "Create a GoNbite account and verify your email to get started." },
   "/verify-email": { title: "Verify Email | GoNbite", description: "Verify your email address for your GoNbite account." },
   "/admin/login": { title: "Admin Login | GoNbite", description: "GoNbite administration portal." },
@@ -74,7 +78,7 @@ function SiteSEO() {
       <html lang="en" />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
-      <meta name="robots" content={path.startsWith("/admin") || ["/login","/register","/verify-email"].includes(path) ? "noindex, nofollow" : "index, follow"} />
+      <meta name="robots" content={path.startsWith("/admin") || ["/login","/register","/verify-email","/forgot-password","/reset-password"].includes(path) ? "noindex, nofollow" : "index, follow"} />
       <meta name="author" content="GoNbite" />
       <link rel="canonical" href={canonical} />
       <meta property="og:title" content={seo.title} />
@@ -107,6 +111,8 @@ export default function App() {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/:slug" element={<BlogDetails />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/register" element={<Register />} />
           <Route path="/verify-email" element={<VerifyEmail />} />
           <Route path="/admin/login" element={<AdminLogin />} />

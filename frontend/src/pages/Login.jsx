@@ -201,6 +201,11 @@ export default function Login() {
             : "Sign in"}
         </button>
 
+        {/* Forgot password */}
+        <div className="form-link" style={{ textAlign: "right" }}>
+          <Link to="/forgot-password">Forgot password?</Link>
+        </div>
+
         {/* Resend verification */}
         <div className="form-link">
           <button

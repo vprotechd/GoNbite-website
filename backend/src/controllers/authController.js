@@ -7,7 +7,10 @@ import {
   createVerificationToken,
   hashToken,
 } from "../utils/tokens.js";
-import { sendVerificationEmail } from "../utils/email.js";
+import {
+  sendVerificationEmail,
+  sendPasswordResetEmail,
+} from "../utils/email.js";
 
 const emailOk = (email) =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -300,6 +303,118 @@ export const resendVerification = async (req, res) => {
 };
 
 /* --------------------------------
+   FORGOT PASSWORD
+-------------------------------- */
+
+export const forgotPassword = async (req, res) => {
+  const genericMessage =
+    "If an account with that email exists, a password reset link has been sent.";
+
+  try {
+    const email = req.body.email?.toLowerCase().trim();
+
+    if (!email || !emailOk(email)) {
+      return res.status(400).json({
+        message: "Please enter a valid email address.",
+      });
+    }
+
+    const user = await User.findOne({ email });
+
+    // Do not reveal whether an email is registered.
+    if (!user) {
+      return res.json({ message: genericMessage });
+    }
+
+    const token = createVerificationToken();
+    user.passwordResetTokenHash = hashToken(token);
+    user.passwordResetExpires = new Date(
+      Date.now() + 60 * 60 * 1000
+    );
+
+    await user.save();
+
+    try {
+      await sendPasswordResetEmail({
+        to: user.email,
+        name: user.name,
+        token,
+      });
+    } catch (emailError) {
+      user.passwordResetTokenHash = null;
+      user.passwordResetExpires = null;
+      await user.save();
+
+      console.error(
+        "Password reset email error:",
+        emailError?.code || emailError?.message || emailError
+      );
+
+      return res.status(503).json({
+        message:
+          "The password reset email service is temporarily unavailable. Please try again later.",
+      });
+    }
+
+    return res.json({ message: genericMessage });
+  } catch (error) {
+    console.error("Forgot password error:", error);
+    return res.status(500).json({
+      message: "Unable to process the password reset request.",
+    });
+  }
+};
+
+/* --------------------------------
+   RESET PASSWORD
+-------------------------------- */
+
+export const resetPassword = async (req, res) => {
+  try {
+    const token = req.body?.token;
+    const password = req.body?.password || "";
+
+    if (!token || typeof token !== "string") {
+      return res.status(400).json({
+        message: "Password reset token is required.",
+      });
+    }
+
+    if (password.length < 8) {
+      return res.status(400).json({
+        message: "Password must be at least 8 characters.",
+      });
+    }
+
+    const user = await User.findOne({
+      passwordResetTokenHash: hashToken(token),
+      passwordResetExpires: { $gt: new Date() },
+    });
+
+    if (!user) {
+      return res.status(400).json({
+        message: "This password reset link is invalid or expired.",
+      });
+    }
+
+    user.passwordHash = await bcrypt.hash(password, 12);
+    user.passwordResetTokenHash = null;
+    user.passwordResetExpires = null;
+
+    await user.save();
+
+    return res.json({
+      message: "Password reset successfully. You can now sign in.",
+    });
+  } catch (error) {
+    console.error("Reset password error:", error);
+    return res.status(500).json({
+      message: "Unable to reset your password.",
+    });
+  }
+};
+
+/* --------------------------------
    LOGIN
 -------------------------------- */
 
@@ -396,4 +511,30 @@ export const getMe = (req, res) => {
   res.json({
     user: req.user,
   });
+};
+
+
+
+export const getRegisteredUsers = async (req, res) => {
+  try {
+    const users = await User.find({
+      role: "user",
+    })
+      .select(
+        "name email role isEmailVerified lastLoginAt createdAt updatedAt"
+      )
+      .sort({ createdAt: -1 })
+      .lean();
+
+    res.json({
+      users,
+      total: users.length,
+    });
+  } catch (error) {
+    console.error("Get registered users error:", error);
+
+    res.status(500).json({
+      message: "Unable to load registered users.",
+    });
+  }
 };

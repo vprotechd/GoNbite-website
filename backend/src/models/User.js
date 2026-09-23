@@ -51,6 +51,17 @@ const userSchema = new mongoose.Schema(
       type: Date,
       default: null,
     },
+
+    // Password reset
+    passwordResetTokenHash: {
+      type: String,
+      default: null,
+    },
+
+    passwordResetExpires: {
+      type: Date,
+      default: null,
+    },
   },
   {
     timestamps: true,
@@ -66,6 +77,8 @@ userSchema.set("toJSON", {
     delete ret.passwordHash;
     delete ret.emailVerificationTokenHash;
     delete ret.emailVerificationExpires;
+    delete ret.passwordResetTokenHash;
+    delete ret.passwordResetExpires;
 
     return ret;
   },
