@@ -876,7 +876,7 @@ export default function AdminDashboard() {
 
   const loadUsers = async () => {
     try {
-      const response = await fetch(`${API}/users/admin/all`, {
+      const response = await fetch(`${API}/auth/registered-users`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -1517,138 +1517,122 @@ export default function AdminDashboard() {
 
         <section className="admin-users-panel">
 
-          <div className="admin-users-head">
+          <div className="admin-users-header">
 
-            <div>
-              <span className="admin-section-label">
-                USER MANAGEMENT
-              </span>
+            <div className="admin-library-head">
+              <div>
+                <span className="admin-section-label">
+                  USER MANAGEMENT
+                </span>
 
-              <h2>
-                Registered users{" "}
-                <span>{users.length}</span>
-              </h2>
+                <h2>
+                  Registered users <span>{users.length}</span>
+                </h2>
+              </div>
+
+              <button
+                className="admin-small"
+                onClick={loadUsers}
+                type="button"
+                title="Refresh users"
+              >
+                <RefreshCw size={14} />
+                Refresh
+              </button>
             </div>
 
-            <button
-              className="admin-small"
-              onClick={loadUsers}
-              type="button"
-              title="Refresh users"
-            >
-              <RefreshCw size={14} />
-              Refresh
-            </button>
+            <div className="admin-users-search">
+              <input
+                type="search"
+                value={userSearch}
+                onChange={(event) =>
+                  setUserSearch(event.target.value)
+                }
+                placeholder="Search users by name or email..."
+                aria-label="Search registered users"
+              />
+
+              {userSearch && (
+                <button
+                  type="button"
+                  className="admin-users-search-clear"
+                  onClick={() => setUserSearch("")}
+                  aria-label="Clear user search"
+                  title="Clear search"
+                >
+                  ×
+                </button>
+              )}
+            </div>
 
           </div>
 
-          {/* USER SEARCH */}
-
-          <div className="admin-users-toolbar">
-
-            <input
-              type="search"
-              value={userSearch}
-              onChange={(event) =>
-                setUserSearch(event.target.value)
-              }
-              placeholder="Search users by name or email..."
-              aria-label="Search registered users"
-            />
-
+          <div className="admin-users-summary">
+            <div className="admin-users-summary-left">
+              <span>
+                Showing {filteredUsers.length} of {users.length} registered users
+              </span>
+            </div>
           </div>
-
-          {/* USERS LIST */}
 
           <div className="admin-users-list">
 
             {filteredUsers.length > 0 ? (
               filteredUsers.map((currentUser) => {
-
                 const displayName =
                   currentUser.name?.trim() ||
-                  currentUser.email
-                    ?.split("@")[0] ||
+                  currentUser.email?.split("@")[0] ||
                   "User";
 
-                const initials =
-                  displayName
-                    .charAt(0)
-                    .toUpperCase();
+                const initials = displayName
+                  .split(/\s+/)
+                  .filter(Boolean)
+                  .slice(0, 2)
+                  .map((part) => part.charAt(0).toUpperCase())
+                  .join("") || "U";
+
+                const verified = Boolean(currentUser.isEmailVerified);
 
                 return (
-                  <div
-                    className="admin-user-row"
-                    key={currentUser._id}
+                  <article
+                    className="admin-user-card"
+                    key={currentUser._id || currentUser.email}
                   >
-
-                    {/* AVATAR */}
-
-                    <div className="admin-user-avatar">
+                    <div className="admin-user-avatar" aria-hidden="true">
                       {initials}
                     </div>
 
-                    {/* USER DETAILS */}
-
                     <div className="admin-user-info">
-
                       <h3>{displayName}</h3>
-
-                      <p>
-                        {currentUser.email ||
-                          "No email available"}
-                      </p>
-
+                      <p>{currentUser.email || "No email available"}</p>
                     </div>
 
-                    {/* USER DATE */}
-
-                    <div className="admin-user-date">
-
-                      <small>
-                        Registered
-                      </small>
-
-                      <span>
-                        {formatUserDate(
-                          currentUser.createdAt
-                        )}
+                    <div className="admin-user-meta">
+                      <span className={`user-status ${verified ? "verified" : "pending"}`}>
+                        <span className="user-status-dot" aria-hidden="true" />
+                        {verified ? "Verified" : "Pending verification"}
                       </span>
 
+                      <span className="admin-user-date">
+                        Registered {formatUserDate(currentUser.createdAt)}
+                      </span>
                     </div>
-
-                    {/* VERIFICATION */}
-
-                    <div
-                      className={`admin-user-status ${
-                        currentUser.isEmailVerified
-                          ? "verified"
-                          : "pending"
-                      }`}
-                    >
-                      {currentUser.isEmailVerified
-                        ? "Verified"
-                        : "Pending"}
-                    </div>
-
-                  </div>
+                  </article>
                 );
               })
             ) : (
               <div className="admin-users-empty">
-
                 {userSearch.trim() ? (
                   <>
-                    No users found for{" "}
-                    <strong>
-                      "{userSearch}"
-                    </strong>
-                    .
+                    <strong>No users found</strong>
+                    <span>Try a different name or email address.</span>
                   </>
                 ) : (
-                  "No registered users yet."
+                  <>
+                    <strong>No registered users yet.</strong>
+                    <span>New accounts will appear here automatically.</span>
+                  </>
                 )}
-
               </div>
             )}
 
