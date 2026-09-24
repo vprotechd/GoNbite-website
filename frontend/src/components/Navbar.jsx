@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ArrowRight, LogIn, LogOut, LayoutDashboard, UserPlus } from "lucide-react";
-import logo from "../assets/images/food logo2-Photoroom.png";
+// import logo from "../assets/images/food logo2-Photoroom.png";
+import logo from "../assets/images/food logo11.jpeg";
 import { useAuth } from "../context/AuthContext";
 import "./Navbar.css";
 
