@@ -20,7 +20,7 @@ import "./Download.css";
 
 const Download = () => {
   // Change this later to your real Play Store / App Store URL
-  const downloadUrl = "https://gonbite.com/download";
+ const downloadUrl = "/app-release.apk";
 
   return (
     <>
@@ -70,47 +70,64 @@ const Download = () => {
 
                 {/* QR CODE */}
 
-                <motion.div
-                  className="download-qr-box"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{
-                    duration: 0.6,
-                    delay: 0.3,
-                  }}
-                >
+              
+{/* QR CODE */}
 
-                  <div className="qr-wrapper">
+<motion.div
+  className="download-qr-box"
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+>
+  <div className="qr-wrapper">
+    <QRCodeSVG
+      value={new URL(downloadUrl, window.location.origin).href}
+      size={145}
+      bgColor="#ffffff"
+      fgColor="#241914"
+      level="H"
+    />
+  </div>
 
-                    <QRCodeSVG
-                      value={downloadUrl}
-                      size={145}
-                      bgColor="#ffffff"
-                      fgColor="#241914"
-                      level="H"
-                    />
+  <div className="qr-content">
+    <div className="qr-icon">
+      <QrCode size={16} />
+    </div>
 
-                  </div>
+    <div>
+      <strong>Scan to download</strong>
+      <span>Open with your phone camera</span>
+    </div>
+  </div>
 
-                  <div className="qr-content">
+  <a
+    href={downloadUrl}
+    download="app-release.apk"
+    className="download-apk-btn"
+  >
+    Download Android App
+  </a>
+</motion.div>
 
-                    <div className="qr-icon">
-                      <QrCode size={16} />
-                    </div>
-
-                    <div>
-                      <strong>Scan to download</strong>
-                      <span>Open with your phone camera</span>
-                    </div>
-
-                  </div>
-
-                </motion.div>
 
 
                 {/* STORE BUTTONS */}
 
                 <div className="download-stores">
+
+
+
+             
+ <a
+  href="/app-release.apk"
+  download="app-release.apk"
+  className="download-apk-btn"
+>
+  <Download size={18} />
+  Download APK
+</a> 
+
+
 
                   {/* GOOGLE PLAY */}
 
@@ -135,6 +152,9 @@ const Download = () => {
                     <ArrowUpRight size={18} />
 
                   </a>
+
+
+
 
 
                   {/* APP STORE */}
