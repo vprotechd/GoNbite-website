@@ -1,3 +1,4 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -19,35 +20,26 @@ import food3 from "../assets/images/food3.jpg";
 import "./Download.css";
 
 const Download = () => {
-  // Change this later to your real Play Store / App Store URL
-  const downloadUrl = "https://gonbite.com/download";
+  // GoNbite Android APK download URL
+  const downloadUrl =
+    "https://drive.google.com/uc?export=download&id=1y86hr2i67OHShpdqFXeuSl4QZqUK72Tt";
 
   return (
     <>
       <Navbar />
 
       <main className="download-page">
-
-        {/* =====================================================
-            DOWNLOAD HERO
-        ===================================================== */}
-
+        {/* DOWNLOAD HERO */}
         <section className="download-hero">
-
           <div className="download-hero-container">
-
-            {/* ================= LEFT CONTENT ================= */}
-
+            {/* LEFT CONTENT */}
             <motion.div
               className="download-hero-content"
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
             >
-
-              <div className="download-label">
-                
-              </div>
+              <div className="download-label"></div>
 
               <h1>
                 Your next
@@ -63,25 +55,16 @@ const Download = () => {
                 all from the GoNbite app.
               </p>
 
-
-              {/* ================= DOWNLOAD AREA ================= */}
-
+              {/* DOWNLOAD AREA */}
               <div className="download-action-area">
-
-                {/* QR CODE */}
-
+                {/* QR CODE AND DOWNLOAD */}
                 <motion.div
                   className="download-qr-box"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{
-                    duration: 0.6,
-                    delay: 0.3,
-                  }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
                 >
-
                   <div className="qr-wrapper">
-
                     <QRCodeSVG
                       value={downloadUrl}
                       size={145}
@@ -89,11 +72,9 @@ const Download = () => {
                       fgColor="#241914"
                       level="H"
                     />
-
                   </div>
 
                   <div className="qr-content">
-
                     <div className="qr-icon">
                       <QrCode size={16} />
                     </div>
@@ -102,29 +83,40 @@ const Download = () => {
                       <strong>Scan to download</strong>
                       <span>Open with your phone camera</span>
                     </div>
-
                   </div>
 
+                  <a
+                    href={downloadUrl}
+                    className="download-apk-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Smartphone size={18} />
+                    Download Android App
+                  </a>
                 </motion.div>
 
-
                 {/* STORE BUTTONS */}
-
                 <div className="download-stores">
+                  {/* ANDROID APK */}
+                  <a
+                    href={downloadUrl}
+                    className="download-apk-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Smartphone size={18} />
+                    Download APK
+                  </a>
 
                   {/* GOOGLE PLAY */}
-
                   <a
                     href="#"
                     className="download-store-button"
                     onClick={(e) => e.preventDefault()}
                   >
-
                     <span className="store-icon">
-                      <Play
-                        size={22}
-                        fill="currentColor"
-                      />
+                      <Play size={22} fill="currentColor" />
                     </span>
 
                     <span className="store-text">
@@ -133,81 +125,57 @@ const Download = () => {
                     </span>
 
                     <ArrowUpRight size={18} />
-
                   </a>
 
-
                   {/* APP STORE */}
-
                   <a
                     href="#"
                     className="download-store-button"
                     onClick={(e) => e.preventDefault()}
                   >
-
                     <span className="store-icon">
-                      <Apple
-                        size={24}
-                        fill="currentColor"
-                      />
+                      <Apple size={24} fill="currentColor" />
                     </span>
 
                     <span className="store-text">
-                      <small>Available soon</small>
+                      <small>Available Soon</small>
                       <strong>App Store</strong>
                     </span>
 
                     <ArrowUpRight size={18} />
-
                   </a>
-
                 </div>
-
               </div>
 
-
               <div className="download-note">
-
                 <Smartphone size={17} />
 
                 <span>
-                  Available soon on Android & iOS
+                  Available now as an Android APK
                 </span>
-
               </div>
-
             </motion.div>
 
-
-            {/* ================= RIGHT VISUAL ================= */}
-
+            {/* RIGHT VISUAL */}
             <motion.div
               className="download-visual"
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{
-                duration: 0.9,
-              }}
+              transition={{ duration: 0.9 }}
             >
-
               <div className="visual-background"></div>
 
-
               {/* MAIN PHONE */}
-
               <div className="phone-mockup">
-
                 <div className="phone-speaker"></div>
 
                 <div className="phone-screen">
-
                   <div className="app-status">
                     <span>9:41</span>
                     <span>● ● ●</span>
                   </div>
 
                   <div className="app-header">
-
                     <div>
                       <small>Good evening 👋</small>
 
@@ -218,189 +186,93 @@ const Download = () => {
                       </h3>
                     </div>
 
-                    <div className="app-avatar">
-                      G
-                    </div>
-
+                    <div className="app-avatar">G</div>
                   </div>
 
-
                   <div className="app-search">
-                    <span>
-                      Search for food...
-                    </span>
-
+                    <span>Search for food...</span>
                     <span>⌕</span>
                   </div>
 
-
                   <div className="app-featured">
-
-                    <img
-                      src={food3}
-                      alt="Featured food"
-                    />
+                    <img src={food3} alt="Featured food" />
 
                     <div className="featured-overlay">
-
-                      <small>
-                        GONBITE PICK
-                      </small>
-
-                      <strong>
-                        Something delicious
-                      </strong>
-
+                      <small>GONBITE PICK</small>
+                      <strong>Something delicious</strong>
                     </div>
-
                   </div>
-
 
                   <div className="app-section-title">
-
-                    <strong>
-                      Popular near you
-                    </strong>
-
-                    <span>
-                      See all
-                    </span>
-
+                    <strong>Popular near you</strong>
+                    <span>See all</span>
                   </div>
-
 
                   <div className="app-mini-list">
-
                     <div className="app-mini-item">
-
                       <div className="mini-food">
-                        <img
-                          src={food1}
-                          alt=""
-                        />
+                        <img src={food1} alt="" />
                       </div>
 
                       <div>
-                        <strong>
-                          Fresh & tasty
-                        </strong>
-
-                        <small>
-                          Ready to order
-                        </small>
+                        <strong>Fresh &amp; tasty</strong>
+                        <small>Ready to order</small>
                       </div>
 
                       <b>+</b>
-
                     </div>
 
-
                     <div className="app-mini-item">
-
                       <div className="mini-food">
-                        <img
-                          src={food2}
-                          alt=""
-                        />
+                        <img src={food2} alt="" />
                       </div>
 
                       <div>
-                        <strong>
-                          Your favorites
-                        </strong>
-
-                        <small>
-                          Order again
-                        </small>
+                        <strong>Your favorites</strong>
+                        <small>Order again</small>
                       </div>
 
                       <b>+</b>
-
                     </div>
-
                   </div>
-
 
                   <button className="app-button">
                     Explore food
                     <ArrowUpRight size={14} />
                   </button>
-
                 </div>
-
               </div>
 
-
               {/* FLOATING DOWNLOAD CARD */}
-
               <motion.div
                 className="download-floating-card"
-                initial={{
-                  opacity: 0,
-                  y: 20,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  duration: 0.6,
-                  delay: 0.7,
-                }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
               >
-
                 <div className="floating-icon">
                   <Smartphone size={18} />
                 </div>
 
                 <div>
-                  <strong>
-                    GoNbite App
-                  </strong>
-
-                  <small>
-                    Food at your fingertips
-                  </small>
+                  <strong>GoNbite App</strong>
+                  <small>Food at your fingertips</small>
                 </div>
-
               </motion.div>
 
-
-              {/* SMALL FOOD CARD */}
-
+              {/* FLOATING FOOD CARD */}
               <motion.div
                 className="floating-food-card"
-                initial={{
-                  opacity: 0,
-                  y: -20,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  duration: 0.6,
-                  delay: 0.9,
-                }}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.9 }}
               >
-
-                <img
-                  src={food1}
-                  alt="GoNbite food"
-                />
-
-                <span>
-                  GOOD FOOD
-                </span>
-
+                <img src={food1} alt="GoNbite food" />
+                <span>GOOD FOOD</span>
               </motion.div>
-
             </motion.div>
-
           </div>
-
         </section>
-
       </main>
 
       <Footer />
