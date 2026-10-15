@@ -45,4 +45,5 @@ router.get(
   getRegisteredUsers
 );
 
+
 export default router;

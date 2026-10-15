@@ -12,6 +12,7 @@ const navLinks = [
   { name: "Why GoNbite", path: "/why-choose-us" },
   { name: "How It Works", path: "/how-it-works" },
   { name: "Blogs", path: "/blogs" },
+  { name: "Partner With Us", path: "/partner-with-us" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -40,10 +41,13 @@ function Navbar() {
             </>
           ) : (
             <>
-              <Link to="/login" className="navbar-auth-btn"><LogIn size={16}/> Login</Link>
-              <Link to="/register" className="navbar-auth-btn register"><UserPlus size={16}/> Register</Link>
+              {/* <Link to="/login" className="navbar-auth-btn"><LogIn size={16}/> Login</Link>
+              <Link to="/register" className="navbar-auth-btn register"><UserPlus size={16}/> Register</Link> */}
             </>
           )}
+
+
+          
           <Link to="/download" className="navbar-order-btn">Download Now <ArrowRight size={17}/></Link>
         </div>
 

@@ -20,7 +20,7 @@ import "./Download.css";
 
 const Download = () => {
   // Change this later to your real Play Store / App Store URL
- const downloadUrl = "/app-release.apk";
+ const downloadUrl = "/https://drive.google.com/file/d/1y86hr2i67OHShpdqFXeuSl4QZqUK72Tt/view?usp=drive_link";
 
   return (
     <>
@@ -102,7 +102,7 @@ const Download = () => {
 
   <a
     href={downloadUrl}
-    download="app-release.apk"
+    download="https://drive.google.com/file/d/1y86hr2i67OHShpdqFXeuSl4QZqUK72Tt/view?usp=drive_linkk"
     className="download-apk-btn"
   >
     Download Android App

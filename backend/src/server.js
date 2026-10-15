@@ -9,6 +9,8 @@ import { config } from "./config.js";
 import authRoutes from "./routes/authRoutes.js";
 import blogRoutes from "./routes/blogRoutes.js";
 import waitlistRoutes from "./routes/waitlistRoutes.js";
+import partnerRoutes from "./routes/partnerRoutes.js";
+
 
 import Blog from "./models/Blog.js";
 
@@ -117,6 +119,8 @@ app.use("/api/auth", authRoutes);
 app.use("/api/blogs", blogRoutes);
 
 app.use("/api/waitlist", waitlistRoutes);
+
+app.use("/api/partners", partnerRoutes);
 
 /* =========================================================
    SITEMAP

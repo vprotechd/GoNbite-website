@@ -6,7 +6,7 @@ const required = [
   "MONGODB_URI",
   "JWT_SECRET",
   "FRONTEND_URL",
-  "ADMIN_REGISTRATION_KEY",
+
 ];
 
 for (const key of required) {

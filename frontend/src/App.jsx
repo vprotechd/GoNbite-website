@@ -27,6 +27,14 @@ import AdminRegister from "./pages/AdminRegister";
 import AdminDashboard from "./pages/AdminDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 
+
+import PartnerWithUs from "./pages/PartnerWithUs";
+import PartnerRegister from "./pages/PartnerRegister";
+import PartnerVerifyEmail from "./pages/PartnerVerifyEmail";
+import PartnerLogin from "./pages/PartnerLogin";
+import PartnerVerifyLogin from "./pages/PartnerVerifyLogin";
+import PartnerDashboard from "./pages/PartnerDashboard";
+
 const seoByPath = {
   "/": {
     title: "GoNbite | Food Delivery & Online Food Ordering in Mohali",
@@ -120,7 +128,32 @@ export default function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route path="/admin/dashboard" element={<ProtectedRoute role="admin"><AdminDashboard /></ProtectedRoute>} />
+        <Route path="/partner-with-us" element={<PartnerWithUs />} />
+
+<Route
+  path="/partner/register/:type"
+  element={<PartnerRegister />}
+/>
+
+<Route
+  path="/partner/verify-email"
+  element={<PartnerVerifyEmail />}
+/>
+
+<Route path="/partner/login" element={<PartnerLogin />} />
+
+<Route
+  path="/partner/verify-login"
+  element={<PartnerVerifyLogin />}
+/>
+
+<Route
+  path="/partner/dashboard"
+  element={<PartnerDashboard />}
+/>
         </Routes>
+
+
       </AuthProvider>
     </BrowserRouter>
   );
