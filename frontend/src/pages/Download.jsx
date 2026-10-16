@@ -118,14 +118,6 @@ const Download = () => {
 
 
              
- <a
-  href="/app-release.apk"
-  download="app-release.apk"
-  className="download-apk-btn"
->
-  <Download size={18} />
-  Download APK
-</a> 
 
 
 
