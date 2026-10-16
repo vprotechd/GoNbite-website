@@ -21,7 +21,7 @@ export function AuthProvider({ children }) {
   };
 
   const value = useMemo(() => ({
-    user, token, logout, isAuthenticated: Boolean(token && user), API,
+    user, token, logout, isAuthenticated:Boolean(token && user), API,
     setSession: (data) => { setUser(data.user); setToken(data.token); },
   }), [user, token]);
 

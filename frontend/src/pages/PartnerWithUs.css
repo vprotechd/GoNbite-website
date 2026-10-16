@@ -1,0 +1,59 @@
+
+.partner-page {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 24px;
+}
+
+.partner-page h1 {
+  text-align: center;
+}
+
+.partner-options {
+  display: flex;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.partner-page button {
+  cursor: pointer;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.partner-options button {
+  flex: 1;
+}
+
+.partner-options .active,
+.partner-page form button {
+  background: #f97316;
+  color: white;
+  border: none;
+}
+
+.partner-page form {
+  display: grid;
+  gap: 16px;
+}
+
+.partner-page label {
+  display: grid;
+  gap: 8px;
+}
+
+.partner-page input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .partner-page {
+    margin: 16px auto;
+    padding: 16px;
+  }
+}
