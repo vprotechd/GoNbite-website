@@ -86,6 +86,7 @@ export default function PartnerRegister() {
           "gonbitePartnerApplicationId",
           data.applicationId
         );
+        
         sessionStorage.setItem("gonbitePartnerEmail", payload.email);
         sessionStorage.setItem("gonbitePartnerType", type);
       }

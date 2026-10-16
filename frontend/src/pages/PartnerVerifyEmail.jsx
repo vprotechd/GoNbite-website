@@ -8,6 +8,7 @@ const API = (
 )
   .replace(/\/+$/, "")
   .replace(/\/api$/i, "");
+  
 
 export default function PartnerVerifyEmail() {
   const location = useLocation();

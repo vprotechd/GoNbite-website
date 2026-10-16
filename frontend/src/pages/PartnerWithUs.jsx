@@ -8,6 +8,7 @@ import {
   LogIn,
   Store,
   TrendingUp,
+  
   ShieldCheck,
   Clock3,
   UsersRound,

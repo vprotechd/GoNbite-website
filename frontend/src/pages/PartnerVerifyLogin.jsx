@@ -10,6 +10,7 @@ const API = (
   .replace(/\/api$/i, "");
 
 export default function PartnerVerifyLogin() {
+  
   const location = useLocation();
   const navigate = useNavigate();
 
