@@ -120,6 +120,14 @@ app.use("/api/blogs", blogRoutes);
 
 app.use("/api/waitlist", waitlistRoutes);
 
+
+app.get("/api/partners-debug", (_req, res) => {
+  res.json({
+    message: "Partner routes deployment check",
+    loaded: true
+  });
+});
+
 app.use("/api/partners", partnerRoutes);
 
 /* =========================================================
